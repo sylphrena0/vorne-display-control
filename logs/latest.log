@@ -1,0 +1,2359 @@
+2022-01-05 14:15:30,777 - INFO: Logging file, starting from 01/05/2022 14:15:30
+2022-01-05 14:20:45,549 - INFO: Logging file, starting from 01/05/2022 14:20:45
+2022-01-05 14:20:45,648 - DEBUG: Getting FBM order info
+2022-01-05 14:20:46,181 - DEBUG: Sending static messages
+2022-01-05 14:21:05,173 - DEBUG: Sending static messages
+2022-01-05 14:21:05,187 - DEBUG: Sending static messages
+2022-01-05 14:21:05,190 - DEBUG: Sending static messages
+2022-01-05 14:21:05,191 - INFO: Debug mode activated
+2022-01-05 14:21:05,194 - DEBUG: Sending static messages
+2022-01-05 14:21:05,195 - INFO: Debug mode activated
+2022-01-05 14:21:05,197 - DEBUG: Sending static messages
+2022-01-05 14:21:05,198 - INFO: Debug mode activated
+2022-01-05 14:21:05,201 - DEBUG: Sending static messages
+2022-01-05 14:21:05,202 - INFO: Debug mode activated
+2022-01-05 14:21:05,205 - DEBUG: Sending static messages
+2022-01-05 14:21:05,206 - INFO: Debug mode activated
+2022-01-05 14:21:05,209 - DEBUG: Sending static messages
+2022-01-05 14:21:05,210 - INFO: Debug mode activated
+2022-01-05 14:21:05,212 - DEBUG: Sending static messages
+2022-01-05 14:21:05,213 - INFO: Debug mode activated
+2022-01-05 14:21:05,216 - DEBUG: Sending static messages
+2022-01-05 14:21:05,217 - INFO: Debug mode activated
+2022-01-05 14:21:05,220 - DEBUG: Sending static messages
+2022-01-05 14:21:05,221 - INFO: Debug mode activated
+2022-01-05 14:21:05,242 - DEBUG: Sending static messages
+2022-01-05 14:21:25,276 - DEBUG: Sending static messages
+2022-01-05 14:21:40,706 - INFO: Logging file, starting from 01/05/2022 14:21:40
+2022-01-05 14:21:40,809 - DEBUG: Getting FBM order info
+2022-01-05 14:21:41,256 - DEBUG: Sending static messages
+2022-01-05 14:21:46,138 - DEBUG: Sending static messages
+2022-01-05 14:21:46,168 - DEBUG: Sending static messages
+2022-01-05 14:21:46,173 - DEBUG: Sending static messages
+2022-01-05 14:21:46,179 - DEBUG: Sending static messages
+2022-01-05 14:21:46,184 - DEBUG: Sending static messages
+2022-01-05 14:21:46,189 - DEBUG: Sending static messages
+2022-01-05 14:21:46,198 - DEBUG: Sending static messages
+2022-01-05 14:21:46,205 - DEBUG: Sending static messages
+2022-01-05 14:21:46,210 - DEBUG: Sending static messages
+2022-01-05 14:21:46,215 - DEBUG: Sending static messages
+2022-01-05 14:21:46,219 - DEBUG: Sending static messages
+2022-01-05 14:21:46,221 - INFO: Debug mode activated
+2022-01-05 14:21:46,241 - DEBUG: Sending static messages
+2022-01-05 14:22:06,272 - DEBUG: Sending static messages
+2022-01-05 14:22:26,307 - DEBUG: Sending static messages
+2022-01-05 14:22:31,472 - DEBUG: Sending static messages
+2022-01-05 14:22:31,488 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,491 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,494 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,497 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,500 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,503 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,506 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,509 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,512 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,515 - DEBUG: Sending srolling messages
+2022-01-05 14:22:31,516 - INFO: Debug mode activated
+2022-01-05 14:22:31,534 - DEBUG: Sending static messages
+2022-01-05 14:22:51,570 - DEBUG: Sending static messages
+2022-01-05 14:23:11,608 - DEBUG: Sending static messages
+2022-01-05 14:23:31,625 - DEBUG: Sending static messages
+2022-01-05 14:23:51,653 - DEBUG: Sending static messages
+2022-01-05 14:24:11,691 - DEBUG: Sending static messages
+2022-01-05 14:24:31,719 - DEBUG: Sending static messages
+2022-01-05 14:24:51,747 - DEBUG: Sending static messages
+2022-01-05 14:24:51,750 - DEBUG: Getting FBM order info
+2022-01-05 14:25:12,545 - DEBUG: Sending static messages
+2022-01-05 14:25:32,582 - DEBUG: Sending static messages
+2022-01-05 14:25:52,617 - DEBUG: Sending static messages
+2022-01-05 14:26:12,654 - DEBUG: Sending static messages
+2022-01-05 14:26:32,688 - DEBUG: Sending static messages
+2022-01-05 15:01:30,951 - INFO: Logging file, starting from 01/05/2022 15:01:30
+2022-01-05 15:03:21,162 - INFO: Logging file, starting from 01/05/2022 15:03:21
+2022-01-05 15:03:42,471 - INFO: Sent message to displays:15:03 RO:36 DF:
+2022-01-05 15:03:42,499 - INFO: Debug mode activated
+2022-01-05 15:04:10,622 - INFO: Logging file, starting from 01/05/2022 15:04:10
+2022-01-05 15:04:24,734 - INFO: Sent message to displays: 15:04 RO:36 DF:
+2022-01-05 15:08:39,709 - INFO: Sent message to displays: 15:08 RO:36 DF:
+2022-01-05 15:08:39,740 - INFO: Debug mode activated
+2022-01-05 15:09:01,295 - INFO: Logging file, starting from 01/05/2022 15:09:01
+2022-01-05 15:09:07,255 - INFO: Sent message to displays: 15:09 RO:36 DF:
+2022-01-05 15:09:07,279 - INFO: Debug mode activated
+2022-01-05 15:09:29,367 - INFO: Logging file, starting from 01/05/2022 15:09:29
+2022-01-05 15:09:35,632 - INFO: Sent message to displays: 15:09 RO:36 DF:
+2022-01-05 15:09:35,660 - INFO: Debug mode activated
+2022-01-05 15:41:38,094 - INFO: Sent message to displays: 15:41 RO:38 DF:
+2022-01-05 15:41:38,121 - INFO: Debug mode activated
+2022-01-05 15:42:05,688 - INFO: Sent message to displays: 15:42 RO:38 DF:
+2022-01-05 15:42:05,716 - INFO: Debug mode activated
+2022-01-05 17:08:58,996 - INFO: Logging file, starting from 01/05/2022 17:08:58
+2022-01-05 17:08:59,800 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/./NMS M1000 Display Tool.pyw", line 211, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/./NMS M1000 Display Tool.pyw", line 147, in gui
+    sendmsg(shipping1,addr=shippingaddress,font=fnt,line=1) #send initial shipping message to displays
+TypeError: sendmsg() got an unexpected keyword argument 'addr'
+
+2022-01-05 17:08:59,805 - ERROR: <traceback object at 0x7ff2dfed0b80>
+2022-01-05 17:08:59,808 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-05 17:08:59,809 - INFO: System restarting once to attempt to resolve fatal errors
+2022-01-05 17:08:59,924 - INFO: Closing NMS M1000 Web Control
+2022-01-05 17:09:21,013 - INFO: Logging file, starting from 01/05/2022 17:09:21
+2022-01-05 17:09:21,593 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 211, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 147, in gui
+    sendmsg(shipping1,addr=shippingaddress,font=fnt,line=1) #send initial shipping message to displays
+TypeError: sendmsg() got an unexpected keyword argument 'addr'
+
+2022-01-05 17:09:21,599 - ERROR: <traceback object at 0x7fedc0710240>
+2022-01-05 17:09:21,599 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-05 17:09:21,599 - INFO: System restarting once to attempt to resolve fatal errors
+2022-01-05 17:09:45,887 - INFO: Logging file, starting from 01/05/2022 17:09:45
+2022-01-05 17:09:46,371 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 211, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 147, in gui
+    sendmsg(shipping1,addr=shippingaddress,font=fnt,line=1) #send initial shipping message to displays
+TypeError: sendmsg() got an unexpected keyword argument 'addr'
+
+2022-01-05 17:09:46,371 - ERROR: <traceback object at 0x7f91209440c0>
+2022-01-05 17:09:46,371 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-05 17:09:46,371 - INFO: Closing NMS M1000 Web Control
+2022-01-05 17:12:24,493 - INFO: Logging file, starting from 01/05/2022 17:12:24
+2022-01-05 17:15:02,486 - INFO: Logging file, starting from 01/05/2022 17:15:02
+2022-01-05 17:15:09,125 - INFO: Logging file, starting from 01/05/2022 17:15:09
+2022-01-05 17:15:42,054 - INFO: Logging file, starting from 01/05/2022 17:15:42
+2022-01-05 17:17:36,376 - INFO: Logging file, starting from 01/05/2022 17:17:36
+2022-01-05 17:18:59,835 - INFO: Logging file, starting from 01/05/2022 17:18:59
+2022-01-05 17:19:37,812 - INFO: Logging file, starting from 01/05/2022 17:19:37
+2022-01-05 17:20:32,400 - INFO: Logging file, starting from 01/05/2022 17:20:32
+2022-01-05 17:22:41,915 - INFO: Logging file, starting from 01/05/2022 17:22:41
+2022-01-06 05:23:26,056 - INFO: Sent message to displays: 05:23 RO:50 DF:535
+2022-01-06 05:23:26,081 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 212, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 182, in gui
+    if debug:
+UnboundLocalError: local variable 'debug' referenced before assignment
+
+2022-01-06 05:23:26,081 - ERROR: <traceback object at 0x7feb99fb55c0>
+2022-01-06 05:23:26,082 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-06 05:23:26,082 - INFO: Closing NMS M1000 Web Control
+2022-01-06 09:42:11,233 - INFO: Logging file, starting from 01/06/2022 09:42:11
+2022-01-06 09:42:34,650 - INFO: Sent message to displays: 09:42 RO:27 DF:
+2022-01-06 09:42:34,674 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 212, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 182, in gui
+    if debug:
+UnboundLocalError: local variable 'debug' referenced before assignment
+
+2022-01-06 09:42:34,675 - ERROR: <traceback object at 0x7f5928728740>
+2022-01-06 09:42:34,675 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-06 09:42:34,676 - INFO: Closing NMS M1000 Web Control
+2022-01-06 11:38:57,175 - INFO: Logging file, starting from 01/06/2022 11:38:57
+2022-01-06 11:39:14,741 - INFO: Sent message to displays: 11:39 RO:26 DF:
+2022-01-06 11:39:14,770 - INFO: Removing rebooted flag, program is stable
+2022-01-06 11:39:26,736 - INFO: Sent message to displays: 11:39 RO:26 DF:
+2022-01-06 12:35:12,367 - INFO: Logging file, starting from 01/06/2022 12:35:12
+2022-01-07 05:49:00,675 - INFO: Sent message to displays: 05:49 RO:44 DF:467
+2022-01-07 05:49:08,208 - INFO: Sent message to displays: 05:49 RO:44 DF:467
+2022-01-07 06:55:54,207 - INFO: Sent message to displays: 06:55 RO:43 DF:528
+2022-01-07 14:00:20,109 - INFO: Logging file, starting from 01/07/2022 14:00:20
+2022-01-07 14:00:32,530 - INFO: Sent message to displays: 14:00 RO:28 DF:538
+2022-01-10 05:24:23,783 - INFO: Sent message to displays: 05:24 RO:88 DF:1701
+2022-01-10 06:03:25,671 - INFO: Sent message to displays: 06:03 RO:88 DF:1728
+2022-01-11 05:19:57,631 - INFO: Sent message to displays: 05:19 RO:59 DF:576
+2022-01-11 05:20:14,711 - INFO: Sent message to displays: 05:20 RO:59 DF:576
+2022-01-11 06:01:13,383 - INFO: Sent message to displays: 06:01 RO:60 DF:601
+2022-01-11 13:58:34,756 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f58f82804c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f58f82804c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f58f82804c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-01-11 13:58:34,758 - ERROR: <traceback object at 0x7f58f827ba80>
+2022-01-11 13:58:34,759 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-11 13:58:34,759 - INFO: System restarting once to attempt to resolve fatal errors
+2022-01-11 13:58:57,743 - INFO: Logging file, starting from 01/11/2022 13:58:57
+2022-01-11 13:58:57,872 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fd7727ba640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd7727ba640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd7727ba640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-01-11 13:58:57,872 - ERROR: <traceback object at 0x7fd772738840>
+2022-01-11 13:58:57,872 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-11 13:58:57,873 - INFO: Closing NMS M1000 Web Control
+2022-01-11 14:22:50,309 - INFO: Logging file, starting from 01/11/2022 14:22:50
+2022-01-11 14:23:10,431 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f7f73e99640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7f73e99640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7f73e99640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-01-11 14:23:10,432 - ERROR: <traceback object at 0x7f7f73e17800>
+2022-01-11 14:23:10,433 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-11 14:23:10,433 - INFO: Closing NMS M1000 Web Control
+2022-01-11 14:36:01,812 - INFO: Logging file, starting from 01/11/2022 14:36:01
+2022-01-11 14:36:01,861 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fdc2e15d640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdc2e15d640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdc2e15d640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-01-11 14:36:01,862 - ERROR: <traceback object at 0x7fdc2e0df680>
+2022-01-11 14:36:01,862 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-11 14:36:01,862 - INFO: Closing NMS M1000 Web Control
+2022-01-17 09:31:33,761 - INFO: Logging file, starting from 01/17/2022 09:31:33
+2022-01-17 09:33:29,211 - INFO: Logging file, starting from 01/17/2022 09:33:29
+2022-01-17 09:34:01,899 - INFO: Logging file, starting from 01/17/2022 09:34:01
+2022-01-17 09:34:56,183 - INFO: Sent message to displays: 09:34 RO:86 DF:
+2022-01-17 09:34:56,205 - INFO: Removing rebooted flag, program is stable
+2022-01-17 20:17:19,624 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f775ef261c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f775ef261c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f775ef261c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-01-17 20:17:19,625 - ERROR: <traceback object at 0x7f775eef1d80>
+2022-01-17 20:17:19,626 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-17 20:17:19,626 - INFO: System restarting once to attempt to resolve fatal errors
+2022-01-17 20:19:09,182 - INFO: Logging file, starting from 01/17/2022 20:19:09
+2022-01-17 20:19:09,304 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7ff222db8640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff222db8640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff222db8640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-01-17 20:19:09,305 - ERROR: <traceback object at 0x7ff222d397c0>
+2022-01-17 20:19:09,305 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-17 20:19:09,305 - INFO: Closing NMS M1000 Web Control
+2022-01-18 08:28:40,626 - INFO: Logging file, starting from 01/18/2022 08:28:40
+2022-01-18 08:34:55,256 - INFO: Sent message to displays: 08:34 RO:66 DF:
+2022-01-18 08:34:55,278 - INFO: Removing rebooted flag, program is stable
+2022-01-19 06:21:33,157 - INFO: Sent message to displays: 06:21 RO:41 DF:1000
+2022-01-19 14:01:04,794 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-01-19 14:01:04,794 - ERROR: <traceback object at 0x7f45088c9e40>
+2022-01-19 14:01:04,794 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-19 14:01:04,795 - INFO: System restarting once to attempt to resolve fatal errors
+2022-01-19 14:02:54,237 - INFO: Logging file, starting from 01/19/2022 14:02:54
+2022-01-20 05:27:56,009 - INFO: Sent message to displays: 05:27 RO:36 DF:561
+2022-01-20 05:27:56,040 - INFO: Removing rebooted flag, program is stable
+2022-01-20 05:27:56,076 - INFO: Sent message to displays: 05:27 RO:36 DF:561
+2022-01-20 06:01:31,423 - INFO: Sent message to displays: 06:01 RO:36 DF:637
+2022-01-21 05:25:58,911 - INFO: Sent message to displays: 05:25 RO:35 DF:471
+2022-01-21 05:26:10,076 - INFO: Sent message to displays: 05:26 RO:35 DF:471
+2022-01-24 05:19:36,062 - INFO: Sent message to displays: 05:19 RO:58 DF:1231
+2022-01-24 13:39:53,770 - INFO: Logging file, starting from 01/24/2022 13:39:53
+2022-01-24 13:46:45,318 - INFO: Sent message to displays: 13:46 RO:31 DF:1231
+2022-01-25 05:26:00,683 - INFO: Sent message to displays: 05:26 RO:42 DF:670
+2022-01-25 06:03:09,543 - INFO: Sent message to displays: 06:03 RO:43 DF:707
+2022-01-26 05:43:52,856 - INFO: Sent message to displays: 05:43 RO:52 DF:469
+2022-01-26 06:11:48,087 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+2022-01-26 06:11:48,088 - ERROR: <traceback object at 0x7fdaa04dab40>
+2022-01-26 06:11:48,088 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-01-26 06:11:48,089 - INFO: System restarting once to attempt to resolve fatal errors
+2022-01-26 06:13:39,466 - INFO: Logging file, starting from 01/26/2022 06:13:39
+2022-01-26 06:18:06,640 - INFO: Sent message to displays: 06:18 RO:52 DF:469
+2022-01-26 06:18:06,658 - INFO: Removing rebooted flag, program is stable
+2022-01-26 06:18:50,150 - INFO: Sent message to displays: 06:18 RO:52 DF:469
+2022-01-26 06:19:05,629 - INFO: Sent message to displays: 06:19 RO:52 DF:475
+2022-01-27 05:03:35,692 - INFO: Sent message to displays: 05:03 RO:53 DF:406
+2022-01-27 06:24:20,321 - INFO: Sent message to displays: 06:24 RO:53 DF:473
+2022-01-28 04:58:14,558 - INFO: Sent message to displays: 04:58 RO:44 DF:415
+2022-01-28 04:58:36,208 - INFO: Sent message to displays: 04:58 RO:44 DF:415
+2022-01-28 06:06:15,542 - INFO: Sent message to displays: 06:06 RO:48 DF:431
+2022-01-31 05:29:27,241 - INFO: Sent message to displays: 05:29 RO:147 DF:1444
+2022-01-31 06:22:29,010 - INFO: Sent message to displays: 06:22 RO:144 DF:1473
+2022-02-01 05:13:25,915 - INFO: Sent message to displays: 05:13 RO:50 DF:473
+2022-02-02 05:14:44,279 - INFO: Sent message to displays: 05:14 RO:37 DF:572
+2022-02-03 04:50:58,009 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7ff390701a60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff390701a60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff390701a60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-03 04:50:58,010 - ERROR: <traceback object at 0x7ff390881140>
+2022-02-03 04:50:58,011 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-03 04:50:58,012 - INFO: System restarting once to attempt to resolve fatal errors
+2022-02-03 04:52:48,145 - INFO: Logging file, starting from 02/03/2022 04:52:48
+2022-02-03 04:52:53,243 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fa4d6d18640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa4d6d18640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa4d6d18640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-03 04:52:53,244 - ERROR: <traceback object at 0x7fa4d6c97680>
+2022-02-03 04:52:53,244 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-03 04:52:53,245 - INFO: Closing NMS M1000 Web Control
+2022-02-03 08:23:43,569 - INFO: Logging file, starting from 02/03/2022 08:23:43
+2022-02-03 08:23:54,347 - INFO: Sent message to displays: 08:23 RO:34 DF:
+2022-02-03 08:23:54,370 - INFO: Removing rebooted flag, program is stable
+2022-02-03 08:31:10,343 - INFO: Sent message to displays: 08:31 RO:33 DF:545
+2022-02-03 08:33:03,856 - INFO: Sent message to displays: 08:33 RO:33 DF:545
+2022-02-03 08:33:30,815 - INFO: Sent message to displays: 08:33 RO:32 DF:545
+2022-02-03 16:30:09,522 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+2022-02-03 16:30:09,523 - ERROR: <traceback object at 0x7f34ec425400>
+2022-02-03 16:30:09,524 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-03 16:30:09,524 - INFO: System restarting once to attempt to resolve fatal errors
+2022-02-03 16:32:01,530 - INFO: Logging file, starting from 02/03/2022 16:32:01
+2022-02-03 16:32:02,193 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-02-03 16:32:02,193 - ERROR: <traceback object at 0x7f2f6f6d4080>
+2022-02-03 16:32:02,194 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-03 16:32:02,194 - INFO: Closing NMS M1000 Web Control
+2022-02-04 09:56:30,112 - INFO: Logging file, starting from 02/04/2022 09:56:30
+2022-02-04 10:25:03,468 - INFO: Sent message to displays: 10:25 RO:54 DF:550
+2022-02-04 10:25:03,508 - INFO: Removing rebooted flag, program is stable
+2022-02-07 05:13:19,107 - INFO: Sent message to displays: 05:13 RO:165 DF:1654
+2022-02-07 07:29:07,402 - INFO: Logging file, starting from 02/07/2022 07:29:07
+2022-02-08 04:57:59,330 - INFO: Sent message to displays: 04:57 RO:63 DF:514
+2022-02-08 04:59:02,750 - INFO: Sent message to displays: 04:59 RO:63 DF:514
+2022-02-08 06:52:37,051 - INFO: Sent message to displays: 06:52 RO:62 DF:591
+2022-02-09 05:12:20,547 - INFO: Sent message to displays: 05:12 RO:61 DF:591
+2022-02-09 05:13:15,546 - INFO: Sent message to displays: 05:13 RO:61 DF:484
+2022-02-09 09:36:10,050 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fc2db4eb2e0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc2db4eb2e0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc2db4eb2e0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-09 09:36:10,051 - ERROR: <traceback object at 0x7fc2db1e5280>
+2022-02-09 09:36:10,052 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-09 09:36:10,053 - INFO: System restarting once to attempt to resolve fatal errors
+2022-02-09 09:38:01,695 - INFO: Logging file, starting from 02/09/2022 09:38:01
+2022-02-09 09:38:01,822 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7ff28471f640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff28471f640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff28471f640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-09 09:38:01,822 - ERROR: <traceback object at 0x7ff2846a0740>
+2022-02-09 09:38:01,822 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-09 09:38:01,822 - INFO: Closing NMS M1000 Web Control
+2022-02-10 09:33:14,629 - INFO: Logging file, starting from 02/10/2022 09:33:14
+2022-02-10 09:33:29,855 - INFO: Sent message to displays: 09:33 RO:88 DF:
+2022-02-10 09:33:29,869 - INFO: Removing rebooted flag, program is stable
+2022-02-11 05:20:15,973 - INFO: Sent message to displays: 05:20 RO:67 DF:409
+2022-02-11 05:49:12,867 - INFO: Sent message to displays: 05:49 RO:67 DF:515
+2022-02-11 05:58:08,641 - INFO: Sent message to displays: 05:58 RO:67 DF:523
+2022-02-14 05:04:41,792 - INFO: Sent message to displays: 05:04 RO:116 DF:1511
+2022-02-14 13:52:50,799 - INFO: Sent message to displays: 13:52 RO:53 DF:1511
+2022-02-15 05:25:55,556 - INFO: Sent message to displays: 05:25 RO:71 DF:461
+2022-02-15 14:40:09,566 - INFO: Logging file, starting from 02/15/2022 14:40:09
+2022-02-15 14:43:56,731 - INFO: Sent message to displays: 14:43 RO:40 DF:461
+2022-02-16 05:23:07,582 - INFO: Sent message to displays: 05:23 RO:55 DF:376
+2022-02-16 06:15:52,323 - INFO: Sent message to displays: 06:15 RO:55 DF:457
+2022-02-16 12:01:18,904 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+2022-02-16 12:01:18,904 - ERROR: <traceback object at 0x7f1bd04c1bc0>
+2022-02-16 12:01:18,905 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-16 12:01:18,905 - INFO: System restarting once to attempt to resolve fatal errors
+2022-02-16 12:03:09,460 - INFO: Logging file, starting from 02/16/2022 12:03:09
+2022-02-16 13:34:06,434 - INFO: Logging file, starting from 02/16/2022 13:34:06
+2022-02-16 13:38:20,850 - INFO: Sent message to displays: 13:38 RO:38 DF:
+2022-02-16 13:38:20,877 - INFO: Removing rebooted flag, program is stable
+2022-02-17 05:16:59,960 - INFO: Sent message to displays: 05:16 RO:59 DF:368
+2022-02-17 05:17:06,320 - INFO: Sent message to displays: 05:17 RO:59 DF:368
+2022-02-17 06:39:22,877 - INFO: Sent message to displays: 06:39 RO:59 DF:488
+2022-02-18 00:18:51,179 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f65ecb304f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f65ecb304f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f65ecb304f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-18 00:18:51,180 - ERROR: <traceback object at 0x7f65ecad5280>
+2022-02-18 00:18:51,180 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-18 00:18:51,180 - INFO: System restarting once to attempt to resolve fatal errors
+2022-02-18 00:19:13,180 - INFO: Logging file, starting from 02/18/2022 00:19:13
+2022-02-18 00:19:33,301 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f208f7c4640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f208f7c4640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f208f7c4640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-18 00:19:33,302 - ERROR: <traceback object at 0x7f208f745700>
+2022-02-18 00:19:33,302 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-18 00:19:33,302 - INFO: Closing NMS M1000 Web Control
+2022-02-18 10:13:09,215 - INFO: Logging file, starting from 02/18/2022 10:13:09
+2022-02-18 10:13:09,263 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f88b6704640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f88b6704640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f88b6704640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-18 10:13:09,264 - ERROR: <traceback object at 0x7f88b6680800>
+2022-02-18 10:13:09,264 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-18 10:13:09,264 - INFO: Closing NMS M1000 Web Control
+2022-02-18 12:11:26,493 - INFO: Logging file, starting from 02/18/2022 12:11:26
+2022-02-18 12:11:32,498 - INFO: Sent message to displays: 12:11 RO:24 DF:
+2022-02-18 12:11:32,524 - INFO: Removing rebooted flag, program is stable
+2022-02-18 13:15:00,562 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f641474baf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f641474baf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f641474baf0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-18 13:15:00,562 - ERROR: <traceback object at 0x7f641474ff40>
+2022-02-18 13:15:00,563 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-18 13:15:00,563 - INFO: System restarting once to attempt to resolve fatal errors
+2022-02-18 13:16:52,192 - INFO: Logging file, starting from 02/18/2022 13:16:52
+2022-02-18 13:17:12,288 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f7dd740a640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7dd740a640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7dd740a640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-18 13:17:12,289 - ERROR: <traceback object at 0x7f7dd738b740>
+2022-02-18 13:17:12,289 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-18 13:17:12,289 - INFO: Closing NMS M1000 Web Control
+2022-02-21 08:37:24,447 - INFO: Logging file, starting from 02/21/2022 08:37:24
+2022-02-21 08:45:24,703 - INFO: Sent message to displays: 08:45 RO:59 DF:986
+2022-02-21 08:45:24,742 - INFO: Removing rebooted flag, program is stable
+2022-02-22 05:18:54,970 - INFO: Sent message to displays: 05:18 RO:46 DF:672
+2022-02-22 06:04:16,459 - INFO: Sent message to displays: 06:04 RO:46 DF:674
+2022-02-23 06:15:34,399 - INFO: Sent message to displays: 06:15 RO:34 DF:701
+2022-02-24 05:18:51,228 - INFO: Sent message to displays: 05:18 RO:31 DF:500
+2022-02-25 05:22:56,209 - INFO: Sent message to displays: 05:22 RO:34 DF:324
+2022-02-25 05:24:58,075 - INFO: Sent message to displays: 05:24 RO:34 DF:324
+2022-02-26 04:00:08,188 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f2500069670>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2500069670>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2500069670>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-26 04:00:08,190 - ERROR: <traceback object at 0x7f24fafe93c0>
+2022-02-26 04:00:08,190 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-26 04:00:08,191 - INFO: System restarting once to attempt to resolve fatal errors
+2022-02-26 04:02:00,326 - INFO: Logging file, starting from 02/26/2022 04:02:00
+2022-02-26 04:02:20,413 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f926cea4640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f926cea4640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f926cea4640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-02-26 04:02:20,414 - ERROR: <traceback object at 0x7f926ce1f8c0>
+2022-02-26 04:02:20,414 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-02-26 04:02:20,415 - INFO: Closing NMS M1000 Web Control
+2022-02-28 10:32:30,113 - INFO: Logging file, starting from 02/28/2022 10:32:30
+2022-03-01 06:04:51,821 - INFO: Sent message to displays: 06:04 RO:35 DF:840
+2022-03-01 06:04:51,842 - INFO: Removing rebooted flag, program is stable
+2022-03-01 10:00:51,247 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-03-01 10:00:51,247 - ERROR: <traceback object at 0x7f24f6bfbac0>
+2022-03-01 10:00:51,247 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-01 10:00:51,247 - INFO: System restarting once to attempt to resolve fatal errors
+2022-03-01 10:02:41,904 - INFO: Logging file, starting from 03/01/2022 10:02:41
+2022-03-01 10:02:52,415 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-03-01 10:02:52,415 - ERROR: <traceback object at 0x7f0f712ad7c0>
+2022-03-01 10:02:52,416 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-01 10:02:52,416 - INFO: Closing NMS M1000 Web Control
+2022-03-01 12:08:17,318 - INFO: Logging file, starting from 03/01/2022 12:08:17
+2022-03-01 12:09:41,530 - INFO: Sent message to displays: 12:09 RO:10 DF:840
+2022-03-01 12:09:41,558 - INFO: Removing rebooted flag, program is stable
+2022-03-02 05:08:50,903 - INFO: Sent message to displays: 05:08 RO:22 DF:528
+2022-03-02 12:01:24,605 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+2022-03-02 12:01:24,605 - ERROR: <traceback object at 0x7f979c39f800>
+2022-03-02 12:01:24,606 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-02 12:01:24,606 - INFO: System restarting once to attempt to resolve fatal errors
+2022-03-02 12:03:17,255 - INFO: Logging file, starting from 03/02/2022 12:03:17
+2022-03-03 04:57:26,455 - INFO: Sent message to displays: 04:57 RO:6 DF:435
+2022-03-03 04:57:26,469 - INFO: Removing rebooted flag, program is stable
+2022-03-03 04:58:12,799 - INFO: Sent message to displays: 04:58 RO:25 DF:435
+2022-03-03 07:00:28,147 - INFO: Sent message to displays: 07:00 RO:26 DF:457
+2022-03-04 04:54:27,015 - INFO: Sent message to displays: 04:54 RO:36 DF:451
+2022-03-04 06:10:25,799 - INFO: Sent message to displays: 06:10 RO:37 DF:494
+2022-03-07 04:55:32,432 - INFO: Sent message to displays: 04:55 RO:112 DF:1765
+2022-03-07 06:06:42,949 - INFO: Sent message to displays: 06:06 RO:112 DF:1786
+2022-03-07 19:06:18,058 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f2ef5ed2790>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2ef5ed2790>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2ef5ed2790>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-03-07 19:06:18,059 - ERROR: <traceback object at 0x7f2ef65be340>
+2022-03-07 19:06:18,059 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-07 19:06:18,059 - INFO: System restarting once to attempt to resolve fatal errors
+2022-03-07 19:08:09,646 - INFO: Logging file, starting from 03/07/2022 19:08:09
+2022-03-08 06:30:07,396 - INFO: Sent message to displays: 06:30 RO:34 DF:433
+2022-03-08 06:30:07,423 - INFO: Removing rebooted flag, program is stable
+2022-03-08 06:32:53,542 - INFO: Sent message to displays: 06:32 RO:48 DF:433
+2022-03-08 06:33:00,616 - INFO: Sent message to displays: 06:33 RO:48 DF:433
+2022-03-08 07:21:41,375 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fe06c6f96d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe06c6f96d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe06c6f96d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-03-08 07:21:41,376 - ERROR: <traceback object at 0x7fe06c697280>
+2022-03-08 07:21:41,376 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-08 07:21:41,377 - INFO: System restarting once to attempt to resolve fatal errors
+2022-03-08 07:23:31,810 - INFO: Logging file, starting from 03/08/2022 07:23:31
+2022-03-08 07:28:08,044 - INFO: Sent message to displays: 07:28 RO:39 DF:433
+2022-03-08 07:28:08,070 - INFO: Removing rebooted flag, program is stable
+2022-03-08 07:28:59,606 - INFO: Sent message to displays: 07:28 RO:39 DF:433
+2022-03-08 07:29:02,365 - INFO: Sent message to displays: 07:29 RO:39 DF:433
+2022-03-09 05:47:20,948 - INFO: Sent message to displays: 05:47 RO:41 DF:272
+2022-03-10 05:03:08,765 - INFO: Sent message to displays: 05:03 RO:34 DF:765
+2022-03-10 07:24:51,498 - INFO: Sent message to displays: 07:24 RO:33 DF:802
+2022-03-11 04:55:55,353 - INFO: Sent message to displays: 04:55 RO:20 DF:483
+2022-03-11 07:27:34,021 - INFO: Sent message to displays: 07:27 RO:7 DF:567
+2022-03-14 04:54:42,482 - INFO: Sent message to displays: 04:54 RO:88 DF:1648
+2022-03-14 06:45:10,405 - INFO: Sent message to displays: 06:45 RO:90 DF:1746
+2022-03-15 04:58:53,327 - INFO: Sent message to displays: 04:58 RO:35 DF:752
+2022-03-15 07:33:56,639 - INFO: Sent message to displays: 07:33 RO:35 DF:763
+2022-03-15 07:34:54,126 - INFO: Sent message to displays: 07:34 RO:35 DF:763
+2022-03-17 17:28:17,350 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-03-17 17:28:17,351 - ERROR: <traceback object at 0x7fc4ac720a40>
+2022-03-17 17:28:17,351 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-17 17:28:17,352 - INFO: System restarting once to attempt to resolve fatal errors
+2022-03-17 17:30:07,900 - INFO: Logging file, starting from 03/17/2022 17:30:07
+2022-03-21 04:55:09,518 - INFO: Sent message to displays: 04:55 RO:118 DF:1488
+2022-03-21 04:55:09,554 - INFO: Removing rebooted flag, program is stable
+2022-03-21 07:28:27,902 - INFO: Sent message to displays: 07:28 RO:66 DF:1663
+2022-03-22 04:58:04,224 - INFO: Sent message to displays: 04:58 RO:42 DF:1663
+2022-03-22 06:19:09,478 - INFO: Sent message to displays: 06:19 RO:44 DF:631
+2022-03-23 04:57:36,950 - INFO: Sent message to displays: 04:57 RO:23 DF:560
+2022-03-23 06:01:12,937 - INFO: Sent message to displays: 06:01 RO:24 DF:595
+2022-03-24 04:45:40,046 - INFO: Sent message to displays: 04:45 RO:27 DF:497
+2022-03-24 06:20:42,818 - INFO: Sent message to displays: 06:20 RO:28 DF:511
+2022-03-25 04:47:39,913 - INFO: Sent message to displays: 04:47 RO:34 DF:452
+2022-03-28 04:50:53,451 - INFO: Sent message to displays: 04:50 RO:79 DF:1408
+2022-03-28 06:17:12,541 - INFO: Sent message to displays: 06:17 RO:79 DF:1472
+2022-03-28 11:06:06,374 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f293eda26d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f293eda26d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f293eda26d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-03-28 11:06:06,375 - ERROR: <traceback object at 0x7f293cbd8940>
+2022-03-28 11:06:06,375 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-28 11:06:06,375 - INFO: System restarting once to attempt to resolve fatal errors
+2022-03-28 11:08:26,421 - INFO: Logging file, starting from 03/28/2022 11:08:26
+2022-03-28 11:08:26,538 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fb4281ba640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb4281ba640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb4281ba640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-03-28 11:08:26,538 - ERROR: <traceback object at 0x7fb42813b780>
+2022-03-28 11:08:26,538 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-28 11:08:26,539 - INFO: Closing NMS M1000 Web Control
+2022-03-28 12:35:07,365 - INFO: Logging file, starting from 03/28/2022 12:35:07
+2022-03-28 12:35:23,352 - INFO: Sent message to displays: 12:35 RO:25 DF:1472
+2022-03-28 12:35:23,379 - INFO: Removing rebooted flag, program is stable
+2022-03-29 04:51:51,163 - INFO: Sent message to displays: 04:51 RO:21 DF:570
+2022-03-30 04:53:02,005 - INFO: Sent message to displays: 04:53 RO:14 DF:566
+2022-03-30 05:53:00,016 - INFO: Sent message to displays: 05:53 RO:14 DF:591
+2022-03-30 05:53:00,084 - INFO: Sent message to displays: 05:53 RO:14 DF:591
+2022-03-31 04:55:51,342 - INFO: Sent message to displays: 04:55 RO:22 DF:450
+2022-03-31 06:13:32,031 - INFO: Sent message to displays: 06:13 RO:23 DF:473
+2022-03-31 16:40:31,920 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f6009779430>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6009779430>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6009779430>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-03-31 16:40:31,921 - ERROR: <traceback object at 0x7f6009775a00>
+2022-03-31 16:40:31,921 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-31 16:40:31,922 - INFO: System restarting once to attempt to resolve fatal errors
+2022-03-31 16:42:22,879 - INFO: Logging file, starting from 03/31/2022 16:42:22
+2022-03-31 16:42:22,988 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f9a134d6640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a134d6640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a134d6640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-03-31 16:42:22,988 - ERROR: <traceback object at 0x7f9a13458440>
+2022-03-31 16:42:22,988 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-03-31 16:42:22,988 - INFO: Closing NMS M1000 Web Control
+2022-04-01 04:43:23,764 - INFO: Logging file, starting from 04/01/2022 04:43:23
+2022-04-01 05:02:13,170 - INFO: Sent message to displays: 05:02 RO:29 DF:413
+2022-04-01 05:02:13,206 - INFO: Removing rebooted flag, program is stable
+2022-04-01 05:02:20,857 - INFO: Sent message to displays: 05:02 RO:29 DF:413
+2022-04-01 07:13:01,750 - INFO: Sent message to displays: 07:13 RO:16 DF:420
+2022-04-04 05:01:34,557 - INFO: Sent message to displays: 05:01 RO:81 DF:1435
+2022-04-04 07:19:44,745 - INFO: Sent message to displays: 07:19 RO:42 DF:1487
+2022-04-04 16:15:21,334 - INFO: Sent message to displays: 16:15 RO:11 DF:1487
+2022-04-05 04:41:12,528 - INFO: Sent message to displays: 04:41 RO:27 DF:544
+2022-04-05 06:09:10,232 - INFO: Sent message to displays: 06:09 RO:28 DF:696
+2022-04-05 15:57:29,622 - INFO: Sent message to displays: 15:57 RO:6 DF:696
+2022-04-06 11:22:18,511 - INFO: Logging file, starting from 04/06/2022 11:22:18
+2022-04-06 11:24:02,771 - INFO: Sent message to displays: 11:24 RO:7 DF:479
+2022-04-06 13:56:12,224 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-04-06 13:56:12,225 - ERROR: <traceback object at 0x7fe908e19380>
+2022-04-06 13:56:12,225 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-06 13:56:12,225 - INFO: System restarting once to attempt to resolve fatal errors
+2022-04-06 13:56:35,786 - INFO: Logging file, starting from 04/06/2022 13:56:35
+2022-04-06 15:50:45,905 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+2022-04-06 15:50:45,906 - ERROR: <traceback object at 0x7f1f924e9b00>
+2022-04-06 15:50:45,907 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-06 15:50:45,907 - INFO: Closing NMS M1000 Web Control
+2022-04-07 10:35:04,803 - INFO: Logging file, starting from 04/07/2022 10:35:04
+2022-04-07 10:35:47,673 - INFO: Sent message to displays: 10:35 RO:9 DF:
+2022-04-07 10:35:47,698 - INFO: Removing rebooted flag, program is stable
+2022-04-07 10:56:14,819 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-04-07 10:56:14,820 - ERROR: <traceback object at 0x7f94c82bd840>
+2022-04-07 10:56:14,820 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-07 10:56:14,821 - INFO: System restarting once to attempt to resolve fatal errors
+2022-04-07 10:56:38,134 - INFO: Logging file, starting from 04/07/2022 10:56:38
+2022-04-07 11:02:45,716 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+2022-04-07 11:02:45,717 - ERROR: <traceback object at 0x7f76de9bfe00>
+2022-04-07 11:02:45,717 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-07 11:02:45,717 - INFO: Closing NMS M1000 Web Control
+2022-04-08 08:29:13,786 - INFO: Logging file, starting from 04/08/2022 08:29:13
+2022-04-08 08:29:28,015 - INFO: Sent message to displays: 08:29 RO:9 DF:
+2022-04-08 08:29:28,041 - INFO: Removing rebooted flag, program is stable
+2022-04-08 08:55:49,453 - INFO: Sent message to displays: 08:55 RO:8 DF:460
+2022-04-11 04:42:40,428 - INFO: Sent message to displays: 04:42 RO:100 DF:1395
+2022-04-12 04:47:51,534 - INFO: Sent message to displays: 04:47 RO:36 DF:658
+2022-04-12 05:16:53,398 - INFO: Sent message to displays: 05:16 RO:36 DF:662
+2022-04-13 04:46:14,817 - INFO: Sent message to displays: 04:46 RO:11 DF:419
+2022-04-14 04:42:48,307 - INFO: Sent message to displays: 04:42 RO:30 DF:469
+2022-04-14 06:51:17,122 - INFO: Sent message to displays: 06:51 RO:13 DF:472
+2022-04-14 10:10:53,694 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-04-14 10:10:53,694 - ERROR: <traceback object at 0x7fb291b0a540>
+2022-04-14 10:10:53,694 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-14 10:10:53,694 - INFO: System restarting once to attempt to resolve fatal errors
+2022-04-14 10:12:45,441 - INFO: Logging file, starting from 04/14/2022 10:12:45
+2022-04-14 12:17:50,443 - INFO: Logging file, starting from 04/14/2022 12:17:50
+2022-04-14 14:52:41,088 - INFO: Logging file, starting from 04/14/2022 14:52:41
+2022-04-14 14:57:08,485 - INFO: Logging file, starting from 04/14/2022 14:57:08
+2022-04-15 13:29:51,942 - INFO: Logging file, starting from 04/15/2022 13:29:51
+2022-04-18 04:23:36,776 - INFO: Sent message to displays: 04:23 RO:36 DF:1865
+2022-04-18 04:23:36,802 - INFO: Removing rebooted flag, program is stable
+2022-04-18 04:24:25,448 - INFO: Sent message to displays: 04:24 RO:79 DF:1865
+2022-04-19 04:04:10,191 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f8faa4804f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8faa4804f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8faa4804f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-04-19 04:04:10,192 - ERROR: <traceback object at 0x7f8faa433a40>
+2022-04-19 04:04:10,193 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-19 04:04:10,194 - INFO: System restarting once to attempt to resolve fatal errors
+2022-04-19 04:06:01,190 - INFO: Logging file, starting from 04/19/2022 04:06:01
+2022-04-19 04:06:21,290 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f240e1fd640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f240e1fd640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f240e1fd640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-04-19 04:06:21,291 - ERROR: <traceback object at 0x7f240e17b840>
+2022-04-19 04:06:21,291 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-19 04:06:21,291 - INFO: Closing NMS M1000 Web Control
+2022-04-19 17:43:34,701 - INFO: Logging file, starting from 04/19/2022 17:43:34
+2022-04-19 17:43:54,759 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f96b2d68640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f96b2d68640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f96b2d68640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-04-19 17:43:54,759 - ERROR: <traceback object at 0x7f96b2ce67c0>
+2022-04-19 17:43:54,759 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-19 17:43:54,759 - INFO: Closing NMS M1000 Web Control
+2022-04-19 18:16:29,450 - INFO: Logging file, starting from 04/19/2022 18:16:29
+2022-04-19 18:16:49,512 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f0dd4fa7640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0dd4fa7640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0dd4fa7640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-04-19 18:16:49,513 - ERROR: <traceback object at 0x7f0dd4f26800>
+2022-04-19 18:16:49,513 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-19 18:16:49,513 - INFO: Closing NMS M1000 Web Control
+2022-04-20 02:13:24,364 - INFO: Logging file, starting from 04/20/2022 02:13:24
+2022-04-20 04:31:01,336 - INFO: Sent message to displays: 04:31 RO:36 DF:1094
+2022-04-20 04:31:01,356 - INFO: Removing rebooted flag, program is stable
+2022-04-20 22:03:18,678 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-04-20 22:03:18,678 - ERROR: <traceback object at 0x7fbe85b42780>
+2022-04-20 22:03:18,679 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-04-20 22:03:18,680 - INFO: System restarting once to attempt to resolve fatal errors
+2022-04-20 22:05:10,060 - INFO: Logging file, starting from 04/20/2022 22:05:10
+2022-04-21 04:42:32,510 - INFO: Sent message to displays: 04:42 RO:20 DF:515
+2022-04-21 04:42:32,548 - INFO: Removing rebooted flag, program is stable
+2022-04-21 06:26:41,960 - INFO: Sent message to displays: 06:26 RO:20 DF:524
+2022-04-22 04:34:39,628 - INFO: Sent message to displays: 04:34 RO:21 DF:447
+2022-04-22 04:34:42,340 - INFO: Sent message to displays: 04:34 RO:21 DF:447
+2022-04-22 06:00:56,953 - INFO: Sent message to displays: 06:00 RO:21 DF:451
+2022-04-25 04:31:08,012 - INFO: Sent message to displays: 04:31 RO:39 DF:1315
+2022-04-26 04:41:25,192 - INFO: Sent message to displays: 04:41 RO:14 DF:615
+2022-04-26 05:00:51,936 - INFO: Sent message to displays: 05:00 RO:14 DF:619
+2022-04-27 04:37:45,026 - INFO: Sent message to displays: 04:37 RO:17 DF:558
+2022-04-27 05:03:02,319 - INFO: Sent message to displays: 05:03 RO:17 DF:559
+2022-04-27 05:43:20,212 - INFO: Sent message to displays: 05:43 RO:17 DF:560
+2022-04-28 04:45:24,151 - INFO: Sent message to displays: 04:45 RO:17 DF:491
+2022-04-28 05:11:22,014 - INFO: Sent message to displays: 05:11 RO:17 DF:493
+2022-04-28 05:50:00,119 - INFO: Sent message to displays: 05:50 RO:17 DF:494
+2022-04-28 05:53:42,413 - INFO: Sent message to displays: 05:53 RO:17 DF:520
+2022-04-29 05:06:05,207 - INFO: Sent message to displays: 05:06 RO:17 DF:454
+2022-04-29 05:50:31,308 - INFO: Sent message to displays: 05:50 RO:17 DF:388
+2022-04-29 06:06:39,796 - INFO: Sent message to displays: 06:06 RO:17 DF:455
+2022-05-02 04:38:29,616 - INFO: Sent message to displays: 04:38 RO:53 DF:1299
+2022-05-02 05:19:09,427 - INFO: Sent message to displays: 05:19 RO:53 DF:1300
+2022-05-02 15:29:03,473 - INFO: Sent message to displays: 15:29 RO:5 DF:1300
+2022-05-03 04:49:58,075 - INFO: Sent message to displays: 04:49 RO:7 DF:719
+2022-05-03 05:45:15,819 - INFO: Sent message to displays: 05:45 RO:8 DF:677
+2022-05-03 06:02:43,789 - INFO: Sent message to displays: 06:02 RO:8 DF:721
+2022-05-03 16:24:58,543 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2022-05-03 16:24:58,544 - ERROR: <traceback object at 0x7fc6385ae880>
+2022-05-03 16:24:58,544 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-05-03 16:24:58,544 - INFO: System restarting once to attempt to resolve fatal errors
+2022-05-03 16:26:50,318 - INFO: Logging file, starting from 05/03/2022 16:26:50
+2022-05-04 04:42:25,927 - INFO: Sent message to displays: 04:42 RO:10 DF:500
+2022-05-04 04:42:25,941 - INFO: Removing rebooted flag, program is stable
+2022-05-04 04:44:07,741 - INFO: Sent message to displays: 04:44 RO:14 DF:500
+2022-05-04 04:44:14,600 - INFO: Sent message to displays: 04:44 RO:14 DF:500
+2022-05-04 15:54:28,517 - INFO: Sent message to displays: 15:54 RO:7 DF:500
+2022-05-05 04:46:13,793 - INFO: Sent message to displays: 04:46 RO:22 DF:444
+2022-05-05 04:52:40,412 - INFO: Sent message to displays: 04:52 RO:22 DF:445
+2022-05-05 05:30:42,249 - INFO: Sent message to displays: 05:30 RO:22 DF:447
+2022-05-05 05:59:36,273 - INFO: Sent message to displays: 05:59 RO:22 DF:448
+2022-05-05 13:24:22,741 - INFO: Logging file, starting from 05/05/2022 13:24:22
+2022-05-05 13:24:42,828 - ERROR: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f778f07b640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f778f07b640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 143, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 112, in getfbmOrders
+    response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ssapi.shipstation.com', port=443): Max retries exceeded with url: /orders?orderStatus=awaiting_shipment&pageSize=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f778f07b640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+2022-05-05 13:24:42,829 - ERROR: <traceback object at 0x7f778effc780>
+2022-05-05 13:24:42,830 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-05-05 13:24:42,830 - INFO: System restarting once to attempt to resolve fatal errors
+2022-05-05 13:26:34,638 - INFO: Logging file, starting from 05/05/2022 13:26:34
+2022-05-05 14:53:57,489 - INFO: Sent message to displays: 14:53 RO:11 DF:
+2022-05-05 14:53:57,521 - INFO: Removing rebooted flag, program is stable
+2022-05-05 14:54:05,034 - INFO: Sent message to displays: 14:54 RO:11 DF:
+2022-05-06 04:45:53,518 - INFO: Sent message to displays: 04:45 RO:19 DF:392
+2022-05-06 06:29:55,623 - INFO: Sent message to displays: 06:29 RO:19 DF:396
+2022-05-06 13:09:24,140 - ERROR: Traceback (most recent call last):
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 216, in <module>
+    gui() #executes program
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 203, in gui
+    FBM = getfbmOrders() #runs FBM order fetch module
+  File "/home/nms/Documents/Display-Tool/NMS M1000 Display Tool.pyw", line 113, in getfbmOrders
+    dict = loads(response.text) #gets post request response
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+2022-05-06 13:09:24,141 - ERROR: <traceback object at 0x7efef06a5700>
+2022-05-06 13:09:24,141 - CRITICAL: Fatal Error Occured, closing COM port :/
+2022-05-06 13:09:24,141 - INFO: System restarting once to attempt to resolve fatal errors
+2022-05-06 13:09:47,753 - INFO: Logging file, starting from 05/06/2022 13:09:47
+2022-05-09 04:44:43,859 - INFO: Sent message to displays: 04:44 RO:52 DF:1104
+2022-05-09 04:44:43,895 - INFO: Removing rebooted flag, program is stable
+2022-05-10 05:12:52,945 - INFO: Sent message to displays: 05:12 RO:23 DF:639
+2022-05-11 04:49:30,943 - INFO: Sent message to displays: 04:49 RO:23 DF:580
