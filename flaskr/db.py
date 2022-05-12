@@ -1,6 +1,6 @@
 import sqlite3
-
 import click
+from datetime import datetime
 from flask import current_app, g
 from flask.cli import with_appcontext
 
@@ -16,6 +16,15 @@ def get_db():
 
     return g.db
 
+def log(level,message):
+    timestamp = datetime.now().strftime("%m/%d/%Y: %H:%M:%S")
+
+    db = get_db()
+    db.execute("DELETE FROM logging WHERE id NOT IN (SELECT id FROM logging ORDER BY id DESC LIMIT 50)") #remove old logs
+    db.commit()
+    db.execute("INSERT INTO logging (datetime, lvl, msg) VALUES (?, ?, ?)", (timestamp, level, message), )
+    print(timestamp,"-",message)
+    db.commit()
 
 def close_db(e=None):
     db = g.pop('db', None)
