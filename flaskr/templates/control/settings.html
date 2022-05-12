@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  {% block title %}Debugging{% endblock %}
+{% endblock %}
+
+{% block hyperlink %}
+  {% if g.user %}
+  <a class="href" href="{{ url_for('control.index') }}">Control</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<script>
+  //script will get current toggle setting from database and update toggles accordingly
+  $(document).ready(function(){
+      $.getJSON('/getsettings', function(settings) {
+        var throttle = settings[0][0];
+        var nightVision = settings[0][1];
+        var keyControl = settings[0][2];
+        var buttonControl = settings[0][3]
+        var resolution = settings[0][3]
+
+        if (nightVision == 1){
+          document.getElementById("nightvision").checked = true;
+        } if (keyControl == 1){
+          document.getElementById("keycontrol").checked = true;
+        } if (buttonControl == 1){
+          document.getElementById("buttoncontrol").checked = true;
+        };
+    });
+  });
+</script>
+
+<div style="margin: 20px;">
+<h4 class="switchlabel">Enable Night Vision:</h4>
+<label class="switch">
+  <input type="checkbox" id="nightvision" onclick="nightvision()" checked>
+  <span class="slider round"></span>
+</label>
+
+<h4 class="switchlabel">Enable Key Control:</h4>
+<label class="switch">
+  <input type="checkbox" id="keycontrol" onclick="keycontrol()" checked>
+  <span class="slider round"></span>
+</label>
+
+<h4 class="switchlabel">Enable Button Control:</h4>
+<label class="switch">
+  <input type="checkbox" id="buttoncontrol" onclick="buttoncontrol()">
+  <span class="slider round"></span>
+</label>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $(":checkbox").click(function(event) {
+      id = $(this).attr('id')
+      checked = document.getElementById(id).checked
+      if (checked) {var value = 1} else {var value = 0}; //$(this).attr('checked') gets value of clicked element
+      $.getJSON(`/changesetting?command=${id}&value=${value}`, function(data) {});
+    });
+  });
+</script>
+  
+
+{% endblock %}

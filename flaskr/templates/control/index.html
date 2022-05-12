@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  {% block title %}Control{% endblock %}
+{% endblock %}
+
+{% block hyperlink %}
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css" media="print"> 
+  BODY {display:none;visibility:hidden;}
+</style>  
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+  //script will get current toggle setting from database and update toggles accordingly
+  $(document).ready(function(){
+      $.getJSON('/getmsg', function(settings) {
+        var msg = settings[0][0];
+        var mode = settings[0][1].toLowerCase().replace(/\s/g, '_');
+        var df = settings[0][2];
+
+        const $select = document.querySelector('#mode');
+        $select.value = $select.querySelector('#' + mode).value;
+        $('#msg').val(msg);
+        $('#df').val(df);
+
+    });
+  });
+</script>
+
+<div class = centerdiv>
+
+  <form method="post" style="align-items: center;">
+    <div class="input-container ic1" style="text-align: inherit; margin: 20px; height: auto; width: auto;">
+      <textarea id="msg" name="msg" class="input" rows="5" cols="50" name="msg" placeholder=" " required></textarea>
+      <div class="cut"></div>
+      <label for="msg" class="placeholder">Message</label>
+    </div>
+
+    <div class="inline">
+      <select id="mode" name="mode" class="input" style="height: 50px; width: 230px; color: #9d9d9d">
+        <option id="static" >Static</option>
+        <option id="slow_scrolling" >Slow Scrolling</option>
+        <option id="medium_scrolling" selected>Medium Scrolling</option>
+        <option id="fast_scrolling" >Fast Scrolling</option>
+        <option id="slow_blinking" >Slow Blinking</option>
+        <option id="medium_blinking" >Medium Blinking</option>
+        <option id="fast_blinking" >Fast Blinking</option>
+       </select>
+
+      <div class="input-container ic1" style="text-align: left; margin: 20px; width: 25%; display: inline-block;">
+        <input id="df" name="df" class="input" type="number" min="0" style="width: auto;" placeholder=" "  required/>
+        <div class="cut"></div>
+        <label for="df" class="placeholder">DF Orders</label>
+      </div>
+    </div>
+
+    <input class="button-1" type="submit" value="Update Messages" style="margin-top: 20px;">
+    
+  </form>
+
+<script type=text/javascript>
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+</script>
+
+</div>
+{% endblock %}

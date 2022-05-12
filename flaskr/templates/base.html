@@ -1,0 +1,27 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - NMS Display Control</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<nav>
+  <h1>Message Interface: {% block header %}{% endblock %}  </h1>
+  <ul>
+    {% if g.user %}
+      <li>{% block hyperlink %}{% endblock %}
+      <li><a class="href" href="{{ url_for('auth.user') }}">{{ g.user['username'] }}</a>
+      <li><a class="href" href="{{ url_for('auth.logout') }}">Logout</a>
+    {% else %}
+      <li><a class="href" href="{{ url_for('auth.login') }}">Login</a>
+    {% endif %}
+  </ul>
+</nav>
+<section class="content">
+  <div class="centerdiv">
+  <img src="{{url_for('static', filename='nms.png')}}" style="margin-top: 20px;"/>
+  <header>
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+  </div>
+</section>

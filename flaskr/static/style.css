@@ -1,0 +1,390 @@
+html {
+    font-family: sans-serif;
+    background: #292929;
+    padding: 1rem;
+    color: #f1f1f1;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #121212;
+}
+
+h1 {
+    font-family: serif;
+    color: #f1f1f1;
+    margin: 1rem 0;
+}
+
+a {
+    color: #f1f1f1;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+nav {
+    background: #1e1e1e;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+nav h1 {
+    flex: auto;
+    margin: 0;
+}
+
+nav h1 a {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a,
+nav ul li span,
+header .action {
+    display: block;
+    padding: 0.5rem;
+}
+
+.href {
+    text-decoration: none
+}
+
+.href:hover {
+    color: #bdbdbd;
+}
+
+.content {
+    padding: 0 1rem 1rem;
+}
+
+.content>header {
+    display: flex;
+    align-items: flex-end;
+}
+
+.content>header h1 {
+    flex: auto;
+    margin: 1rem 0 0.25rem 0;
+}
+
+.flash {
+    margin: 1em 0;
+    padding: 1em;
+    background: #1e1e1e;
+}
+
+.content:last-child {
+    margin-bottom: 0;
+}
+
+.content form {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content input,
+.content textarea {
+    margin-bottom: 1em;
+}
+
+input.danger {
+    color: #cc2f2e;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.centerdiv {
+    text-align: center;
+}
+
+.button {
+    background-color: #292929;
+    border: none;
+    color: #bbb;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-top: 16px;
+    border-radius: 15px;
+}
+
+/* Slider CSS: */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switchlabel {
+    display: inline;
+    vertical-align: middle;
+    margin: 15px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #35393b;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #181a1b;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*Dropdown CSS*/
+.dropbtn {
+    background-color: #292929;
+    border-radius: 8px;
+    margin-right: 13px;
+    color: #9d9d9d;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    border-radius: 8px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #292929;
+    min-width: 160px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #9d9d9d;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #292929;
+    border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #181a1b;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #402c59;
+}
+
+.button-1 {
+    margin-top: 4px;
+    margin-bottom: 18px;
+    height: 50px;
+    appearance: none;
+    background-color: #333;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 12px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.button-1:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+.button-1:hover {
+    background-color: #242424;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    margin-left: 10px;
+}
+
+.container div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.container div input {
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+/*.form { background-color: #15172b; border-radius: 20px; box-sizing: border-box; height: 500px; padding: 20px; width: 320px;}*/
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.input {
+    background-color: #292929;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+    
+}
+
+.input:hover {
+    background-color: #242424;
+}
+
+.cut {
+    background-color: #121212;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+}
+
+.cut-short {
+    width: 50px;
+}
+
+.cut-long {
+    width: 100px;
+}
+
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
+    transform: translateY(8px);
+}
+
+.placeholder {
+    color: #9d9d9d;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 550;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown)~.placeholder {
+    color: #808097;
+}
+
+.input:focus~.placeholder {
+    color: #dc2f55;
+}
+
+.inline { 
+    white-space: nowrap;
+    text-align: left;
+    margin-left: 20px; 
+}
+
+textarea {
+    resize: none;
+    font-family: inherit;
+    padding-top: 15px !important;
+}
