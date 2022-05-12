@@ -1,9 +1,15 @@
 import os
-
+from multiprocessing.dummy import Process
 from flask import Flask
 
 
 def create_app(test_config=None):
+    #setup backend script as a subprocess
+    from . import backend
+    global p 
+    p = Process(target=backend.start)
+    p.start()
+
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
