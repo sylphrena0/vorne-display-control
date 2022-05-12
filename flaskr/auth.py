@@ -37,7 +37,7 @@ def login_required(view):
 def admin_required(view):
     @functools.wraps(view)
     def wrapped_view(**kwargs):
-        if session['admin'] is 0:
+        if session['admin'] == 0:
             flash("Administrator login required!")
             return redirect(url_for('auth.user'))
 
