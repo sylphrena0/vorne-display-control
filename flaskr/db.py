@@ -23,7 +23,7 @@ def log(level,message):
         db = get_db()
         db.execute("DELETE FROM logging WHERE id NOT IN (SELECT id FROM logging ORDER BY id DESC LIMIT 50)") #remove old logs
         db.commit()
-        db.execute("INSERT INTO logging (datetime, lvl, msg) VALUES (?, ?, ?)", (timestamp, level, message), )
+        db.execute("INSERT INTO logging (datetime, lvl, msg) VALUES (?, ?, ?)", (timestamp, level.upper(), message), )
         print(timestamp,"-",message)
         db.commit()
     except Exception as e:
