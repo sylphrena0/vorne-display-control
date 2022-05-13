@@ -1,22 +1,16 @@
 import os
-from multiprocessing.dummy import Process
 from flask import Flask
-
+from . import backend
 
 def create_app(test_config=None):
-    #setup backend script as a subprocess
-    from . import backend
-    global p 
-    p = Process(target=backend.start)
-    p.start()
-
-    # create and configure the app
+    
     app = Flask(__name__, instance_relative_config=True)
+
     app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
     )
-
+    
     if test_config is None:
         # load the instance config, if it exists, when not testing
         app.config.from_pyfile('config.py', silent=True)
@@ -40,6 +34,6 @@ def create_app(test_config=None):
     app.register_blueprint(control.bp)
     app.add_url_rule('/', endpoint='index')
 
-    #from .templates.control import stream
+    backend.backend(app) #calls our backend function, which starts a sub-process with the application context, even if nobody loads the web app
 
     return app

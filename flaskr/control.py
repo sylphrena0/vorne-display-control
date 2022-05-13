@@ -1,5 +1,4 @@
 import io #used to store frames
-import logging #self-explainatory
 import json #to get data from js
 import socketserver #may be unused?
 from flask import Blueprint, flash, g, redirect, render_template, request, url_for, Flask, Response #web framework imports
