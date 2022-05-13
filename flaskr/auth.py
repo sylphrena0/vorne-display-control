@@ -2,6 +2,7 @@ import functools
 from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for
 from werkzeug.security import check_password_hash, generate_password_hash
 from flaskr.db import get_db, log
+import re
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
@@ -56,7 +57,9 @@ def register():
         db = get_db()
         error = None
 
-        if not username:
+        if re.compile('[^0-9a-zA-Z]+').search(username): #ensures no special charecters are present in username, should prevent injection attacks
+            error = "Invalid Username"
+        elif not username:
             error = 'Username is required.'
         elif not password:
             error = 'Password is required.'
@@ -99,7 +102,9 @@ def login():
             'SELECT * FROM user WHERE username = ?', (username,)
         ).fetchone()
 
-        if user is None:
+        if re.compile('[^0-9a-zA-Z]+').search(username): #ensures no special charecters are present in username, should prevent injection attacks
+            error = "Invalid Username"
+        elif user is None:
             error = 'Incorrect username.'
         elif not check_password_hash(user['password'], password):
             error = 'Incorrect password.'
@@ -124,7 +129,6 @@ def user():
         if "change_password" in request.form:
             oldpassword = request.form['oldpassword']
             newpassword = request.form['newpassword']
-
             if not oldpassword or not newpassword: #check that the form is complete
                 error = 'All fields are required.'
 
@@ -147,7 +151,9 @@ def user():
 
             user_data = db.execute('SELECT * FROM user WHERE id = {}'.format(user_id,)).fetchone() #grab user data to check password
 
-            if user_data is None: #catch database errors
+            if re.compile('[^0-9a-zA-Z]+').search(newusername): #ensures no special charecters are present in username, should prevent injection attacks
+                error = "Invalid New Username"
+            elif user_data is None: #catch database errors
                 error = 'Database error.'
             elif not check_password_hash(user_data['password'], password): #check that the password is correct
                 error = 'Incorrect password.'
