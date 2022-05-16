@@ -88,10 +88,13 @@ def settings():
         end_time = request.form['end_time']
         
         try:
+            db = get_db()
+            db.execute("DELETE FROM addresses")
+            db.commit()
+            log("INFO","Updating addresses, " + addresses + shipping_addresses)
             for display in addresses:
                 if int(display) >= 0 and int(display) <= 100:
                     db = get_db()
-                    db.execute("DELETE FROM addresses")
                     db.execute("INSERT INTO addresses VALUES (?, 0)", (display,))
                     db.commit()
                 else:
