@@ -1,3 +1,4 @@
+from dis import dis
 import json #to get data from js
 from flask import Blueprint, flash, g, redirect, render_template, request, url_for, Flask, Response #web framework imports
 from flaskr.auth import login_required, admin_required
@@ -71,6 +72,7 @@ def index():
 #defines the settings page, currently blank. contains depreciated code from tutorial
 @bp.route('/settings', methods=('GET', 'POST'))
 @login_required
+@admin_required
 def settings():
     if request.method == 'POST':
         error = None
@@ -79,8 +81,8 @@ def settings():
         font = ''.join(filter(str.isdigit, request.form['font']))
         ss_api_key = request.form['SS_API_KEY']
         ss_api_secret = request.form['SS_API_SECRET']
-        addresses = request.form['displays'].split(", ")
-        shipping_addresses = request.form['shipping_displays'].split(", ")
+        addresses = request.form['displays'].replace(" ","").split(",")
+        shipping_addresses = request.form['shipping_displays'].replace(" ","").split(",")
         FBM_delay = request.form['FBM_delay']
         start_time = request.form['start_time']
         end_time = request.form['end_time']
@@ -96,6 +98,8 @@ def settings():
                     error = "Invalid Addresses!"
             for display in shipping_addresses:
                 if int(display) >= 0 and int(display) <= 100:
+                    if int(display) >= 0 and int(display) <= 9 and len(display) < 2:
+                        display = "0" + str(display)
                     db = get_db()
                     db.execute("INSERT INTO addresses(stored, shipping) VALUES (?, 1)", (display,))
                     db.commit()
