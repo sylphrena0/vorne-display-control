@@ -1,25 +1,12 @@
-import io #used to store frames
 import json #to get data from js
-import socketserver #may be unused?
+from turtle import st #may be unused?
 from flask import Blueprint, flash, g, redirect, render_template, request, url_for, Flask, Response #web framework imports
-from werkzeug.exceptions import abort
-from flaskr.auth import login_required
-from flaskr.db import get_db,close_db #access to database
+from flaskr.auth import login_required, admin_required
+from flaskr.db import log, get_db,close_db #access to database
+from flaskr.backend import parsemode, sendmessage, get_ser
 
 #sets the blueprint for this code
 bp = Blueprint('control', __name__)
-
-'''
-def updateSettings():
-    db = get_db()
-    settings_list = db.execute('SELECT * FROM settings WHERE id = 1') #grab settings data
-    #settings['throttle'] settings['nightvision'] settings['buttoncontrol'] settings['keycontrol'] settings['resolution'] 
-
-    #set nightvision mode
-
-
-updateSettings()
-'''
 
 #defines a settings function which is called when /getmsg is accessed
 @bp.route('/getmsg')
@@ -50,11 +37,31 @@ def index():
 
         try:
             db = get_db()
-            print("UPDATE msg SET (msg, mode, df) = (?, ?, ?) WHERE id = 1",(msg, mode, df,))
             db.execute("UPDATE msg SET (msg, mode, df) = (?, ?, ?) WHERE id = 1",(msg, mode, df,))
             db.commit()
-        except error as e:
-            flash(e)
+        except Exception as e:
+            log("ERROR",e)
+        rate, scrollexpiry, blinktype = parsemode(mode) #parse the human readable mode to commands
+        
+        get_ser()
+
+        settings = {}
+        addresses, shipping = [], []
+        storedsettings = get_db().execute('SELECT * FROM settings')
+        for setting in storedsettings:
+            settings[setting['setting']] = setting['stored']
+        fnt = int(settings['FNT'])
+
+        storedaddresses = get_db().execute('SELECT * FROM addresses')
+        for address in storedaddresses:
+            if address['shipping'] == 1:
+                shipping.append(address['stored'])
+            else:
+                addresses.append(address['stored'])
+
+        totalfbm = get_db().execute('SELECT ro FROM msg').fetchone()[0]
+        sendmessage(msg,addr=addresses,font=fnt,line=2,rate=rate,scrollexpiry=scrollexpiry,blinktype=blinktype)
+        sendmessage(" RO:" + str(totalfbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
 
         if error is not None:
             flash(error)
@@ -66,4 +73,77 @@ def index():
 @bp.route('/settings', methods=('GET', 'POST'))
 @login_required
 def settings():
+    if request.method == 'POST':
+        error = None
+        com_port = request.form['COM']
+        baud_rate = ''.join(filter(str.isdigit, request.form['baudrate']))
+        font = ''.join(filter(str.isdigit, request.form['font']))
+        ss_api_key = request.form['SS_API_KEY']
+        ss_api_secret = request.form['SS_API_SECRET']
+        addresses = request.form['displays'].split(", ")
+        shipping_addresses = request.form['shipping_displays'].split(", ")
+        FBM_delay = request.form['FBM_delay']
+        start_time = request.form['start_time']
+        end_time = request.form['end_time']
+        
+        try:
+            for display in addresses:
+                if int(display) >= 0 and int(display) <= 100:
+                    db = get_db()
+                    db.execute("DELETE FROM addresses")
+                    db.execute("INSERT INTO addresses VALUES (?, 0)", (display,))
+                    db.commit()
+                else:
+                    error = "Invalid Addresses!"
+            for display in shipping_addresses:
+                if int(display) >= 0 and int(display) <= 100:
+                    db = get_db()
+                    db.execute("INSERT INTO addresses(stored, shipping) VALUES (?, 1)", (display,))
+                    db.commit()
+                else:
+                    error = "Invalid Addresses!"
+            
+            if ss_api_key != "" and ss_api_secret != "":
+                log("INFO","Updating Shipstation API Keys")
+                db = get_db()
+                db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'SS_API_KEY'", (ss_api_key,))
+                db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'SS_API_SECRET'", (ss_api_secret,))
+                db.commit()
+
+            log("INFO","Updating settings -" + " com_port: " + com_port + ", baud_rate: " + baud_rate + ", font: " + font + ", FBM_delay: " + FBM_delay + ", start_time: " + start_time + ", end_time: " + end_time)
+            db = get_db()
+            db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'COM_PORT'", (com_port,))
+            db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'BAUD_RATE'", (baud_rate,))
+            db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'FNT'", (font,))
+            db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'FBM_DELAY'", (FBM_delay,))
+            db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'START_TIME'", (start_time,))
+            db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'END_TIME'", (end_time,))
+            db.commit()
+        except Exception as e:
+            log("ERROR",e)
+        if error is not None:
+            flash(error)
+    elif request.method == 'GET':
+        return render_template('control/settings.html', form=request.form)
     return render_template('control/settings.html')
+
+#defines a settings function which is called when /getsettings is accessed
+@bp.route('/getsettings')
+@admin_required
+def getsettings():
+    db = get_db()
+
+    settings = {}
+    for setting in get_db().execute('SELECT * FROM settings WHERE NOT (setting = "SS_API_KEY") AND NOT (setting = "SS_API_SECRET")'):
+        settings[setting['setting']] = setting['stored']
+
+    addresses, shipping = "", ""
+    for address in get_db().execute('SELECT * FROM addresses'):
+        if address['shipping'] == 1:
+            shipping += address['stored'] + ", " if shipping != "" else address['stored']
+        else:
+            addresses += address['stored'] + ", " if addresses != "" else address['stored']
+    settings['ADDRESSES'] = addresses
+    settings['SHIPPING_ADDRESSES'] = shipping
+
+    return Response(json.dumps(settings))
