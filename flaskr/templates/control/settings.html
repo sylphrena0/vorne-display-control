@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  {% block title %}Debugging{% endblock %}
+  {% block title %}Settings{% endblock %}
 {% endblock %}
 
 {% block hyperlink %}
@@ -11,46 +11,118 @@
 {% endblock %}
 
 {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script>
   //script will get current toggle setting from database and update toggles accordingly
   $(document).ready(function(){
       $.getJSON('/getsettings', function(settings) {
-        var throttle = settings[0][0];
-        var nightVision = settings[0][1];
-        var keyControl = settings[0][2];
-        var buttonControl = settings[0][3]
-        var resolution = settings[0][3]
+        var COM_PORT = settings['COM_PORT'];
+        var BAUD_RATE = settings['BAUD_RATE'];
+        var FNT = settings['FNT'];
+        var FBM_DELAY = settings['FBM_DELAY'];
+        var START_TIME = settings['START_TIME'];
+        var END_TIME = settings['END_TIME'];
+        var ADDRESSES = settings['ADDRESSES'];
+        var SHIPPING_ADDRESSES = settings['SHIPPING_ADDRESSES'];
+        
+        $('#COM').val(COM_PORT);
+        const $selectbaud = document.querySelector('#baudrate');
+        $selectbaud.value = $selectbaud.querySelector('#baud' + BAUD_RATE).value;
+        const $selectfnt = document.querySelector('#font');
+        $selectfnt.value = $selectfnt.querySelector('#font' + FNT).value;
+        $('#displays').val(ADDRESSES);
+        $('#shipping_displays').val(SHIPPING_ADDRESSES);
+        $('#FBM_delay').val(FBM_DELAY);
+        $('#start_time').val(START_TIME);
+        $('#end_time').val(END_TIME);
 
-        if (nightVision == 1){
-          document.getElementById("nightvision").checked = true;
-        } if (keyControl == 1){
-          document.getElementById("keycontrol").checked = true;
-        } if (buttonControl == 1){
-          document.getElementById("buttoncontrol").checked = true;
-        };
     });
   });
 </script>
 
-<div style="margin: 20px;">
-<h4 class="switchlabel">Enable Night Vision:</h4>
-<label class="switch">
-  <input type="checkbox" id="nightvision" onclick="nightvision()" checked>
-  <span class="slider round"></span>
-</label>
+<form method="post" style="display: inline;">
+<div class="centerdiv" style="margin-top:20px">
 
-<h4 class="switchlabel">Enable Key Control:</h4>
-<label class="switch">
-  <input type="checkbox" id="keycontrol" onclick="keycontrol()" checked>
-  <span class="slider round"></span>
-</label>
+  <div class="input-container ic1" style="text-align: left; margin: 20px; width: 20%; display: inline-block;">
+    <input id="COM" name="COM" class="input" type="text" placeholder=" " required/>
+    <div class="cut"></div>
+    <label for="COM" class="placeholder">COM Port</label>
+  </div>
 
-<h4 class="switchlabel">Enable Button Control:</h4>
-<label class="switch">
-  <input type="checkbox" id="buttoncontrol" onclick="buttoncontrol()">
-  <span class="slider round"></span>
-</label>
+  <select id="baudrate" name="baudrate" class="input" style="height: 50px; width: 20%; color: #9d9d9d; margin:20px;">
+    <option id="baud300" >300 Baudrate</option>
+    <option id="baud600" >600 Baudrate</option>
+    <option id="baud1200" >1200 Baudrate</option>
+    <option id="baud2400" >2400 Baudrate</option>
+    <option id="baud4800" >4800 Baudrate</option>
+    <option id="baud9600" selected>9600 Baudrate</option>
+    <option id="baud19200" >19200 Baudrate</option>
+  </select>
+
+  <select id="font" name="font" class="input" style="height: 50px; width: 20%; color: #9d9d9d; margin:20px;">
+    <option id="font1" selected title="8x6 pixels, 2 lines of 20 characters">Font 1</option>
+    <option id="font2" title="8x8 pixels, 2 lines of 15 characters">Font 2</option>
+    <option id="font3" title="16x12 pixels, 1 line of 10 characters">Font 3</option>
+    <option id="font4" title="16x15 pixels, 1 line of 8 characters">Font 4</option>
+    <option id="font5" title="16x8 pixels, 1 line of 15 characters">Font 5</option>
+    <option id="font6" title="16x10 pixels, 1 line of 12 characters">Font 6</option>
+    <option id="font7" title="8x6 pixels, 2 lines of 20 characters *JIS8/Katakana">Font 7</option>
+    <option id="font8" title="8x6 pixels, 2 lines of 20 characters *Slavic">Font 8</option>
+    <option id="font9" title="8x6 pixels, 2 lines of 20 characters *Cyrillic">Font 9</option>
+  </select>
+  </div>
+
+  <div class="centerdiv">
+    <div class="input-container ic1" style="text-align: left; margin: 20px; width: 32.5%; display: inline-block;">
+      <input id="SS_API_KEY" name="SS_API_KEY" class="input" type="password" placeholder=" " title="Shipstation API Key" />
+      <div class="cut"></div>
+      <label for="SS_API_KEY" class="placeholder">SS API KEY</label>
+    </div>
+  
+    <div class="input-container ic1" style="text-align: left; margin: 20px; width: 32.5%; display: inline-block;">
+      <input id="SS_API_SECRET" name="SS_API_SECRET" class="input" type="password" placeholder=" "  title="Shipstation API Secret" />
+      <div class="cut cut-long"></div>
+      <label for="SS_API_SECRET" class="placeholder">SS API SECRET</label>
+    </div>
+    </div>
+
+    <div class="centerdiv">
+      <div class="input-container ic1" style="text-align: left; margin: 20px; width: 50%; display: inline-block;">
+        <input id="displays" name="displays" class="input" type="text" placeholder=" " title="Display Addresses" required/>
+        <div class="cut cut-exlong"></div>
+        <label for="displays" class="placeholder">Display Addresses</label>
+      </div>
+
+      <div class="input-container ic1" style="text-align: left; margin: 20px; width: 15%; display: inline-block;">
+        <input id="shipping_displays" name="shipping_displays" class="input" type="text" placeholder=" " title="Shipping Display Addresses" required/>
+        <div class="cut"></div>
+        <label for="shipping_displays" class="placeholder">Shipping</label>
+      </div>
+    </div>
+
+    <div class="centerdiv">
+      <div class="input-container ic1" style="text-align: left; margin: 20px; width: 20%; display: inline-block;">
+        <input id="FBM_delay" name="FBM_delay" class="input" type="number" placeholder=" " min="1" max="120" step="1" title="Set delay in minutes between API requests to update FBM numbers on displays" required/>
+        <div class="cut"></div>
+        <label for="FBM_delay" class="placeholder">FBM Delay</label>
+      </div>
+      <div class="input-container ic1" style="text-align: left; margin: 20px; width: 20%; display: inline-block;">
+        <input type="time" id="start_time" class="input" name="start_time" title="Set start time for displays in the morning" required>
+        <div class="cut"></div>
+        <label for="start_time" class="placeholder">Start Time</label>
+      </div>
+      <div class="input-container ic1" style="text-align: left; margin: 20px; width: 20%; display: inline-block;">
+        <input type="time" id="end_time" class="input" name="end_time" title="Set end time for displays in the evening" required>
+        <div class="cut"></div>
+        <label for="end_time" class="placeholder">End Time</label>
+      </div>
+
+    </div>
+
+  <input name="update" class="button-1" type="submit" value="Update Settings">
+  </form>
+  <input name="debugging" class="button-1" type="submit" value="Debugging">
 </div>
 
 <script>
@@ -59,7 +131,7 @@
       id = $(this).attr('id')
       checked = document.getElementById(id).checked
       if (checked) {var value = 1} else {var value = 0}; //$(this).attr('checked') gets value of clicked element
-      $.getJSON(`/changesetting?command=${id}&value=${value}`, function(data) {});
+      $.getJSON(`/changesetting?FBM_delaymand=${id}&value=${value}`, function(data) {});
     });
   });
 </script>
