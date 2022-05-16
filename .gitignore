@@ -1,1 +1,3 @@
 flaskr/__pycache__/
+flaskr/__pycache__/*
+flaskr/ss-api-insert.sql
