@@ -1,5 +1,4 @@
 import json #to get data from js
-from turtle import st #may be unused?
 from flask import Blueprint, flash, g, redirect, render_template, request, url_for, Flask, Response #web framework imports
 from flaskr.auth import login_required, admin_required
 from flaskr.db import log, get_db,close_db #access to database
