@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from . import backend
+from . import auth, backend, control, db
 
 def create_app(test_config=None):
     
@@ -24,16 +24,13 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    from . import db
     db.init_app(app)
 
-    from . import auth
     app.register_blueprint(auth.bp)
 
-    from . import control
     app.register_blueprint(control.bp)
     app.add_url_rule('/', endpoint='index')
 
-    backend.backend(app) #calls our backend function, which starts a sub-process with the application context, even if nobody loads the web app
+    backend.start(app) #calls our backend function, which starts a sub-process with the application context, even if nobody loads the web app
 
     return app
