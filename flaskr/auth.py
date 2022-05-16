@@ -57,7 +57,7 @@ def register():
         db = get_db()
         error = None
 
-        if re.compile('[^0-9a-zA-Z]+').search(username): #ensures no special charecters are present in username, should prevent injection attacks
+        if re.compile('[^0-9a-zA-Z]+').search(username) or len(username) > 20: #ensures no special charecters are present in username, should prevent injection attacks
             error = "Invalid Username"
         elif not username:
             error = 'Username is required.'
@@ -151,7 +151,7 @@ def user():
 
             user_data = db.execute('SELECT * FROM user WHERE id = {}'.format(user_id,)).fetchone() #grab user data to check password
 
-            if re.compile('[^0-9a-zA-Z]+').search(newusername): #ensures no special charecters are present in username, should prevent injection attacks
+            if re.compile('[^0-9a-zA-Z]+').search(newusername) or len(newusername) > 20: #ensures no special charecters are present in username, should prevent injection attacks
                 error = "Invalid New Username"
             elif user_data is None: #catch database errors
                 error = 'Database error.'
