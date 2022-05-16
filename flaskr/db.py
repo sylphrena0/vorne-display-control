@@ -41,6 +41,11 @@ def init_db():
 
     with current_app.open_resource('schema.sql') as f:
         db.executescript(f.read().decode('utf8'))
+    try:
+        with current_app.open_resource('ss-api-insert.sql') as f:
+            db.executescript(f.read().decode('utf8'))
+    except:
+        pass
 
     #make default user
     db.execute("INSERT INTO user (username, admin, password) VALUES (?, ?, ?)",    ('Admin', 1, generate_password_hash('administrator')),)
