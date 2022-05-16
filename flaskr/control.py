@@ -141,11 +141,17 @@ def getsettings():
         settings[setting['setting']] = setting['stored']
 
     addresses, shipping = "", ""
-    for address in get_db().execute('SELECT * FROM addresses'):
-        if address['shipping'] == 1:
-            shipping = shipping + address['stored'] + ", " if shipping == "" else shipping + address['stored']
+    for row in get_db().execute('SELECT * FROM addresses'):
+        if row['shipping'] == 1:
+            if shipping == "":
+                shipping += row['stored']
+            else:
+                shipping += ", " + row['stored']
         else:
-            addresses = addresses + address['stored'] + ", " if addresses == "" else addresses + address['stored']
+            if addresses == "":
+                addresses += row['stored']
+            else:
+                addresses += ", " + row['stored']
     settings['ADDRESSES'] = addresses
     settings['SHIPPING_ADDRESSES'] = shipping
 
