@@ -143,9 +143,9 @@ def getsettings():
     addresses, shipping = "", ""
     for address in get_db().execute('SELECT * FROM addresses'):
         if address['shipping'] == 1:
-            shipping += address['stored'] + ", " if shipping != "" else address['stored']
+            shipping += address['stored'] + ", " if shipping == "" else address['stored']
         else:
-            addresses += address['stored'] + ", " if addresses != "" else address['stored']
+            addresses += address['stored'] + ", " if addresses == "" else address['stored']
     settings['ADDRESSES'] = addresses
     settings['SHIPPING_ADDRESSES'] = shipping
 
