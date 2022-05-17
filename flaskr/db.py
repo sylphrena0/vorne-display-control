@@ -19,11 +19,12 @@ def get_db():
 
 def log(level,message):
     timestamp = datetime.now().strftime("%m/%d/%Y: %H:%M:%S")
+    int_level = ["DEBUG","INFO","WARN","ERROR","CRIT"].index(level.upper())
     try:
         db = get_db()
-        db.execute("DELETE FROM logging WHERE id NOT IN (SELECT id FROM logging ORDER BY id DESC LIMIT 50)") #remove old logs
+        db.execute("DELETE FROM logging WHERE id NOT IN (SELECT id FROM logging ORDER BY id DESC LIMIT 100)") #remove old logs
         db.commit()
-        db.execute("INSERT INTO logging (datetime, lvl, msg) VALUES (?, ?, ?)", (timestamp, level.upper(), message), )
+        db.execute("INSERT INTO logging (datetime, lvl, msg) VALUES (?, ?, ?)", (timestamp, int_level, message), )
         print(timestamp,"-",message)
         db.commit()
     except Exception as e:
