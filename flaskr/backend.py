@@ -170,7 +170,7 @@ def backend(app):
 
             #schedules message functions
             schedule.every(int(settings['FBM_DELAY'])).minutes.at(':30').do(updateFBM).tag('send-msg')
-            schedule.every(int().minute.at(':00').do(updateTime).tag('send-msg'))
+            schedule.every().minute.at(':00').do(updateTime).tag('send-msg')
 
         ###########################################
         ############ [Timeout Handler] ############
