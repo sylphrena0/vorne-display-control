@@ -340,4 +340,10 @@ textarea {
 }
 
 
-
+pre code {
+    background-color: #1e1e1e;
+    display: block;
+    padding: 20px;
+    text-align: left;
+    overflow-y:scroll
+  }
