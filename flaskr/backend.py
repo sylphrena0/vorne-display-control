@@ -184,7 +184,7 @@ def backend(app):
             start_hour, start_min = get_db().execute('SELECT * FROM settings WHERE setting = "START_TIME"').fetchone()['stored'].split(":")
             end = end_hour*60 + end_min
             start = start_hour*60 + start_min
-            now_min = datetime.now().hour()*60 + datetime.now().min()
+            now_min = datetime.now().hour()*60 + datetime.now().minute()
 
             if now_min >= start and inactive: #if time is beyond start hour and the displays are off, schedule message updates
                 log("INFO","Startup time reached. Activating displays.")
