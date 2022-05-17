@@ -27,12 +27,13 @@ def getmsg():
 @bp.route('/', methods=['GET','POST'])
 @login_required
 def index():
-    if request.method == 'POST':
+    if request.method == 'POST': #if the user hits the submit button
         msg = request.form['msg']
         mode = request.form['mode']
         df = request.form['df'] + "    "
-        error = None
+        error = None #initializes error message
 
+        #check for incomplete form, though it should not be allowed by html
         if not msg:
             error = 'Message is required.'
         elif not df:
@@ -44,10 +45,12 @@ def index():
             db.commit()
         except Exception:
             log("CRIT",traceback.format_exc())
+    
         rate, scrollexpiry, blinktype = parsemode(mode) #parse the human readable mode to commands
         
-        get_ser()
+        get_ser() #gets serial config from backend.py to enable serial control from here
 
+        #grab addresses from settings in db
         settings = {}
         addresses, shipping = [], []
         storedsettings = get_db().execute('SELECT * FROM settings')
