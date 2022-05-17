@@ -181,4 +181,6 @@ def getlogs():
     logging = []
     for log in get_db().execute('SELECT * FROM logging WHERE lvl >= {} ORDER BY id DESC'.format(lvl)):
         logging.append(log['datetime'] + " - " + ["DEBUG","INFO","WARN","ERROR","CRIT"][log['lvl']] + ": " + log['msg'])
+    if len(logging) < 1:
+        logging = ["No entries found"]
     return Response(json.dumps(logging))
