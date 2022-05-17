@@ -88,6 +88,7 @@ def get_ser():
 def backend(app):
     with app.app_context(): #activates application context
         log("DEBUG","Backend active")
+        inactive = True #initializes display status variable
         ser = get_ser()
         
         ##########################################
@@ -114,8 +115,7 @@ def backend(app):
         ###########################################
         ##### [Update Shipstation Order Data] #####
         ########################################### 
-        @schedule.repeat(schedule.every(int(settings['FBM_DELAY'])).minutes.at(':30').tag('send-msg')) #decorator schedules the FBM update every three minutes 
-        def getfbmOrders():
+        def updateFBM():
             log("DEBUG","Updating FBM orders")
             msg = get_db().execute('SELECT df FROM msg WHERE id = 1').fetchone()
             ss_api_key = settings['SS_API_KEY']
@@ -150,34 +150,51 @@ def backend(app):
         ###########################################
         ##### [Update Shipstation Order Data] #####
         ########################################### 
-        @schedule.repeat(schedule.every(1).minutes.at(':00').tag('send-msg')) #decorator schedules the FBM update every three minutes 
         def updateTime():
             now = datetime.now()
             sendmessage(text=str(now.strftime("%H:%M")),char=0,addr=addresses,font=1,line=1)
 
         ###########################################
-        ############# [Stop Updating] #############
-        ###########################################
-        #@schedule.repeat(schedule.every(15).minutes.at(':00'))
-        def stop():
-            end_hour, end_min = get_db().execute('SELECT * FROM settings WHERE setting = "END_TIME"').fetchone()['stored'].split(":")
-            start_hour, start_min = get_db().execute('SELECT * FROM settings WHERE setting = "START_TIME"').fetchone()['stored'].split(":")
-            end_sec = end_hour*60**2 + end_min*60
-            start_sec = start_hour*60**2 + start_min*60
-
-
-        ###########################################
         ########## [Initialize Displays] ##########
         ########################################### 
-        updateTime() #initializes time
+        def initializeDisplays():
+            #initializes time and automatic order qtys
+            updateTime()
+            time.sleep(.5)
+            updateFBM()
 
-        msg = get_db().execute('SELECT * FROM msg WHERE id = 1').fetchone()
-        rate, scrollexpiry, blinktype = parsemode(msg['mode']) #parse the human readable mode to commands
-        sendmessage(msg['msg'],addr=addresses,font=fnt,line=2,rate=rate,scrollexpiry=scrollexpiry,blinktype=blinktype)
-        time.sleep(.5)
+            #adds message from previous instance
+            msg = get_db().execute('SELECT * FROM msg WHERE id = 1').fetchone()
+            rate, scrollexpiry, blinktype = parsemode(msg['mode']) #parse the human readable mode to commands
+            sendmessage(msg['msg'],addr=addresses,font=fnt,line=2,rate=rate,scrollexpiry=scrollexpiry,blinktype=blinktype)
 
-        getfbmOrders() #initializes automatic order qtys
+            #schedules message functions
+            schedule.every(int(settings['FBM_DELAY'])).minutes.at(':30').do(updateFBM).tag('send-msg')
+            schedule.every(int().minute.at(':00').do(updateTime).tag('send-msg'))
 
+        ###########################################
+        ############ [Timeout Handler] ############
+        ###########################################
+        #handles scheduling and turns off displays at night
+        @schedule.repeat(schedule.every(5).minutes.at(':10'))
+        def timeoutHandler():
+            end_hour, end_min = get_db().execute('SELECT * FROM settings WHERE setting = "END_TIME"').fetchone()['stored'].split(":")
+            start_hour, start_min = get_db().execute('SELECT * FROM settings WHERE setting = "START_TIME"').fetchone()['stored'].split(":")
+            end = end_hour*60 + end_min
+            start = start_hour*60 + start_min
+            now_min = datetime.now().hour()*60 + datetime.now().min()
+
+            if now_min >= start and inactive: #if time is beyond start hour and the displays are off, schedule message updates
+                log("INFO","Startup time reached. Activating displays.")
+                inactive = False
+                initializeDisplays() #will add initial messages and scedule update tasks
+            if now_min <= end and not inactive: # if time is beyond end hour and the displays are on
+                log("INFO","Shutdown time reached. Deactivating displays.")
+                inactive = True
+                schedule.clear('send-msg') #clears tasks with 'send-msg' tag
+                sendmessage(text="\x1b10R ",addr=addresses + shippingaddress,font=3,line=1) #clears display by filling with empty space. Using font 3 as this is a one line font
+
+        initializeDisplays()
         while True:
             schedule.run_pending()
             time.sleep(5)     
