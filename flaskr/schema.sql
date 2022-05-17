@@ -46,7 +46,14 @@ INSERT INTO msg VALUES( --insert default values
 );
 
 INSERT INTO addresses(stored, shipping) VALUES --insert default values
-  ("11", 0), 
+  ("01", 0), 
+  ("02", 0), 
+  ("03", 0), 
+  ("04", 0), 
+  ("05", 0), 
+  ("06", 0), 
+  ("07", 0), 
+  ("18", 0), 
   ("08", 1);
 
 INSERT INTO settings(setting, stored) VALUES --insert default values
