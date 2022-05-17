@@ -9,7 +9,10 @@ from flaskr.backend import parsemode, sendmessage, get_ser
 #sets the blueprint for this code
 bp = Blueprint('control', __name__)
 
-#defines a settings function which is called when /getmsg is accessed
+############################################
+############# [Control Routes] #############
+############################################ 
+#defines a function which is called when /getmsg is accessed
 @bp.route('/getmsg')
 @login_required
 def getmsg():
@@ -70,7 +73,10 @@ def index():
         return render_template('control/index.html', form=request.form)
     return render_template('control/index.html')
 
-#defines the settings page, currently blank. contains depreciated code from tutorial
+############################################
+############# [Setting Routes] #############
+############################################ 
+#defines the settings page
 @bp.route('/settings', methods=('GET', 'POST'))
 @login_required
 @admin_required
@@ -162,7 +168,10 @@ def getsettings():
 
     return Response(json.dumps(settings))
 
-#defines the settings page, currently blank. contains depreciated code from tutorial
+############################################
+############ [Debugging Routes] ############
+############################################ 
+#defines the debugging page
 @bp.route('/debugging', methods=('GET', 'POST'))
 @login_required
 @admin_required
