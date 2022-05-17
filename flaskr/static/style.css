@@ -198,6 +198,7 @@ input:checked+.slider:before {
 
 .button-1 {
     margin: 20px;
+    margin-bottom: 26px !important; 
     height: 50px;
     appearance: none;
     background-color: #333;
