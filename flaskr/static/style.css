@@ -346,5 +346,6 @@ pre code {
     display: block;
     padding: 20px;
     text-align: left;
-    overflow-y:scroll
+    overflow-y:scroll;
+    max-height: 60vh;
   }
