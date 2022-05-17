@@ -61,7 +61,7 @@ def index():
 
         totalfbm = get_db().execute('SELECT ro FROM msg').fetchone()[0]
         sendmessage(msg,addr=addresses,font=fnt,line=2,rate=rate,scrollexpiry=scrollexpiry,blinktype=blinktype)
-        sendmessage(" RO:" + str(totalfbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
+        sendmessage("RO:" + str(totalfbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
 
         if error is not None:
             flash(error)
@@ -135,6 +135,7 @@ def settings():
 
 #defines a settings function which is called when /getsettings is accessed
 @bp.route('/getsettings')
+@login_required
 @admin_required
 def getsettings():
     db = get_db()
@@ -159,3 +160,20 @@ def getsettings():
     settings['SHIPPING_ADDRESSES'] = shipping
 
     return Response(json.dumps(settings))
+
+#defines the settings page, currently blank. contains depreciated code from tutorial
+@bp.route('/debugging', methods=('GET', 'POST'))
+@login_required
+@admin_required
+def debugging():
+    return render_template('control/debugging.html')
+
+@bp.route('/getlogs')
+@login_required
+@admin_required
+def getlogs():
+    lvl = request.args.get("lvl")
+    logging = []
+    for log in get_db().execute('SELECT * FROM logging WHERE lvl >= {} ORDER BY id DESC'.format(lvl)):
+        logging.append(log['datetime'] + " - " + ["DEBUG","INFO","WARN","ERROR","CRIT"][log['lvl']] + ": " + log['msg'])
+    return Response(json.dumps(logging))
