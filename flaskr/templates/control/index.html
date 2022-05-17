@@ -5,6 +5,10 @@
 {% endblock %}
 
 {% block hyperlink %}
+{% if g.admin %}
+<li><a class="href" href="{{ url_for('control.debugging') }}">Debugging</a>
+<li><a class="href" href="{{ url_for('control.settings') }}">Config</a>
+{% endif %}
 {% endblock %}
 
 {% block content %}

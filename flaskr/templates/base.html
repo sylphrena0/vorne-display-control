@@ -6,7 +6,7 @@
   <h1>Message Interface: {% block header %}{% endblock %}  </h1>
   <ul>
     {% if g.user %}
-      <li>{% block hyperlink %}{% endblock %}
+      {% block hyperlink %}{% endblock %}
       <li><a class="href" href="{{ url_for('auth.user') }}">{{ g.user['username'] }}</a>
       <li><a class="href" href="{{ url_for('auth.logout') }}">Logout</a>
     {% else %}

@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  {% block title %}Settings{% endblock %}
+  {% block title %}Configuration{% endblock %}
 {% endblock %}
 
 {% block hyperlink %}
+  {% if g.admin %}
+  <li><a class="href" href="{{ url_for('control.debugging') }}">Debugging</a>
+  {% endif %}
   {% if g.user %}
-  <a class="href" href="{{ url_for('control.index') }}">Control</a>
+  <li><a class="href" href="{{ url_for('control.index') }}">Control</a>
   {% endif %}
 {% endblock %}
 
