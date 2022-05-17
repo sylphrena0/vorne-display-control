@@ -33,13 +33,12 @@ def index():
         df = request.form['df'] + "    "
         error = None #initializes error message
 
-        #check for incomplete form, though it should not be allowed by html
-        if not msg:
+        if not msg: #check for incomplete form, though it should not be allowed by html
             error = 'Message is required.'
         elif not df:
             error = 'DF Orders is required.'
 
-        try:
+        try: #send new message to database and log any errors
             db = get_db()
             db.execute("UPDATE msg SET (msg, mode, df) = (?, ?, ?) WHERE id = 1",(msg, mode, df,))
             db.commit()
@@ -65,6 +64,7 @@ def index():
             else:
                 addresses.append(address['stored'])
 
+        #get FBM numbers and update messages
         totalfbm = get_db().execute('SELECT ro FROM msg').fetchone()[0]
         sendmessage(msg,addr=addresses,font=fnt,line=2,rate=rate,scrollexpiry=scrollexpiry,blinktype=blinktype)
         sendmessage("RO:" + str(totalfbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
@@ -86,8 +86,8 @@ def settings():
     if request.method == 'POST':
         error = None
         com_port = request.form['COM']
-        baud_rate = ''.join(filter(str.isdigit, request.form['baudrate']))
-        font = ''.join(filter(str.isdigit, request.form['font']))
+        baud_rate = ''.join(filter(str.isdigit, request.form['baudrate'])) #these contain text in the html, we just need the number
+        font = ''.join(filter(str.isdigit, request.form['font'])) #same as above
         ss_api_key = request.form['SS_API_KEY']
         ss_api_secret = request.form['SS_API_SECRET']
         addresses = request.form['displays'].replace(" ","").split(",")
