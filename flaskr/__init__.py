@@ -1,4 +1,5 @@
 import os
+import traceback
 from flask import Flask
 from . import auth, backend, control, db
 
@@ -24,13 +25,16 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    db.init_app(app)
+    try:
+        db.init_app(app)
 
-    app.register_blueprint(auth.bp)
+        app.register_blueprint(auth.bp)
 
-    app.register_blueprint(control.bp)
-    app.add_url_rule('/', endpoint='index')
+        app.register_blueprint(control.bp)
+        app.add_url_rule('/', endpoint='index')
 
-    backend.start(app) #calls our backend function, which starts a sub-process with the application context, even if nobody loads the web app
+        backend.start(app) #calls our backend function, which starts a sub-process with the application context, even if nobody loads the web app
+    except Exception:
+        db.log("CRIT",traceback.format_exc())
 
     return app

@@ -1,5 +1,6 @@
 from dis import dis
 import json #to get data from js
+import traceback
 from flask import Blueprint, flash, g, redirect, render_template, request, url_for, Flask, Response #web framework imports
 from flaskr.auth import login_required, admin_required
 from flaskr.db import log, get_db,close_db #access to database
@@ -39,8 +40,8 @@ def index():
             db = get_db()
             db.execute("UPDATE msg SET (msg, mode, df) = (?, ?, ?) WHERE id = 1",(msg, mode, df,))
             db.commit()
-        except Exception as e:
-            log("ERROR",e)
+        except Exception:
+            log("CRIT",traceback.format_exc())
         rate, scrollexpiry, blinktype = parsemode(mode) #parse the human readable mode to commands
         
         get_ser()
@@ -125,8 +126,8 @@ def settings():
             db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'START_TIME'", (start_time,))
             db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'END_TIME'", (end_time,))
             db.commit()
-        except Exception as e:
-            log("ERROR",e)
+        except Exception:
+            log("ERROR",traceback.format_exc())
         if error is not None:
             flash(error)
     elif request.method == 'GET':

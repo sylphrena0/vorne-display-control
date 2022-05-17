@@ -4,17 +4,18 @@ import traceback
 from datetime import datetime
 from flask import current_app, g
 from flask.cli import with_appcontext
-
 from werkzeug.security import generate_password_hash
 
 def get_db():
-    if 'db' not in g:
-        g.db = sqlite3.connect(
-            current_app.config['DATABASE'],
-            detect_types=sqlite3.PARSE_DECLTYPES
-        )
-        g.db.row_factory = sqlite3.Row
-
+    try:
+        if 'db' not in g:
+            g.db = sqlite3.connect(
+                current_app.config['DATABASE'],
+                detect_types=sqlite3.PARSE_DECLTYPES
+            )
+            g.db.row_factory = sqlite3.Row
+    except Exception:
+        log("CRIT",traceback.format_exc())
     return g.db
 
 def log(level,message):
@@ -28,7 +29,7 @@ def log(level,message):
         db.execute("INSERT INTO logging (datetime, lvl, msg) VALUES (?, ?, ?)", (timestamp, int_level, message), )
         print(timestamp,"-",message)
         db.commit()
-    except Exception as e:
+    except Exception:
         print("Critical Error: Could not log to database!")
         print(traceback.format_exc())
 

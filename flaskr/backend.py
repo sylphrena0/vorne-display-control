@@ -3,6 +3,7 @@ import time
 import datetime
 import requests
 import schedule
+import traceback
 from json import loads as loads
 from datetime import datetime
 from flask import g, request, session, Blueprint, app
@@ -44,6 +45,7 @@ def sendmessage(text="CHANGEME",addr=["01"],font=1,line=1,char="",rate=None,blin
         g.ser.close() #close COM 
 
     if debug: log("DEBUG","Sending %smessage to displays" % (messagetype))
+
 def parsemode(mode,rate=None, scrollexpiry=None, blinktype=None): #turns the mode string used by flask into three backend compabile options
     if mode.endswith("Scrolling"):
         scrollexpiry = 0
@@ -56,18 +58,22 @@ def parsemode(mode,rate=None, scrollexpiry=None, blinktype=None): #turns the mod
     elif mode.startswith("Fast"):
         rate = 15 if scrollexpiry != None  else 150
     return rate, scrollexpiry, blinktype
+
 def get_ser():
-    settings = {}
-    storedsettings = get_db().execute('SELECT * FROM settings')
-    for setting in storedsettings:
-        settings[setting['setting']] = setting['stored']
-    g.ser = serial.Serial()
-    g.ser.baudrate = int(settings['BAUD_RATE']) #baud rate, set to number shown on the display
-    g.ser.port = settings['COM_PORT'] #COM port of serial display control.
-    g.ser.timeout = 2 #timeout. Leave as is
-    if(g.ser.isOpen() == True): #checks for improper shutdown
-        g.ser.close()
-        log("info","Caught unclosed port. Closing now.")
+    try:
+        settings = {}
+        storedsettings = get_db().execute('SELECT * FROM settings')
+        for setting in storedsettings:
+            settings[setting['setting']] = setting['stored']
+        g.ser = serial.Serial()
+        g.ser.baudrate = int(settings['BAUD_RATE']) #baud rate, set to number shown on the display
+        g.ser.port = settings['COM_PORT'] #COM port of serial display control.
+        g.ser.timeout = 2 #timeout. Leave as is
+        if(g.ser.isOpen() == True): #checks for improper shutdown
+            g.ser.close()
+            log("info","Caught unclosed port. Closing now.")
+    except Exception:
+        log("CRIT",traceback.format_exc())
     return g.ser
 
 #Information on setting the font for the next message
@@ -87,7 +93,7 @@ def get_ser():
 ############################################
 def backend(app):
     with app.app_context(): #activates application context
-        log("DEBUG","Backend active")
+        log("INFO","Backend active")
         inactive = True #initializes display status variable
         ser = get_ser()
         
@@ -107,10 +113,6 @@ def backend(app):
                 shippingaddress.append(address['stored'])
             else:
                 addresses.append(address['stored'])
-
-        #addresses = ["01","02","03","04","05","06","07","18"] #defines the list of addresses of our normal displays. #5-5am
-    
-        
 
         ###########################################
         ##### [Update Shipstation Order Data] #####
