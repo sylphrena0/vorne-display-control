@@ -91,7 +91,7 @@ def settings():
             db = get_db()
             db.execute("DELETE FROM addresses")
             db.commit()
-            log("INFO","Updating addresses, " + str(addresses) + str(shipping_addresses))
+            log("INFO","Updating addresses: " + str(addresses) + ", shipping addresses: " + str(shipping_addresses))
             for display in addresses:
                 if int(display) >= 0 and int(display) <= 100:
                     db = get_db()
