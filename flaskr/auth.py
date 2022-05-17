@@ -109,13 +109,13 @@ def login():
             error = 'Incorrect password.'
 
         if error is None:
-            log("INFO","Logging in user " + username)
+            log("INFO","Logging in user " + username.lower())
             session.clear()
             session['user_id'] = user['id']
             session['admin'] = user['admin']
             return redirect(url_for('index'))
         else:
-            log("WARN", "Failed login with user " + username + ": " + error)
+            log("WARN", "Failed login - user " + username.lower() + ": " + error)
             flash(error)
 
     return render_template('auth/login.html')
@@ -140,7 +140,7 @@ def user():
             elif not check_password_hash(user_data['password'], oldpassword): #check that the old password is correct
                 error = 'Incorrect password.'
 
-            log("INFO","User " + user_data['username'] + " changed their password")
+            log("INFO","User " + user_data['username'].lower() + " changed their password")
             db.execute("UPDATE user SET password = '{}' WHERE id = '{}'".format(generate_password_hash(newpassword),user_id)) #update password
             db.commit()
         elif "change_username" in request.form:
@@ -159,7 +159,7 @@ def user():
             elif not check_password_hash(user_data['password'], password): #check that the password is correct
                 error = 'Incorrect password.'
 
-            log("INFO","User " + user_data['username'] + " changed their username to " + newusername)
+            log("INFO","User " + user_data['username'].lower() + " changed their username to " + newusername.lower())
             db.execute("UPDATE user SET username = '{}' WHERE id = '{}'".format(newusername,user_id)) #update username
             db.commit()
         flash(error)
