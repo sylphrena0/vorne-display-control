@@ -22,7 +22,7 @@ CREATE TABLE msg ( --create settings table
 CREATE TABLE logging ( --create logging table
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   datetime TEXT NOT NULL,
-  lvl CHARACTER(20) NOT NULL,
+  lvl INT NOT NULL,
   msg TEXT NOT NULL
 );
 
@@ -50,7 +50,7 @@ INSERT INTO addresses(stored, shipping) VALUES --insert default values
   ("08", 1);
 
 INSERT INTO settings(setting, stored) VALUES --insert default values
-  ("COM_PORT", "COM2"),
+  ("COM_PORT", "/dev/ttyS0"),
   ("BAUD_RATE", "9600"),
   ("FNT","1"),
   ("FBM_DELAY","3"),
