@@ -114,8 +114,9 @@ def login():
             session['user_id'] = user['id']
             session['admin'] = user['admin']
             return redirect(url_for('index'))
-
-        flash(error)
+        else:
+            log("WARN", "Failed login with user " + username + ": " + error)
+            flash(error)
 
     return render_template('auth/login.html')
 
@@ -139,7 +140,7 @@ def user():
             elif not check_password_hash(user_data['password'], oldpassword): #check that the old password is correct
                 error = 'Incorrect password.'
 
-            print("Change Password Query: UPDATE user SET password = '{}' WHERE id = '{}'".format(generate_password_hash(newpassword),user_id))
+            log("INFO","User " + user_data['username'] + " changed their password")
             db.execute("UPDATE user SET password = '{}' WHERE id = '{}'".format(generate_password_hash(newpassword),user_id)) #update password
             db.commit()
         elif "change_username" in request.form:
@@ -158,7 +159,7 @@ def user():
             elif not check_password_hash(user_data['password'], password): #check that the password is correct
                 error = 'Incorrect password.'
 
-            print("Change Username Query: UPDATE user SET username = '{}' WHERE id = '{}'".format(newusername,user_id))
+            log("INFO","User " + user_data['username'] + " changed their username to " + newusername)
             db.execute("UPDATE user SET username = '{}' WHERE id = '{}'".format(newusername,user_id)) #update username
             db.commit()
         flash(error)
