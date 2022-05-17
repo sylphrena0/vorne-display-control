@@ -21,7 +21,6 @@ def getmsg():
     data = []
     data.append(list(settings))
     print(data)
-    #updateSettings()
     return Response(json.dumps(data))
 
 #defines the index page and controls buttons. control buttons should be removed!
