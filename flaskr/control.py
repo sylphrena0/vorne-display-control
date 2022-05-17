@@ -27,7 +27,7 @@ def index():
     if request.method == 'POST':
         msg = request.form['msg']
         mode = request.form['mode']
-        df = request.form['df']
+        df = request.form['df'] + "    "
         error = None
 
         if not msg:
@@ -166,6 +166,11 @@ def getsettings():
 @login_required
 @admin_required
 def debugging():
+    if request.method == 'POST':
+        db = get_db()
+        db.execute("DELETE FROM logging")
+        db.commit()
+        log("INFO","Logs cleared!")
     return render_template('control/debugging.html')
 
 @bp.route('/getlogs')
