@@ -1,7 +1,7 @@
 import serial #pyserial
 import time
+import datetime
 import requests
-import traceback
 import schedule
 from json import loads as loads
 from datetime import datetime
@@ -36,6 +36,7 @@ def sendmessage(text="CHANGEME",addr=["01"],font=1,line=1,char="",rate=None,blin
     if center and len(text) < 19: #this will center the message if enabled
         centerspcs = "\x1b%sR " % int((fontlength[font] - len(text))/2)
 
+    log("DEBUG","Sending message: " + text + " to " + str(addr))
     for address in addr: #iterates through all displays
         g.ser.open() #open COM port
         string = "\x1b%sA\x1b%sL%s\x1b-b\x1b-B\x1b%sF%s%s%s%s\r" % (address,line,char,font,blink,scroll,centerspcs,text) #\x1b is eqv to <ESC> in the manual, \r to <CR> (EOL)
@@ -86,7 +87,7 @@ def get_ser():
 ############################################
 def backend(app):
     with app.app_context(): #activates application context
-
+        log("DEBUG","Backend active")
         ser = get_ser()
         
         ##########################################
@@ -113,8 +114,9 @@ def backend(app):
         ###########################################
         ##### [Update Shipstation Order Data] #####
         ########################################### 
-        @schedule.repeat(schedule.every(3).minutes.at(':30')) #decorator schedules the FBM update every three minutes 
+        @schedule.repeat(schedule.every(int(settings['FBM_DELAY'])).minutes.at(':30').tag('send-msg')) #decorator schedules the FBM update every three minutes 
         def getfbmOrders():
+            log("DEBUG","Updating FBM orders")
             msg = get_db().execute('SELECT df FROM msg WHERE id = 1').fetchone()
             ss_api_key = settings['SS_API_KEY']
             ss_api_secret = settings['SS_API_SECRET']
@@ -135,7 +137,7 @@ def backend(app):
                     nms += 1 
             sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship),addr=shippingaddress,font=fnt,line=1,center=True)
             sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual),addr=shippingaddress,font=fnt,line=2,center=True)
-            sendmessage(str(time.strftime("%H:%M") + " RO:" + str(totalfbm) + " DF:" + str(msg['df'])),addr=addresses,font=fnt,line=1)
+            sendmessage(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
 
             #update database for other modules
             try:
@@ -144,11 +146,30 @@ def backend(app):
                 db.commit()
             except Exception as e:
                 log("ERROR",e)
-            
+
+        ###########################################
+        ##### [Update Shipstation Order Data] #####
+        ########################################### 
+        @schedule.repeat(schedule.every(1).minutes.at(':00').tag('send-msg')) #decorator schedules the FBM update every three minutes 
+        def updateTime():
+            now = datetime.now()
+            sendmessage(text=str(now.strftime("%H:%M")),char=0,addr=addresses,font=1,line=1)
+
+        ###########################################
+        ############# [Stop Updating] #############
+        ###########################################
+        #@schedule.repeat(schedule.every(15).minutes.at(':00'))
+        def stop():
+            end_hour, end_min = get_db().execute('SELECT * FROM settings WHERE setting = "END_TIME"').fetchone()['stored'].split(":")
+            start_hour, start_min = get_db().execute('SELECT * FROM settings WHERE setting = "START_TIME"').fetchone()['stored'].split(":")
+            end_sec = end_hour*60**2 + end_min*60
+            start_sec = start_hour*60**2 + start_min*60
+
+
         ###########################################
         ########## [Initialize Displays] ##########
         ########################################### 
-        sendmessage(text=str(time.strftime("%H:%M")),char=0,addr=addresses,font=1,line=1)
+        updateTime() #initializes time
 
         msg = get_db().execute('SELECT * FROM msg WHERE id = 1').fetchone()
         rate, scrollexpiry, blinktype = parsemode(msg['mode']) #parse the human readable mode to commands
@@ -156,9 +177,6 @@ def backend(app):
         time.sleep(.5)
 
         getfbmOrders() #initializes automatic order qtys
-        
-        #this will schedule display updates only when they are needed
-        schedule.every().minute.at(':00').do(sendmessage,text=str(time.strftime("%H:%M")),char=0,addr=addresses,font=1,line=1) #update time everytime the sys clock is xx:xx:00
 
         while True:
             schedule.run_pending()
