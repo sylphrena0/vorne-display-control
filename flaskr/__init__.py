@@ -27,14 +27,11 @@ def create_app(test_config=None):
 
     try:
         db.init_app(app)
-
         app.register_blueprint(auth.bp)
-
         app.register_blueprint(control.bp)
         app.add_url_rule('/', endpoint='index')
-
         backend.start(app) #calls our backend function, which starts a sub-process with the application context, even if nobody loads the web app
     except Exception:
-        db.log("CRIT",traceback.format_exc())
-
+        print(traceback.format_exc()) #unfortuntly, logging doesn't work at this point in application loading
+        
     return app
