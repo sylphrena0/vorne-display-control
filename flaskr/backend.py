@@ -146,8 +146,8 @@ def backend(app):
                 db = get_db()
                 db.execute("UPDATE msg SET ro = ? WHERE id = 1",(totalfbm,))
                 db.commit()
-            except Exception as e:
-                log("ERROR",e)
+            except Exception:
+                log("ERROR",traceback.format_exc())
 
         ###########################################
         ##### [Update Shipstation Order Data] #####
@@ -180,21 +180,24 @@ def backend(app):
         #handles scheduling and turns off displays at night
         @schedule.repeat(schedule.every(5).minutes.at(':10'))
         def timeoutHandler():
-            end_hour, end_min = get_db().execute('SELECT * FROM settings WHERE setting = "END_TIME"').fetchone()['stored'].split(":")
-            start_hour, start_min = get_db().execute('SELECT * FROM settings WHERE setting = "START_TIME"').fetchone()['stored'].split(":")
-            end = end_hour*60 + end_min
-            start = start_hour*60 + start_min
-            now_min = datetime.now().hour()*60 + datetime.now().minute()
+            try:
+                end_hour, end_min = get_db().execute('SELECT * FROM settings WHERE setting = "END_TIME"').fetchone()['stored'].split(":")
+                start_hour, start_min = get_db().execute('SELECT * FROM settings WHERE setting = "START_TIME"').fetchone()['stored'].split(":")
+                end = end_hour*60 + end_min
+                start = start_hour*60 + start_min
+                now_min = datetime.now().hour*60 + datetime.now().minute
 
-            if now_min >= start and inactive: #if time is beyond start hour and the displays are off, schedule message updates
-                log("INFO","Startup time reached. Activating displays.")
-                inactive = False
-                initializeDisplays() #will add initial messages and scedule update tasks
-            if now_min <= end and not inactive: # if time is beyond end hour and the displays are on
-                log("INFO","Shutdown time reached. Deactivating displays.")
-                inactive = True
-                schedule.clear('send-msg') #clears tasks with 'send-msg' tag
-                sendmessage(text="\x1b10R ",addr=addresses + shippingaddress,font=3,line=1) #clears display by filling with empty space. Using font 3 as this is a one line font
+                if now_min >= start and inactive: #if time is beyond start hour and the displays are off, schedule message updates
+                    log("INFO","Startup time reached. Activating displays.")
+                    inactive = False
+                    initializeDisplays() #will add initial messages and scedule update tasks
+                if now_min <= end and not inactive: # if time is beyond end hour and the displays are on
+                    log("INFO","Shutdown time reached. Deactivating displays.")
+                    inactive = True
+                    schedule.clear('send-msg') #clears tasks with 'send-msg' tag
+                    sendmessage(text="\x1b10R ",addr=addresses + shippingaddress,font=3,line=1) #clears display by filling with empty space. Using font 3 as this is a one line font
+            except Exception:
+                log("ERROR",traceback.format_exc())
 
         initializeDisplays()
         while True:
