@@ -62,4 +62,5 @@ INSERT INTO settings(setting, stored) VALUES --insert default values
   ("FNT","1"),
   ("FBM_DELAY","3"),
   ("START_TIME","04:00"),
-  ("END_TIME","17:00");
+  ("END_TIME","17:00"),
+  ("INACTIVE","0");

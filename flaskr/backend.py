@@ -178,9 +178,11 @@ def backend(app):
         ###########################################
         #handles scheduling and turns off displays at night
         
-        @schedule.repeat(schedule.every(5).minutes.at(':10'),inactive=False)
-        def timeoutHandler(inactive):
+        @schedule.repeat(schedule.every(5).minutes.at(':10'))
+        def timeoutHandler():
             try:
+                active = get_db().execute('SELECT * FROM settings WHERE setting = "ACTIVE"').fetchone()['stored']
+                log("INFO","Got active status from database")
                 end_hour, end_min = get_db().execute('SELECT * FROM settings WHERE setting = "END_TIME"').fetchone()['stored'].split(":")
                 start_hour, start_min = get_db().execute('SELECT * FROM settings WHERE setting = "START_TIME"').fetchone()['stored'].split(":")
                 end = int(end_hour)*60 + int(end_min)
@@ -188,13 +190,17 @@ def backend(app):
                 now_min = datetime.now().hour*60 + datetime.now().minute
 
                 log("DEBUG","Timeout handler called")
-                if now_min >= start and now_min <= end and inactive: #if time is beyond start hour and the displays are off, schedule message updates
-                    log("INFO","Startup time reached. Activating displays. nowmin: " + now_min + ", start: " + start + ", end: " + end)
-                    inactive = False
+                if now_min >= start and now_min <= end and active == 0: #if time is beyond start hour and the displays are off, schedule message updates
+                    db = get_db()
+                    db.execute('UPDATE msg SET stored = "1" WHERE setting = "ACTIVE"')
+                    db.commit()
+                    log("INFO","Startup time reached. Activating displays.")
                     initializeDisplays() #will add initial messages and schedule update tasks
-                if now_min >= end and not inactive: # if time is beyond end hour and the displays are on
+                if now_min >= end and active == 1: # if time is beyond end hour and the displays are on
                     log("INFO","Shutdown time reached. Deactivating displays.")
-                    inactive = True
+                    db = get_db()
+                    db.execute('UPDATE msg SET stored = "0" WHERE setting = "ACTIVE"')
+                    db.commit()
                     schedule.clear('send-msg') #clears tasks with 'send-msg' tag
                     sendmessage(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=1) #clears display by filling with empty space
                     sendmessage(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=2) #clears display by filling with empty space
