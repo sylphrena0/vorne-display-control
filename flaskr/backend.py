@@ -136,8 +136,8 @@ def backend(app):
                     manual += 1 
                 elif advancedOptions.get('storeId') == storedict.get("nms"): 
                     nms += 1 
-            sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship + "    "),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
-            sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual) + "    ",char=0,addr=shippingaddress,font=fnt,line=2,center=True)
+            sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
+            sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shippingaddress,font=fnt,line=2,center=True)
             sendmessage(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
 
             #update database for other modules
@@ -153,7 +153,7 @@ def backend(app):
         ########################################### 
         def updateTime():
             now = datetime.now()
-            sendmessage(text=str(now.strftime("%H:%M")),char=0,addr=addresses,font=1,line=1)
+            sendmessage(text=str(now.strftime("%H:%M ")),char=0,addr=addresses,font=1,line=1)
 
         ###########################################
         ########## [Initialize Displays] ##########
@@ -189,16 +189,16 @@ def backend(app):
                 now_min = datetime.now().hour*60 + datetime.now().minute
 
                 log("DEBUG","Timeout handler called")
-                if now_min >= start and now_min <= end and active == 0: #if time is beyond start hour and the displays are off, schedule message updates
+                if now_min >= start and now_min <= end and active == '0': #if time is beyond start hour and the displays are off, schedule message updates
                     db = get_db()
-                    db.execute('UPDATE msg SET stored = "1" WHERE setting = "ACTIVE"')
+                    db.execute('UPDATE settings SET stored = "1" WHERE setting = "ACTIVE"')
                     db.commit()
                     log("INFO","Startup time reached. Activating displays.")
                     initializeDisplays() #will add initial messages and schedule update tasks
-                if now_min >= end and active == 1: # if time is beyond end hour and the displays are on
+                if now_min >= end and active == '1': # if time is beyond end hour and the displays are on
                     log("INFO","Shutdown time reached. Deactivating displays.")
                     db = get_db()
-                    db.execute('UPDATE msg SET stored = "0" WHERE setting = "ACTIVE"')
+                    db.execute('UPDATE settings SET stored = "0" WHERE setting = "ACTIVE"')
                     db.commit()
                     schedule.clear('send-msg') #clears tasks with 'send-msg' tag
                     sendmessage(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=1) #clears display by filling with empty space
@@ -207,6 +207,8 @@ def backend(app):
                 log("ERROR",traceback.format_exc())
 
         initializeDisplays()
+        time.sleep(0.5)
+        timeoutHandler()
         while True:
             schedule.run_pending()
             time.sleep(5)     
