@@ -108,7 +108,7 @@ def backend(app):
 
         storedaddresses = get_db().execute('SELECT * FROM addresses')
         for address in storedaddresses:
-            if address['shipping'] == '1':
+            if address['shipping'] == 1:
                 shippingaddress.append(address['stored'])
             else:
                 addresses.append(address['stored'])
@@ -182,7 +182,6 @@ def backend(app):
         def timeoutHandler():
             try:
                 active = get_db().execute('SELECT * FROM settings WHERE setting = "ACTIVE"').fetchone()['stored']
-                log("INFO","Got active status from database")
                 end_hour, end_min = get_db().execute('SELECT * FROM settings WHERE setting = "END_TIME"').fetchone()['stored'].split(":")
                 start_hour, start_min = get_db().execute('SELECT * FROM settings WHERE setting = "START_TIME"').fetchone()['stored'].split(":")
                 end = int(end_hour)*60 + int(end_min)
