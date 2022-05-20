@@ -136,8 +136,8 @@ def backend(app):
                     manual += 1 
                 elif advancedOptions.get('storeId') == storedict.get("nms"): 
                     nms += 1 
-            sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship),addr=shippingaddress,font=fnt,line=1,center=True)
-            sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual),addr=shippingaddress,font=fnt,line=2,center=True)
+            sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship + "    "),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
+            sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual) + "    ",char=0,addr=shippingaddress,font=fnt,line=2,center=True)
             sendmessage(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
 
             #update database for other modules
