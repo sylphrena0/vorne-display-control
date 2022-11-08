@@ -32,6 +32,6 @@ def create_app(test_config=None):
         app.add_url_rule('/', endpoint='index')
         backend.start(app) #calls our backend function, which starts a sub-process with the application context, even if nobody loads the web app
     except Exception:
-        print(traceback.format_exc()) #unfortuntly, logging doesn't work at this point in application loading
+        print(traceback.format_exc()) #unfortunately, logging doesn't work at this point in application loading
         
     return app
