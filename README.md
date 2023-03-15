@@ -1,5 +1,5 @@
 ## NMS Display Control Software for Vorne Industries M1000 Displays
-*Author: Kirk Kleinsasser*
+*Author: Sylphrena Kleinsasser*
 
 *Developed for [North Mountain Supply, LLC](https://northmountainsupply.com)*
 
