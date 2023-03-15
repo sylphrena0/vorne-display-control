@@ -107,8 +107,8 @@ def sendmsg(msg,mode,addresses,fnt,line):
 
 ###### [Grab Shipstation Order Data] ###### 
 def getfbmOrders():
-    ss_api_key = '2d434e9321574d708dbdc966c30bbd36'
-    ss_api_secret = '2611068a8a7c4a1d905b33e074b972e2'
+    ss_api_key = 'API_KEY_HERE'
+    ss_api_secret = 'API_SECRET_HERE'
     response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
     dict = loads(response.text) #gets post request response
     storedict = {"thermalbladedealer": 67315,"thermalblade": 89213,"qqship": 91927,"qqshipCA": 61349,"nms": 67134,"manual": 38981,"unbranded": 82894} #defines dictionary of shipstation store IDs
