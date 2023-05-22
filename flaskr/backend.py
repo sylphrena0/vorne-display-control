@@ -117,29 +117,32 @@ def backend(app):
         ##### [Update Shipstation Order Data] #####
         ########################################### 
         def updateFBM():
-            log("DEBUG","Updating FBM orders")
-            msg = get_db().execute('SELECT df FROM msg WHERE id = 1').fetchone()
-            ss_api_key = settings['SS_API_KEY']
-            ss_api_secret = settings['SS_API_SECRET']
-            response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
-            dict = loads(response.text) #gets post request response
-            storedict = {"thermalbladedealer": 67315,"thermalblade": 89213,"qqship": 91927,"qqshipCA": 61349,"nms": 67134,"manual": 38981,"unbranded": 82894} #defines dictionary of shipstation store IDs
-            totalfbm, thermalblade, qqship, manual, nms = 0, 0, 0, 0, 0 #initializes order variable counters
-            for order in dict.get("orders"): #grabs the order dictionarys from the set response
-                advancedOptions = order.get("advancedOptions") #gets the dictionary that containes the storeID from each order
-                totalfbm += 1
-                if (advancedOptions.get('storeId') == storedict.get("thermalbladedealer")) or (advancedOptions.get('storeId') == storedict.get("thermalblade")): 
-                    thermalblade += 1 
-                elif advancedOptions.get('storeId') == storedict.get("qqship") or advancedOptions.get('storeId') == storedict.get("qqshipCA"): 
-                    qqship += 1 
-                elif advancedOptions.get('storeId') == storedict.get("manual") or advancedOptions.get('storeId') == storedict.get("unbranded"): 
-                    manual += 1 
-                elif advancedOptions.get('storeId') == storedict.get("nms"): 
-                    nms += 1 
-            sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
-            sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shippingaddress,font=fnt,line=2,center=True)
-            sendmessage(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
-
+            try:
+                log("DEBUG","Updating FBM orders")
+                msg = get_db().execute('SELECT df FROM msg WHERE id = 1').fetchone()
+                ss_api_key = settings['SS_API_KEY']
+                ss_api_secret = settings['SS_API_SECRET']
+                response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+                dict = loads(response.text) #gets post request response
+                storedict = {"thermalbladedealer": 67315,"thermalblade": 89213,"qqship": 91927,"qqshipCA": 61349,"nms": 67134,"manual": 38981,"unbranded": 82894} #defines dictionary of shipstation store IDs
+                totalfbm, thermalblade, qqship, manual, nms = 0, 0, 0, 0, 0 #initializes order variable counters
+                for order in dict.get("orders"): #grabs the order dictionarys from the set response
+                    advancedOptions = order.get("advancedOptions") #gets the dictionary that containes the storeID from each order
+                    totalfbm += 1
+                    if (advancedOptions.get('storeId') == storedict.get("thermalbladedealer")) or (advancedOptions.get('storeId') == storedict.get("thermalblade")): 
+                        thermalblade += 1 
+                    elif advancedOptions.get('storeId') == storedict.get("qqship") or advancedOptions.get('storeId') == storedict.get("qqshipCA"): 
+                        qqship += 1 
+                    elif advancedOptions.get('storeId') == storedict.get("manual") or advancedOptions.get('storeId') == storedict.get("unbranded"): 
+                        manual += 1 
+                    elif advancedOptions.get('storeId') == storedict.get("nms"): 
+                        nms += 1 
+                sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
+                sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shippingaddress,font=fnt,line=2,center=True)
+                sendmessage(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
+            except Exception:
+                log("ERROR", "Error in ShipStation API call!")
+                log("ERROR",traceback.format_exc())
             #update database for other modules
             try:
                 db = get_db()
