@@ -7,7 +7,7 @@ import traceback
 from json import loads as loads
 from datetime import datetime
 from flask import g, request, session, Blueprint, app
-from flaskr.db import log, get_db
+from application.db import log, get_db
 from threading import Thread
 
 #Manual: https://www.vorne.com/support/product-manuals/m1000.pdf

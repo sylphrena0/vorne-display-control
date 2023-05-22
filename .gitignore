@@ -1,5 +1,5 @@
-flaskr/__pycache__/
-flaskr/__pycache__/*
-flaskr/ss-api-insert.sql
-instance/flaskr.sqlite
+application/__pycache__/
+application/__pycache__/*
+application/ss-api-insert.sql
+instance/database.sqlite
 readme.txt
