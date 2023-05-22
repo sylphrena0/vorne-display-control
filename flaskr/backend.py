@@ -140,15 +140,13 @@ def backend(app):
                 sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
                 sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shippingaddress,font=fnt,line=2,center=True)
                 sendmessage(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
-            except Exception:
-                log("ERROR", "Error in ShipStation API call!")
-                log("ERROR",traceback.format_exc())
-            #update database for other modules
-            try:
+                
+                #update database for other modules
                 db = get_db()
                 db.execute("UPDATE msg SET ro = ? WHERE id = 1",(totalfbm,))
                 db.commit()
             except Exception:
+                log("ERROR", "Error in ShipStation API call!")
                 log("ERROR",traceback.format_exc())
 
         ###########################################
