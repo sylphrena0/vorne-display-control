@@ -1,6 +1,7 @@
 from dis import dis
 import json #to get data from js
 import traceback
+import os
 from flask import Blueprint, flash, g, redirect, render_template, request, url_for, Flask, Response #web framework imports
 from flaskr.auth import login_required, admin_required
 from flaskr.db import log, get_db,close_db #access to database
@@ -196,3 +197,11 @@ def getlogs():
     if len(logging) < 1:
         logging = ["No entries found"]
     return Response(json.dumps(logging))
+
+@bp.route('/restart')
+@login_required
+@admin_required
+def restart():
+    log("INFO","Restarting Service")
+    os.system("sudo reboot")
+    return
