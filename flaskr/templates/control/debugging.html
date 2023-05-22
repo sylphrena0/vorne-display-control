@@ -44,10 +44,16 @@
 </select>
 
 <input name="update" class="button-1" type="submit" value="Update Debug Level" onclick="updateLogs()">
-<form style="display: inline-block;" method="post"><input name="clear" class="button-1" type="submit" value="Clear Logs" onclick="updateLogs()"></form>
+<form style="display: inline-block;" method="post">
+<input name="clear" class="button-1" type="submit" value="Clear Logs" onclick="updateLogs()">
+</form>
+<input name="restart" class="button-1" type="submit" value="Restart" onclick="restart()">
 </div>
 
   <script>
+    function restart(){
+      $.getJSON(`/restart`, function(logging) {});
+    };
     function updateLogs(){
         lvl = document.getElementById("debug").value
         $.getJSON(`/getlogs?lvl=${lvl}`, function(logging) {
