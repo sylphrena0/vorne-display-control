@@ -1,27 +1,73 @@
 <!doctype html>
 <title>{% block title %}{% endblock %} - NMS Display Control</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-<nav>
-  <h1>Message Interface: {% block header %}{% endblock %}  </h1>
-  <ul>
-    {% if g.user %}
-      {% block hyperlink %}{% endblock %}
-      <li><a class="href" href="{{ url_for('auth.user') }}">{{ g.user['username'] }}</a>
-      <li><a class="href" href="{{ url_for('auth.logout') }}">Logout</a>
-    {% else %}
-      <li><a class="href" href="{{ url_for('auth.login') }}">Login</a>
+
+{% set active_page = active_page|default('home') -%}
+
+{% set navigation_bar_home = [
+  ("/", 'home', 'Home')
+] -%}
+
+{% set navigation_bar_admin = [
+  ("/settings", 'settings', 'Settings'),
+  ("/debugging", 'debug', 'Debugging'),
+  ("/users/register", 'register', 'Register'),
+  ("/users", 'users', 'Users')
+] -%}
+
+{% set navigation_bar_user = [
+  ("/users/settings", 'usersettings', 'Settings'),
+  ("/users/logout", 'logout', 'Logout')
+] -%}
+
+<nav class="topnav" id="myTopnav">
+
+  <!-- <img src="{{url_for('static', filename='nms-mountain.webp')}}"/> -->
+  {% if g.user %}
+    {% for href, id, caption in navigation_bar_home %}
+    <a class="home{% if id == active_page %} active{% endif%}" href="{{ href|e }}">{{ caption|e }}</a>
+    {% endfor %}
+    <div class="dropdown{% if active_page == 'user' %} active{% endif%}">
+      <button class="dropbtn" onclick="changeStyle(0)">{{ g.user['username'] }}  
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        {% for href, id, caption in navigation_bar_user %}
+        <a class="static" href="{{ href|e }}">{{ caption|e }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% if g.admin == 1 %}
+      <div class="dropdown{% if active_page == 'admin' %} active{% endif%}">
+        <button class="dropbtn" onclick="changeStyle(1)">Configuration 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          {% for href, id, caption in navigation_bar_admin %}
+          <a class="static" href="{{ href|e }}">{{ caption|e }}</a>
+          {% endfor %}
+        </div>
+      </div>
     {% endif %}
-  </ul>
+  {% else %}
+  <a href="{{ url_for('users.login') }}">Login</a>
+  {% endif %}
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+
 </nav>
+
 <section class="content">
   <div class="centerdiv">
-  <img src="{{url_for('static', filename='nms.png')}}" style="margin-top: 20px;"/>
-  <header>
-  </header>
-  {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% block content %}{% endblock %}
+    <img src="{{url_for('static', filename='nms.png')}}" style="margin-top: 20px;"/>
+    <header>
+    </header>
+    {% for message in get_flashed_messages() %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
   </div>
 </section>

@@ -1,7 +1,7 @@
 import os
 import traceback
 from flask import Flask
-from . import auth, backend, control, db
+from . import backend, control, db, users
 
 def create_app(test_config=None):
     
@@ -27,7 +27,7 @@ def create_app(test_config=None):
 
     try:
         db.init_app(app)
-        app.register_blueprint(auth.bp)
+        app.register_blueprint(users.bp)
         app.register_blueprint(control.bp)
         app.add_url_rule('/', endpoint='index')
         backend.start(app) #calls our backend function, which starts a sub-process with the application context, even if nobody loads the web app

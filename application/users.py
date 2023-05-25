@@ -4,7 +4,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from application.db import get_db, log
 import re
 
-bp = Blueprint('auth', __name__, url_prefix='/auth')
+bp = Blueprint('users', __name__, url_prefix='/users')
 
 @bp.before_app_request
 def load_logged_in_user():
@@ -29,7 +29,7 @@ def login_required(view):
     @functools.wraps(view)
     def wrapped_view(**kwargs):
         if g.user is None:
-            return redirect(url_for('auth.login'))
+            return redirect(url_for('users.login'))
 
         return view(**kwargs)
 
@@ -40,7 +40,7 @@ def admin_required(view):
     def wrapped_view(**kwargs):
         if session['admin'] == 0:
             flash("Administrator login required!")
-            return redirect(url_for('auth.user'))
+            return redirect(url_for('users.settings'))
 
         return view(**kwargs)
 
@@ -83,12 +83,12 @@ def register():
                 error = f"User {username} is already registered."
             else:
                 session.clear()
-                return redirect(url_for("auth.login"))
+                return redirect(url_for("users.login"))
 
         if error is not None:
             flash(error) 
 
-    return render_template('auth/register.html')
+    return render_template('users/register.html')
 
 @bp.route('/login', methods=('GET', 'POST'))
 def login():
@@ -118,9 +118,9 @@ def login():
             log("WARN", "Failed login - user " + username.lower() + ": " + error)
             flash(error)
 
-    return render_template('auth/login.html')
+    return render_template('users/login.html')
 
-@bp.route('/user', methods=('GET', 'POST'))
+@bp.route('/settings', methods=('GET', 'POST'))
 @login_required
 def user():
     if request.method == 'POST':
@@ -164,4 +164,4 @@ def user():
             db.commit()
         flash(error)
 
-    return render_template('auth/user.html')
+    return render_template('users/settings.html')
