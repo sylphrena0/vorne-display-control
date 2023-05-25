@@ -9,6 +9,7 @@
 {% block content %}
 
 <form method="post">
+  <h2 class="header hinput">User Settings:</h2>
 
   <div class="centerdiv">
     <div class="input-container ic1" style="text-align: left; margin: 20px; width: 30%; display: inline-block;">
@@ -43,11 +44,6 @@
   </div>
 
 </form>
-
-{% if session['admin'] == 1 %}
-<a href="{{ url_for('users.register') }}" class="button-1" style="display: inline-flex; align-items: center;">Register New User</a> 
-<a href="{{ url_for('control.settings') }}" class="button-1" style="display: inline-flex; align-items: center;">Settings</a>
-{% endif %}
 
 
 

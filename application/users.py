@@ -1,8 +1,9 @@
 import functools
-from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for
+from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for, Response, jsonify
 from werkzeug.security import check_password_hash, generate_password_hash
 from application.db import get_db, log
 import re
+import json #to get data from js
 
 bp = Blueprint('users', __name__, url_prefix='/users')
 
@@ -46,11 +47,12 @@ def admin_required(view):
 
     return wrapped_view
 
-@bp.route('/register', methods=('GET', 'POST'))
-@login_required #cannot create new user unless already registered!
-@admin_required #only admins can create users
-def register():
-    if request.method == 'POST':
+#defines the index page
+@bp.route('/', methods=['GET','POST'])
+@login_required
+@admin_required #only admins can view userlist
+def index():
+    if request.method == 'POST': #register user
         username = request.form['username'].capitalize()
         password = request.form['password']
         privilege = request.form['privilege']
@@ -88,7 +90,7 @@ def register():
         if error is not None:
             flash(error) 
 
-    return render_template('users/register.html')
+    return render_template('users/list.html')
 
 @bp.route('/login', methods=('GET', 'POST'))
 def login():
@@ -165,3 +167,83 @@ def user():
         flash(error)
 
     return render_template('users/settings.html')
+
+
+#defines a users function which is called when /getusers is accessed
+@bp.route('/getusers', methods=['GET', 'POST'])
+@login_required
+@admin_required
+def getusers():
+    db = get_db()
+    user_id = session["user_id"]
+    user_data = db.execute('SELECT * FROM user')
+    users = []
+    for user in user_data:
+        role = "Admin" if user['admin'] == 1 else "User"
+        users.append({'id': user['id'], 'username': user['username'], 'role': role})
+
+    return jsonify(users)
+
+#reset password route
+@bp.route('/resetpassword', methods=['GET'])
+@login_required
+@admin_required
+def resetpassword():
+    if request.method == 'GET':
+        user_id = request.args.get('id')
+        username = request.args.get('user')
+        password = request.args.get('password')
+        db = get_db()
+        log("INFO","Admin " + g.user['username'].lower() + " changed " + username + "'s password!")
+        db.execute("UPDATE user SET password = '{}' WHERE id = '{}'".format(generate_password_hash(password), user_id)) #update password
+        db.commit()
+
+    return Response(status=200)
+
+#delete user route
+@bp.route('/deleteuser', methods=['GET'])
+@login_required
+@admin_required
+def deleteuser():
+    if request.method == 'GET':
+        admin = True if request.args.get('admin') == "Admin" else False
+
+        db = get_db()
+
+        user_data = db.execute('SELECT * FROM user WHERE admin = 1').fetchall()
+        if admin and len(user_data) == 1:
+            return Response(status=403)
+
+        user_id = request.args.get('id')
+        username = request.args.get('user')
+        log("INFO","Admin " + g.user['username'].lower() + " deleted " + username + "'s account!")
+        db.execute("DELETE FROM user WHERE id = '{}'".format(user_id))
+        db.commit()
+
+        return Response(status=200)
+    
+#change role route
+@bp.route('/changerole', methods=['GET'])
+@login_required
+@admin_required
+def changerole():
+    admin = True if request.args.get('admin') == "Admin" else False
+
+    db = get_db()
+
+    user_data = db.execute('SELECT * FROM user WHERE admin = 1').fetchall()
+    if admin and len(user_data) == 1:
+        return Response(status=403)
+
+    user_id = request.args.get('id')
+    username = request.args.get('user')
+
+    if not admin:
+        log("INFO","Admin " + g.user['username'].lower() + " made " + username + " an admin!")
+        db.execute("UPDATE user SET admin = 1 WHERE id = '{}'".format(user_id))
+    else:
+        log("INFO","Admin " + g.user['username'].lower() + " demoted " + username + " to a user!")
+        db.execute("UPDATE user SET admin = 0 WHERE id = '{}'".format(user_id))
+    db.commit()
+
+    return Response(status=200)

@@ -65,9 +65,9 @@ header .action {
     color: #bdbdbd;
 }
 
-.content {
+/* .content {
     padding: 0 1rem 1rem;
-}
+} */
 
 .content>header {
     display: flex;
@@ -349,3 +349,78 @@ pre code {
     overflow-y:scroll;
     max-height: 60vh;
   }
+
+table{
+    color: #f1f1f1 !important;
+}
+
+.table-hover tbody tr:hover {
+  color: #ddafeb !important;
+}
+
+.container-xl {
+    margin-top: 50px;
+}
+
+table {
+    border-collapse: separate;
+    /*Allows disabling those annoying white borders on tables*/
+    border-spacing: 0px;
+    width: 100%;
+  }
+  
+  
+  table.striped tbody tr:nth-child(2n) td {
+    /*I used a ID here because the sorting script I enabled requires the <thead> tag, which fucks up table selections*/
+    background: #1e1e1e;
+    /*Change the varable above, not the value*/
+  }
+  
+  table.striped tbody tr:nth-child(2n+1) td {
+    background: #121212;
+    /*Change the varable above, not the value*/
+  }
+  
+  table.striped th {
+    background: #1e1e1e;
+    /*Table header color*/
+    color: white;
+  }
+  
+  tr { /*height of rows*/
+    height: 45px;
+  }
+
+  h2.header {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .header#register {
+    margin-bottom: 0px;
+    margin-top: 30px;
+  }
+  .header.hinput {
+    margin-bottom: 5px;
+    margin-top: 30px;
+  }
+  
+  table,
+  tr,
+  td {
+    border: none;
+    text-align: center;
+  }
+  
+  table {
+    box-sizing: border-box;
+    display: table;
+    font-family: \"Helvetica Neue\", Helvetica, Roboto, Arial, sans-serif;
+    margin: 0 auto;
+    inline-size: 100%;
+  }
+  
+  /* table > tbody > * > td:first-child {
+    text-align: left;
+    padding-left: 15px;
+  } */

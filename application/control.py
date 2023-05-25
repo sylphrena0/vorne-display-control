@@ -24,7 +24,7 @@ def getmsg():
     print(data)
     return Response(json.dumps(data))
 
-#defines the index page and controls buttons. control buttons should be removed!
+#defines the index page
 @bp.route('/', methods=['GET','POST'])
 @login_required
 def index():

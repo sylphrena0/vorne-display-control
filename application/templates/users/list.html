@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  {% block title %}Users{% endblock %}
+{% endblock %}
+
+{% set active_page = "admin" %}
+
+{% block content %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+<script>
+    //script will run on load
+    $(document).ready(function(){
+        fetch("/users/getusers")
+        .then(response => response.json())
+        .then(data => {
+            //loop through data
+            for (var i = 0; i < data.length; i++) {
+                //create row
+                var row = $("<tr />")
+                //append row to table
+                $("#table").append(row);
+                //append data to row
+                row.append($("<td>" + data[i].id + "</td>"));
+                row.append($("<td>" + data[i].username + "</td>"));
+                row.append($("<td>" + data[i].role + "</td>"));
+                row.append($("<td>" + 
+                    "<i class='material-icons role' title='Change user role'>&#xf02e;</i>" +
+                    "<i class='material-icons reset' title='Reset user password'>&#xeade;</i>" +
+                    "<i class='material-icons delete' title='Delete user'>&#xe872;</i>" + 
+                    "</td>"));
+            }
+        })
+    });
+
+    //add click listener to icon with id settings
+    document.addEventListener('click',function(event){
+        const reset = event.target.closest('.reset');
+        const deletei = event.target.closest('.delete');
+        const role = event.target.closest('.role');
+        if (deletei !== null) {
+            const id = deletei.parentNode.parentNode.firstChild.textContent;
+            const name = deletei.parentNode.parentNode.firstChild.nextSibling.textContent;
+            const admin = deletei.parentNode.parentNode.firstChild.nextSibling.nextSibling.textContent;
+            console.log(`/users/deleteuser?id=${id}&user=${name}&admin=${admin}`);
+            if (window.confirm("Please confirm that you wish to delete " + name + ".")) {
+                fetch(`/users/deleteuser?id=${id}&user=${name}&admin=${admin}`)
+                .then(function(response) {
+                    if (response.status == 403) {
+                        alert("You cannot delete the last admin.");
+                    } else {
+                        location.reload();
+                    }
+                });
+            }
+        } else if (reset !== null) {
+            const id = reset.parentNode.parentNode.firstChild.textContent;
+            const name = reset.parentNode.parentNode.firstChild.nextSibling.textContent;
+            const admin = reset.parentNode.parentNode.firstChild.nextSibling.nextSibling.textContent;
+            if (window.confirm("Please confirm that you wish to reset " + name + "'s password.")) {
+                //generate random password
+                var password = Math.random().toString(36).slice(-8);
+                //prompts user to save password
+                alert("Please save the new password for " + name + ": " + password);
+                //reset password
+                $.getJSON(`/users/resetpassword?id=${id}&user=${name}&password=${password}`, function(event) {});
+            }  
+        } else if (role !== null) {
+            const id = role.parentNode.parentNode.firstChild.textContent;
+            const name = role.parentNode.parentNode.firstChild.nextSibling.textContent;
+            const admin = role.parentNode.parentNode.firstChild.nextSibling.nextSibling.textContent;
+            if (admin != "Admin") {
+                if(!window.confirm("Please confirm that you wish to promote " + name + " to admin.")) {return;}
+            } else {
+                if (!window.confirm("Please confirm that you wish to demote " + name + " to user.")) {return;}
+            }
+            //change role
+            fetch(`/users/changerole?id=${id}&user=${name}&admin=${admin}`)
+            .then(function(response) {
+                if (response.status == 403) {
+                    alert("You cannot demote the last admin.");
+                } else {
+                    location.reload();
+                }
+            });
+        }
+
+      });
+
+</script>
+
+
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <h2 class="header">User Management:</h2>
+                </div>
+            </div>
+            <table class="table striped table-hover">
+                <thead>
+                    <tr>
+                        <th>ID #</th>
+                        <th>Username</th>						
+                        <th>Role</th>
+                        <th>Modify User</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+     
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>   
+<h2 class="header" id="register">Register New User:</h2>
+<form method="post">
+    <div class="centerdiv">
+      <div class="input-container ic1" style="text-align: left; margin: 20px; width: 25%; display: inline-block;">
+        <input id="username" name="username" class="input" placeholder=" "  required/>
+        <div class="cut"></div>
+        <label for="username" class="placeholder">Username</label>
+      </div>
+  
+      <div class="input-container ic1" style="text-align: left; margin: 20px; width: 25%; display: inline-block;">
+        <input id="password" name="password" class="input" type="password" placeholder=" "  required/>
+        <div class="cut"></div>
+        <label for="password" class="placeholder">Password</label>
+      </div>
+  
+      
+      <select class="input" name="privilege" style="height: 50px; width: 110px; color: #9d9d9d; margin: 0px 20px;">
+        <option name="user" selected>User</option>
+        <option name="admin">Admin</option>
+        </select>
+  
+      <input class="button-1" type="submit" value="Register">
+    </div>
+    </form>
+{% endblock %}

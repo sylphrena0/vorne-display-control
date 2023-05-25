@@ -10,7 +10,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script>
-  //script will get current toggle setting from database and update toggles accordingly
   $(document).ready(function(){
       $.getJSON('/getsettings', function(settings) {
         var COM_PORT = settings['COM_PORT'];

@@ -10,7 +10,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script>
-    //script will get current toggle setting from database and update toggles accordingly
     $(document).ready(function(){
         lvl = document.getElementById("debug").value
         $.getJSON(`/getlogs?lvl=${lvl}`, function(logging) {
@@ -27,7 +26,6 @@
 </pre>
 
 <div class="centerdiv">
-
 <select id="debug" name="debug" class="input" title="Set debug level" style="height: 50px; width: 20%; color: #9d9d9d; margin:20px;">
     <option value=4>CRIT</option>
     <option value=3>ERROR</option>
@@ -45,7 +43,9 @@
 
   <script>
     function restart(){
-      $.getJSON(`/restart`, function(logging) {});
+      if (window.confirm("Please confirm that you wish to restart the server.")) {
+        $.getJSON(`/restart`, function(logging) {});
+      }
     };
     function updateLogs(){
         lvl = document.getElementById("debug").value
