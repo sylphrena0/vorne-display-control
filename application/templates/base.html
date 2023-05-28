@@ -29,7 +29,7 @@
     <a class="home{% if id == active_page %} active{% endif%}" href="{{ href|e }}">{{ caption|e }}</a>
     {% endfor %}
     <div class="dropdown{% if active_page == 'user' %} active{% endif%}">
-      <button class="dropbtn" onclick="changeStyle(0)">{{ g.user['username'] }}  
+      <button class="dropbtn" id="user" onclick="(0)">{{ g.user['username'] }}  
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
@@ -40,7 +40,7 @@
     </div>
     {% if g.admin == 1 %}
       <div class="dropdown{% if active_page == 'admin' %} active{% endif%}">
-        <button class="dropbtn" onclick="changeStyle(1)">Configuration 
+        <button class="dropbtn">Configuration 
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">

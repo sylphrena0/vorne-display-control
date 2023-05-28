@@ -98,7 +98,10 @@ body {
     font-family: inherit;
     margin: 0;
   }
-  
+
+  .dropdown .dropbtn#user { 
+    min-width: 94px;
+  }
 
   .dropdown-content {
     display: none;
