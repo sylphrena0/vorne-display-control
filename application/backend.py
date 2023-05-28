@@ -123,6 +123,8 @@ def backend(app):
                 ss_api_key = settings['SS_API_KEY']
                 ss_api_secret = settings['SS_API_SECRET']
                 response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+                if response.status_code == 204:
+                    raise RuntimeWarning("Shipstation API returned 204: Success, No Content")
                 dict = loads(response.text) #gets post request response
                 storedict = {"thermalbladedealer": 67315,"thermalblade": 89213,"qqship": 91927,"qqshipCA": 61349,"nms": 67134,"manual": 38981,"unbranded": 82894} #defines dictionary of shipstation store IDs
                 totalfbm, thermalblade, qqship, manual, nms = 0, 0, 0, 0, 0 #initializes order variable counters
