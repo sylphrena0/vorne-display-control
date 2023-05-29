@@ -115,6 +115,10 @@ input.danger {
     text-align: center;
 }
 
+.centerdiv.bottom {
+    padding-bottom: 20px;
+}
+
 .button {
     background-color: #292929;
     border: none;

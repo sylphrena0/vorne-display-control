@@ -25,20 +25,20 @@
     </code>
 </pre>
 
-<div class="centerdiv">
-<select id="debug" name="debug" class="input" title="Set debug level" style="height: 50px; width: 20%; color: #9d9d9d; margin:20px;">
-    <option value=4>CRIT</option>
-    <option value=3>ERROR</option>
-    <option value=2>WARN</option>
-    <option value=1 selected>INFO</option>
-    <option value=0>DEBUG</option>
-</select>
+<div class="centerdiv bottom">
+  <select id="debug" name="debug" class="input" title="Set debug level" style="height: 50px; width: 20%; color: #9d9d9d; margin:20px;">
+      <option value=4>CRIT</option>
+      <option value=3>ERROR</option>
+      <option value=2>WARN</option>
+      <option value=1 selected>INFO</option>
+      <option value=0>DEBUG</option>
+  </select>
 
-<input name="update" class="button-1" type="submit" value="Update Debug Level" onclick="updateLogs()">
-<form style="display: inline-block;" method="post">
-<input name="clear" class="button-1" type="submit" value="Clear Logs" onclick="updateLogs()">
-</form>
-<input name="restart" class="button-1" type="submit" value="Restart" onclick="restart()">
+  <input name="update" class="button-1" type="submit" value="Update Debug Level" onclick="updateLogs()">
+  <form style="display: inline-block;" method="post">
+  <input name="clear" class="button-1" type="submit" value="Clear Logs" onclick="updateLogs()">
+  </form>
+  <input name="restart" class="button-1" type="submit" value="Restart" onclick="restart()">
 </div>
 
   <script>
