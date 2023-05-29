@@ -38,7 +38,7 @@
         {% endfor %}
       </div>
     </div>
-    {% if g.admin == 1 %}
+    {% if g.user['admin'] == 1 %}
       <div class="dropdown{% if active_page == 'admin' %} active{% endif%}">
         <button class="dropbtn">Configuration 
           <i class="fa fa-caret-down"></i>

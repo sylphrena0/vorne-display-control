@@ -13,10 +13,7 @@ def load_logged_in_user():
     admin = session.get('admin')
     if user_id is None:
         g.user = None
-        g.admin = None
     else:
-        if admin is not None:
-            g.admin = 1
         g.user = get_db().execute(
             'SELECT * FROM user WHERE id = ?', (user_id,)
         ).fetchone()
