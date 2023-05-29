@@ -43,7 +43,7 @@
         <button class="dropbtn">Configuration 
           <i class="fa fa-caret-down"></i>
         </button>
-        <div class="dropdown-content">
+        <div class="dropdown-content" id="config">
           {% for href, id, caption in navigation_bar_admin %}
           <a class="static" href="{{ href|e }}">{{ caption|e }}</a>
           {% endfor %}
