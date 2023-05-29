@@ -3,7 +3,6 @@ from flask import Blueprint, flash, g, redirect, render_template, request, sessi
 from werkzeug.security import check_password_hash, generate_password_hash
 from application.db import get_db, log
 import re
-import json #to get data from js
 
 bp = Blueprint('users', __name__, url_prefix='/users')
 
