@@ -9,3 +9,54 @@ This program uses [Flask](https://flask.palletsprojects.com/en/2.1.x/) to host a
  - python: [Flask](https://flask.palletsprojects.com/en/2.1.x/installation)
  - python: [schedule](https://schedule.readthedocs.io/en/stable/installation.html)
  - python: [pyserial](https://pyserial.readthedocs.io/en/latest/pyserial.html#installation)
+
+Install by running the command `pip3 install flask schedule pyserial` in your terminal.
+
+## **Screenshots:** 
+<br>
+
+<img src="screenshots/Login.png"
+     alt="NMS Display Control Software Login Page"
+     style="float: center; margin-right: 10px;" />
+
+Login Page 
+
+<br>
+
+<img src="screenshots/Control.png"
+     alt="NMS Display Control Software Control Page"
+     style="float: center; margin-right: 10px;" />
+
+Display Control Page 
+
+<br>
+
+<img src="screenshots/User Settings.png"
+        alt="NMS Display Control Software User Settings Page"
+        style="float: center; margin-right: 10px;" />
+
+User Settings Page 
+
+<br>
+
+<img src="screenshots/Configuration.png"
+        alt="NMS Display Control Software Configuration Page"
+        style="float: center; margin-right: 10px;" />
+
+Configuration Page 
+
+<br>
+
+<img src="screenshots/Debugging.png"
+        alt="NMS Display Control Software Debugging Page"
+        style="float: center; margin-right: 10px;" />
+
+Debugging Page
+
+<br>
+
+<img src="screenshots/Users.png"
+        alt="NMS Display Control Software User Management Page"
+        style="float: center; margin-right: 10px;" />
+
+User Management Page
