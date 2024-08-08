@@ -15,19 +15,19 @@ from threading import Thread
 #############################################
 ###### [M1000 Communication Functions] ######
 ############################################# 
-def sendmessage(text="CHANGEME",addr=["01"],font=1,line=1,char="",rate=None,blinktype=None,scrollexpiry=None,center=False,debug=False): #defines function to send data to display
-    #translate optional arguments to command syntax or null strings if not specifed
-    blink, scroll, messagetype = "", "", "static "
+def send_message(text="CHANGEME",addr=["01"],font=1,line=1,char="",rate=None,blink_type=None,scroll_expiry=None,center=False,debug=False): #defines function to send data to display
+    #translate optional arguments to command syntax or null strings if not specified
+    blink, scroll, message_type = "", "", "static "
     if char != "":
         char = "\x1b%sC" % (char)
-        messagetype = "partial "
-    if blinktype != None:
-        blink = "\x1b%s;+%s" % (rate,blinktype)
-        messagetype = "blinking "
-    if scrollexpiry != None:
-        scroll = "\x1b%s;%sS\x1b20R " % (rate,scrollexpiry)
-        messagetype = "scrolling "
-    if [char,blink,scroll].count("") < 2: #ensure mutliple commands are not specified
+        message_type = "partial "
+    if blink_type != None:
+        blink = "\x1b%s;+%s" % (rate,blink_type)
+        message_type = "blinking "
+    if scroll_expiry != None:
+        scroll = "\x1b%s;%sS\x1b20R " % (rate,scroll_expiry)
+        message_type = "scrolling "
+    if [char,blink,scroll].count("") < 2: #ensure multiple commands are not specified
         log("WARN","Conflicting message commands - canceling message!")
         print([char,blink,scroll].count("") < 2,[char,blink,scroll].count(""), [char,blink,scroll])
         return
@@ -44,26 +44,26 @@ def sendmessage(text="CHANGEME",addr=["01"],font=1,line=1,char="",rate=None,blin
         g.ser.write(b'%s' % (string.encode('ascii'))) #encodes as ascii, changes to bytes, and writes to display
         g.ser.close() #close COM 
 
-    if debug: log("DEBUG","Sending %smessage to displays" % (messagetype))
+    if debug: log("DEBUG","Sending %smessage to displays" % (message_type))
 
-def parsemode(mode,rate=None, scrollexpiry=None, blinktype=None): #turns the mode string used by flask into three backend compabile options
+def parse_mode(mode,rate=None, scroll_expiry=None, blink_type=None): #turns the mode string used by flask into three backend compabile options
     if mode.endswith("Scrolling"):
-        scrollexpiry = 0
+        scroll_expiry = 0
     elif mode.endswith("Blinking"):
-        blinktype = "B"
+        blink_type = "B"
     if mode.startswith("Slow"):
-        rate = 5 if scrollexpiry != None else 50
+        rate = 5 if scroll_expiry != None else 50
     elif mode.startswith("Medium"):
-        rate = 10 if scrollexpiry != None  else 100
+        rate = 10 if scroll_expiry != None  else 100
     elif mode.startswith("Fast"):
-        rate = 15 if scrollexpiry != None  else 150
-    return rate, scrollexpiry, blinktype
+        rate = 15 if scroll_expiry != None  else 150
+    return rate, scroll_expiry, blink_type
 
 def get_ser():
     try:
         settings = {}
-        storedsettings = get_db().execute('SELECT * FROM settings')
-        for setting in storedsettings:
+        stored_settings = get_db().execute('SELECT * FROM settings')
+        for setting in stored_settings:
             settings[setting['setting']] = setting['stored']
         g.ser = serial.Serial()
         g.ser.baudrate = int(settings['BAUD_RATE']) #baud rate, set to number shown on the display
@@ -100,23 +100,23 @@ def backend(app):
         ############### [Settings] ###############
         ###########################################
         settings = {}
-        addresses, shippingaddress = [], []
-        storedsettings = get_db().execute('SELECT * FROM settings')
-        for setting in storedsettings:
+        addresses, shipping_address = [], []
+        stored_settings = get_db().execute('SELECT * FROM settings')
+        for setting in stored_settings:
             settings[setting['setting']] = setting['stored']
         fnt = int(settings['FNT'])
 
-        storedaddresses = get_db().execute('SELECT * FROM addresses')
-        for address in storedaddresses:
+        stored_addresses = get_db().execute('SELECT * FROM addresses')
+        for address in stored_addresses:
             if address['shipping'] == 1:
-                shippingaddress.append(address['stored'])
+                shipping_address.append(address['stored'])
             else:
                 addresses.append(address['stored'])
 
         ###########################################
         ##### [Update Shipstation Order Data] #####
         ########################################### 
-        def updateFBM():
+        def update_fbm():
             try:
                 log("DEBUG","Updating FBM orders")
                 msg = get_db().execute('SELECT df FROM msg WHERE id = 1').fetchone()
@@ -125,27 +125,27 @@ def backend(app):
                 response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
                 if response.status_code == 204:
                     raise RuntimeWarning("Shipstation API returned 204: Success, No Content")
-                dict = loads(response.text) #gets post request response
-                storedict = {"thermalbladedealer": 67315,"thermalblade": 89213,"qqship": 91927,"qqshipCA": 61349,"nms": 67134,"manual": 38981,"unbranded": 82894} #defines dictionary of shipstation store IDs
-                totalfbm, thermalblade, qqship, manual, nms = 0, 0, 0, 0, 0 #initializes order variable counters
-                for order in dict.get("orders"): #grabs the order dictionarys from the set response
-                    advancedOptions = order.get("advancedOptions") #gets the dictionary that containes the storeID from each order
-                    totalfbm += 1
-                    if (advancedOptions.get('storeId') == storedict.get("thermalbladedealer")) or (advancedOptions.get('storeId') == storedict.get("thermalblade")): 
+                _dict = loads(response.text) #gets post request response
+                store_dict = {"thermalbladedealer": 67315,"thermalblade": 89213,"qqship": 91927,"qqshipCA": 61349,"nms": 67134,"manual": 38981,"unbranded": 82894} #defines dictionary of shipstation store IDs
+                total_fbm, thermalblade, qqship, manual, nms = 0, 0, 0, 0, 0 #initializes order variable counters
+                for order in _dict.get("orders"): #grabs the order dictionaries from the set response
+                    advanced_options = order.get("advancedOptions") #gets the dictionary that contains the storeID from each order
+                    total_fbm += 1
+                    if (advanced_options.get('storeId') == store_dict.get("thermalbladedealer")) or (advanced_options.get('storeId') == store_dict.get("thermalblade")): 
                         thermalblade += 1 
-                    elif advancedOptions.get('storeId') == storedict.get("qqship") or advancedOptions.get('storeId') == storedict.get("qqshipCA"): 
+                    elif advanced_options.get('storeId') == store_dict.get("qqship") or advanced_options.get('storeId') == store_dict.get("qqshipCA"): 
                         qqship += 1 
-                    elif advancedOptions.get('storeId') == storedict.get("manual") or advancedOptions.get('storeId') == storedict.get("unbranded"): 
+                    elif advanced_options.get('storeId') == store_dict.get("manual") or advanced_options.get('storeId') == store_dict.get("unbranded"): 
                         manual += 1 
-                    elif advancedOptions.get('storeId') == storedict.get("nms"): 
+                    elif advanced_options.get('storeId') == store_dict.get("nms"): 
                         nms += 1 
-                sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
-                sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shippingaddress,font=fnt,line=2,center=True)
-                sendmessage(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
+                send_message("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shipping_address,font=fnt,line=1,center=True)
+                send_message("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shipping_address,font=fnt,line=2,center=True)
+                send_message(str("RO:" + str(total_fbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
                 
                 #update database for other modules
                 db = get_db()
-                db.execute("UPDATE msg SET ro = ? WHERE id = 1",(totalfbm,))
+                db.execute("UPDATE msg SET ro = ? WHERE id = 1",(total_fbm,))
                 db.commit()
             except Exception:
                 log("ERROR", "Error in ShipStation API call!")
@@ -154,27 +154,27 @@ def backend(app):
         ###########################################
         ##### [Update Shipstation Order Data] #####
         ########################################### 
-        def updateTime():
+        def update_time():
             now = datetime.now()
-            sendmessage(text=str(now.strftime("%H:%M ")),char=0,addr=addresses,font=1,line=1)
+            send_message(text=str(now.strftime("%H:%M ")),char=0,addr=addresses,font=1,line=1)
 
         ###########################################
         ########## [Initialize Displays] ##########
         ########################################### 
-        def initializeDisplays():
+        def initialize_displays():
             #initializes time and automatic order qtys
-            updateTime()
+            update_time()
             time.sleep(.5)
-            updateFBM()
+            update_fbm()
 
             #adds message from previous instance
             msg = get_db().execute('SELECT * FROM msg WHERE id = 1').fetchone()
-            rate, scrollexpiry, blinktype = parsemode(msg['mode']) #parse the human readable mode to commands
-            sendmessage(msg['msg'],addr=addresses,font=fnt,line=2,rate=rate,scrollexpiry=scrollexpiry,blinktype=blinktype)
+            rate, scroll_expiry, blink_type = parse_mode(msg['mode']) #parse the human readable mode to commands
+            send_message(msg['msg'],addr=addresses,font=fnt,line=2,rate=rate,scroll_expiry=scroll_expiry,blink_type=blink_type)
 
             #schedules message functions
-            schedule.every(int(settings['FBM_DELAY'])).minutes.at(':30').do(updateFBM).tag('send-msg')
-            schedule.every().minute.at(':00').do(updateTime).tag('send-msg')
+            schedule.every(int(settings['FBM_DELAY'])).minutes.at(':30').do(update_fbm).tag('send-msg')
+            schedule.every().minute.at(':00').do(update_time).tag('send-msg')
 
         ###########################################
         ############ [Timeout Handler] ############
@@ -182,7 +182,7 @@ def backend(app):
         #handles scheduling and turns off displays at night
         
         @schedule.repeat(schedule.every(5).minutes.at(':10'))
-        def timeoutHandler():
+        def timeout_handler():
             try:
                 active = get_db().execute('SELECT * FROM settings WHERE setting = "ACTIVE"').fetchone()['stored']
                 end_hour, end_min = get_db().execute('SELECT * FROM settings WHERE setting = "END_TIME"').fetchone()['stored'].split(":")
@@ -197,21 +197,21 @@ def backend(app):
                     db.execute('UPDATE settings SET stored = "1" WHERE setting = "ACTIVE"')
                     db.commit()
                     log("INFO","Startup time reached. Activating displays.")
-                    initializeDisplays() #will add initial messages and schedule update tasks
+                    initialize_displays() #will add initial messages and schedule update tasks
                 if now_min >= end and active == '1': # if time is beyond end hour and the displays are on
                     log("INFO","Shutdown time reached. Deactivating displays.")
                     db = get_db()
                     db.execute('UPDATE settings SET stored = "0" WHERE setting = "ACTIVE"')
                     db.commit()
                     schedule.clear('send-msg') #clears tasks with 'send-msg' tag
-                    sendmessage(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=1) #clears display by filling with empty space
-                    sendmessage(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=2) #clears display by filling with empty space
+                    send_message(text="\x1b20R ",addr=addresses + shipping_address,font=1,line=1) #clears display by filling with empty space
+                    send_message(text="\x1b20R ",addr=addresses + shipping_address,font=1,line=2) #clears display by filling with empty space
             except Exception:
                 log("ERROR",traceback.format_exc())
 
-        initializeDisplays()
+        initialize_displays()
         time.sleep(0.5)
-        timeoutHandler()
+        timeout_handler()
         while True:
             schedule.run_pending()
             time.sleep(5)     

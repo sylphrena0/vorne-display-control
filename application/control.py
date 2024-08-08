@@ -5,7 +5,7 @@ import os
 from flask import Blueprint, flash, g, redirect, render_template, request, url_for, Flask, Response #web framework imports
 from application.users import login_required, admin_required
 from application.db import log, get_db, close_db #access to database
-from application.backend import parsemode, sendmessage, get_ser
+from application.backend import parse_mode, send_message, get_ser
 
 #sets the blueprint for this code
 bp = Blueprint('control', __name__)
@@ -46,29 +46,29 @@ def index():
         except Exception:
             log("CRIT",traceback.format_exc())
     
-        rate, scrollexpiry, blinktype = parsemode(mode) #parse the human readable mode to commands
+        rate, scroll_expiry, blink_type = parse_mode(mode) #parse the human readable mode to commands
         
         get_ser() #gets serial config from backend.py to enable serial control from here
 
         #grab addresses from settings in db
         settings = {}
         addresses, shipping = [], []
-        storedsettings = get_db().execute('SELECT * FROM settings')
-        for setting in storedsettings:
+        stored_settings = get_db().execute('SELECT * FROM settings')
+        for setting in stored_settings:
             settings[setting['setting']] = setting['stored']
         fnt = int(settings['FNT'])
 
-        storedaddresses = get_db().execute('SELECT * FROM addresses')
-        for address in storedaddresses:
+        stored_addresses = get_db().execute('SELECT * FROM addresses')
+        for address in stored_addresses:
             if address['shipping'] == 1:
                 shipping.append(address['stored'])
             else:
                 addresses.append(address['stored'])
 
         #get FBM numbers and update messages
-        totalfbm = get_db().execute('SELECT ro FROM msg').fetchone()[0]
-        sendmessage(msg,addr=addresses,font=fnt,line=2,rate=rate,scrollexpiry=scrollexpiry,blinktype=blinktype)
-        sendmessage("RO:" + str(totalfbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
+        total_fbm = get_db().execute('SELECT ro FROM msg').fetchone()[0]
+        send_message(msg,addr=addresses,font=fnt,line=2,rate=rate,scroll_expiry=scroll_expiry,blink_type=blink_type)
+        send_message("RO:" + str(total_fbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
 
         if error is not None:
             flash(error)
@@ -93,7 +93,7 @@ def settings():
         ss_api_secret = request.form['SS_API_SECRET']
         addresses = request.form['displays'].replace(" ","").split(",")
         shipping_addresses = request.form['shipping_displays'].replace(" ","").split(",")
-        FBM_delay = request.form['FBM_delay']
+        fbm_delay = request.form['FBM_delay']
         start_time = request.form['start_time']
         end_time = request.form['end_time']
         
@@ -126,12 +126,12 @@ def settings():
                 db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'SS_API_SECRET'", (ss_api_secret,))
                 db.commit()
 
-            log("INFO","Updating settings -" + " com_port: " + com_port + ", baud_rate: " + baud_rate + ", font: " + font + ", FBM_delay: " + FBM_delay + ", start_time: " + start_time + ", end_time: " + end_time)
+            log("INFO","Updating settings -" + " com_port: " + com_port + ", baud_rate: " + baud_rate + ", font: " + font + ", FBM_delay: " + fbm_delay + ", start_time: " + start_time + ", end_time: " + end_time)
             db = get_db()
             db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'COM_PORT'", (com_port,))
             db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'BAUD_RATE'", (baud_rate,))
             db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'FNT'", (font,))
-            db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'FBM_DELAY'", (FBM_delay,))
+            db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'FBM_DELAY'", (fbm_delay,))
             db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'START_TIME'", (start_time,))
             db.execute("UPDATE settings SET (stored) =  (?) WHERE setting = 'END_TIME'", (end_time,))
             db.commit()
@@ -189,7 +189,7 @@ def debugging():
 @bp.route('/getlogs')
 @login_required
 @admin_required
-def getlogs():
+def get_logs():
     lvl = request.args.get("lvl")
     logging = []
     for log in get_db().execute('SELECT * FROM logging WHERE lvl >= {} ORDER BY id DESC'.format(lvl)):
@@ -204,4 +204,3 @@ def getlogs():
 def restart():
     log("INFO","Restarting Service")
     os.system("sudo reboot")
-    return

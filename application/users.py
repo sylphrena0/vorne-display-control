@@ -4,12 +4,12 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from application.db import get_db, log
 import re
 
+username_regex: str = '[^0-9a-zA-Z]+'
 bp = Blueprint('users', __name__, url_prefix='/users')
 
 @bp.before_app_request
 def load_logged_in_user():
     user_id = session.get('user_id')
-    admin = session.get('admin')
     if user_id is None:
         g.user = None
     else:
@@ -55,7 +55,7 @@ def index():
         db = get_db()
         error = None
 
-        if re.compile('[^0-9a-zA-Z]+').search(username) or len(username) > 20: #ensures no special charecters are present in username, should prevent injection attacks
+        if re.compile('username_regex').search(username) or len(username) > 20: #ensures no special charecters are present in username, should prevent injection attacks
             error = "Invalid Username"
         elif not username:
             error = 'Username is required.'
@@ -99,7 +99,7 @@ def login():
             'SELECT * FROM user WHERE username = ?', (username,)
         ).fetchone()
 
-        if re.compile('[^0-9a-zA-Z]+').search(username): #ensures no special charecters are present in username, should prevent injection attacks
+        if re.compile('username_regex').search(username): #ensures no special charecters are present in username, should prevent injection attacks
             error = "Invalid Username"
         elif user is None:
             error = 'Incorrect username.'
@@ -126,39 +126,39 @@ def user():
         user_id = session["user_id"]
         error = None
         if "change_password" in request.form:
-            oldpassword = request.form['oldpassword']
-            newpassword = request.form['newpassword']
-            if not oldpassword or not newpassword: #check that the form is complete
+            old_password = request.form['oldpassword']
+            new_password = request.form['newpassword']
+            if not old_password or not new_password: #check that the form is complete
                 error = 'All fields are required.'
 
             user_data = db.execute('SELECT * FROM user WHERE id = {}'.format(user_id,)).fetchone() #grab user data to check old passowrd
 
             if user_data is None: #catch database errors
                 error = 'Database error.'
-            elif not check_password_hash(user_data['password'], oldpassword): #check that the old password is correct
+            elif not check_password_hash(user_data['password'], old_password): #check that the old password is correct
                 error = 'Incorrect password.'
 
             log("INFO","User " + user_data['username'].lower() + " changed their password")
-            db.execute("UPDATE user SET password = '{}' WHERE id = '{}'".format(generate_password_hash(newpassword),user_id)) #update password
+            db.execute("UPDATE user SET password = '{}' WHERE id = '{}'".format(generate_password_hash(new_password),user_id)) #update password
             db.commit()
         elif "change_username" in request.form:
             password = request.form['password']
-            newusername = request.form['newusername'].capitalize()
+            new_username = request.form['newusername'].capitalize()
             
-            if not password or not newusername: #check that the form is complete
+            if not password or not new_username: #check that the form is complete
                 error = 'All fields are required.'
 
             user_data = db.execute('SELECT * FROM user WHERE id = {}'.format(user_id,)).fetchone() #grab user data to check password
 
-            if re.compile('[^0-9a-zA-Z]+').search(newusername) or len(newusername) > 20: #ensures no special charecters are present in username, should prevent injection attacks
+            if re.compile('username_regex').search(new_username) or len(new_username) > 20: #ensures no special charecters are present in username, should prevent injection attacks
                 error = "Invalid New Username"
             elif user_data is None: #catch database errors
                 error = 'Database error.'
             elif not check_password_hash(user_data['password'], password): #check that the password is correct
                 error = 'Incorrect password.'
 
-            log("INFO","User " + user_data['username'].lower() + " changed their username to " + newusername.lower())
-            db.execute("UPDATE user SET username = '{}' WHERE id = '{}'".format(newusername,user_id)) #update username
+            log("INFO","User " + user_data['username'].lower() + " changed their username to " + new_username.lower())
+            db.execute("UPDATE user SET username = '{}' WHERE id = '{}'".format(new_username,user_id)) #update username
             db.commit()
         flash(error)
 
@@ -169,9 +169,8 @@ def user():
 @bp.route('/getusers', methods=['GET', 'POST'])
 @login_required
 @admin_required
-def getusers():
+def get_users():
     db = get_db()
-    user_id = session["user_id"]
     user_data = db.execute('SELECT * FROM user')
     users = []
     for user in user_data:
@@ -184,7 +183,7 @@ def getusers():
 @bp.route('/resetpassword', methods=['GET'])
 @login_required
 @admin_required
-def resetpassword():
+def reset_password():
     if request.method == 'GET':
         user_id = request.args.get('id')
         username = request.args.get('user')
@@ -200,7 +199,7 @@ def resetpassword():
 @bp.route('/deleteuser', methods=['GET'])
 @login_required
 @admin_required
-def deleteuser():
+def delete_user():
     if request.method == 'GET':
         admin = True if request.args.get('admin') == "Admin" else False
 
@@ -222,7 +221,7 @@ def deleteuser():
 @bp.route('/changerole', methods=['GET'])
 @login_required
 @admin_required
-def changerole():
+def change_role():
     admin = True if request.args.get('admin') == "Admin" else False
 
     db = get_db()
