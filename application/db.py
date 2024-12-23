@@ -20,12 +20,14 @@ def get_db():
 
 #custom logging function that prints and sends to database. also deletes old messages
 def log(level,message):
+    timestamp = datetime.now().strftime("%m/%d/%Y: %H:%M:%S")
     int_level = ["DEBUG","INFO","WARN","ERROR","CRIT"].index(level.upper())
     try:
         db = get_db()
-        db.execute("DELETE FROM logging WHERE logging.datetime < DATEADD(MONTH, -1, GETDATE())")
+        db.execute("DELETE FROM logging WHERE id NOT IN (SELECT id FROM logging ORDER BY id DESC LIMIT 100000)")
         db.commit()
-        db.execute("INSERT INTO logging (lvl, msg) VALUES (?, ?, ?)", (int_level, message), )
+        db.execute("INSERT INTO logging (datetime, lvl, msg) VALUES (?, ?, ?)", (timestamp, int_level, message), )
+        print(timestamp,"-",message)
         db.commit()
     except Exception:
         print("Critical Error: Could not log to database!")
