@@ -55,7 +55,7 @@ def index():
         db = get_db()
         error = None
 
-        if re.compile('username_regex').search(username) or len(username) > 20: #ensures no special charecters are present in username, should prevent injection attacks
+        if re.compile('username_regex').search(username) or len(username) > 20: #ensures no special characters are present in username, should prevent injection attacks
             error = "Invalid Username"
         elif not username:
             error = 'Username is required.'
@@ -99,7 +99,7 @@ def login():
             'SELECT * FROM user WHERE username = ?', (username,)
         ).fetchone()
 
-        if re.compile('username_regex').search(username): #ensures no special charecters are present in username, should prevent injection attacks
+        if re.compile('username_regex').search(username): #ensures no special characters are present in username, should prevent injection attacks
             error = "Invalid Username"
         elif user is None:
             error = 'Incorrect username.'
@@ -131,7 +131,7 @@ def user():
             if not old_password or not new_password: #check that the form is complete
                 error = 'All fields are required.'
 
-            user_data = db.execute('SELECT * FROM user WHERE id = {}'.format(user_id,)).fetchone() #grab user data to check old passowrd
+            user_data = db.execute('SELECT * FROM user WHERE id = {}'.format(user_id,)).fetchone() #grab user data to check old password
 
             if user_data is None: #catch database errors
                 error = 'Database error.'
@@ -150,7 +150,7 @@ def user():
 
             user_data = db.execute('SELECT * FROM user WHERE id = {}'.format(user_id,)).fetchone() #grab user data to check password
 
-            if re.compile('username_regex').search(new_username) or len(new_username) > 20: #ensures no special charecters are present in username, should prevent injection attacks
+            if re.compile('username_regex').search(new_username) or len(new_username) > 20: #ensures no special characters are present in username, should prevent injection attacks
                 error = "Invalid New Username"
             elif user_data is None: #catch database errors
                 error = 'Database error.'

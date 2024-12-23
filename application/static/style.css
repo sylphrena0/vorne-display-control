@@ -377,12 +377,12 @@ table {
   table.striped tbody tr:nth-child(2n) td {
     /*I used a ID here because the sorting script I enabled requires the <thead> tag, which fucks up table selections*/
     background: #1e1e1e;
-    /*Change the varable above, not the value*/
+    /*Change the variable above, not the value*/
   }
   
   table.striped tbody tr:nth-child(2n+1) td {
     background: #121212;
-    /*Change the varable above, not the value*/
+    /*Change the variable above, not the value*/
   }
   
   table.striped th {
@@ -423,8 +423,3 @@ table {
     margin: 0 auto;
     inline-size: 100%;
   }
-  
-  /* table > tbody > * > td:first-child {
-    text-align: left;
-    padding-left: 15px;
-  } */
