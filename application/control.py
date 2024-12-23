@@ -2,10 +2,10 @@ from dis import dis
 import json #to get data from js
 import traceback
 import os
-from flask import Blueprint, flash, g, redirect, render_template, request, url_for, Flask, Response #web framework imports
+from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for, Flask, Response #web framework imports
 from application.users import login_required, admin_required
 from application.db import log, get_db, close_db #access to database
-from application.backend import parsemode, sendmessage, get_ser
+from application.backend import parsemode, send_message, get_ser
 
 #sets the blueprint for this code
 bp = Blueprint('control', __name__)
@@ -67,8 +67,12 @@ def index():
 
         #get FBM numbers and update messages
         totalfbm = get_db().execute('SELECT ro FROM msg').fetchone()[0]
-        sendmessage(msg,addr=addresses,font=fnt,line=2,rate=rate,scrollexpiry=scrollexpiry,blinktype=blinktype)
-        sendmessage("RO:" + str(totalfbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
+
+        user_data = db.execute('SELECT * FROM user WHERE id = {}'.format(session["user_id"],)).fetchone() #grab user data to check old password
+
+        log("INFO", f'{user_data['username']} updated the message: "{msg}"')
+        send_message(msg,addr=addresses,font=fnt,line=2,rate=rate,scroll_expiry=scrollexpiry,blink_type=blinktype)
+        send_message("RO:" + str(totalfbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
 
         if error is not None:
             flash(error)

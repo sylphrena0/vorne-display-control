@@ -15,19 +15,19 @@ from threading import Thread
 #############################################
 ###### [M1000 Communication Functions] ######
 ############################################# 
-def sendmessage(text="CHANGEME",addr=["01"],font=1,line=1,char="",rate=None,blinktype=None,scrollexpiry=None,center=False,debug=False): #defines function to send data to display
-    #translate optional arguments to command syntax or null strings if not specifed
-    blink, scroll, messagetype = "", "", "static "
+def send_message(text="CHANGEME",addr=["01"],font=1,line=1,char="",rate=None,blink_type=None,scroll_expiry=None,center=False,debug=False): #defines function to send data to display
+    #translate optional arguments to command syntax or null strings if not specified
+    blink, scroll, message_type = "", "", "static "
     if char != "":
         char = "\x1b%sC" % (char)
-        messagetype = "partial "
-    if blinktype != None:
-        blink = "\x1b%s;+%s" % (rate,blinktype)
-        messagetype = "blinking "
-    if scrollexpiry != None:
-        scroll = "\x1b%s;%sS\x1b20R " % (rate,scrollexpiry)
-        messagetype = "scrolling "
-    if [char,blink,scroll].count("") < 2: #ensure mutliple commands are not specified
+        message_type = "partial "
+    if blink_type != None:
+        blink = "\x1b%s;+%s" % (rate,blink_type)
+        message_type = "blinking "
+    if scroll_expiry != None:
+        scroll = "\x1b%s;%sS\x1b20R " % (rate,scroll_expiry)
+        message_type = "scrolling "
+    if [char,blink,scroll].count("") < 2: #ensure multiple commands are not specified
         log("WARN","Conflicting message commands - canceling message!")
         print([char,blink,scroll].count("") < 2,[char,blink,scroll].count(""), [char,blink,scroll])
         return
@@ -44,7 +44,7 @@ def sendmessage(text="CHANGEME",addr=["01"],font=1,line=1,char="",rate=None,blin
         g.ser.write(b'%s' % (string.encode('ascii'))) #encodes as ascii, changes to bytes, and writes to display
         g.ser.close() #close COM 
 
-    if debug: log("DEBUG","Sending %smessage to displays" % (messagetype))
+    if debug: log("DEBUG","Sending %smessage to displays" % (message_type))
 
 def parsemode(mode,rate=None, scrollexpiry=None, blinktype=None): #turns the mode string used by flask into three backend compabile options
     if mode.endswith("Scrolling"):
@@ -139,9 +139,9 @@ def backend(app):
                         manual += 1 
                     elif advancedOptions.get('storeId') == storedict.get("nms"): 
                         nms += 1 
-                sendmessage("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
-                sendmessage("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shippingaddress,font=fnt,line=2,center=True)
-                sendmessage(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
+                send_message("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
+                send_message("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shippingaddress,font=fnt,line=2,center=True)
+                send_message(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
                 
                 #update database for other modules
                 db = get_db()
@@ -156,7 +156,7 @@ def backend(app):
         ########################################### 
         def updateTime():
             now = datetime.now()
-            sendmessage(text=str(now.strftime("%H:%M ")),char=0,addr=addresses,font=1,line=1)
+            send_message(text=str(now.strftime("%H:%M ")),char=0,addr=addresses,font=1,line=1)
 
         ###########################################
         ########## [Initialize Displays] ##########
@@ -170,7 +170,7 @@ def backend(app):
             #adds message from previous instance
             msg = get_db().execute('SELECT * FROM msg WHERE id = 1').fetchone()
             rate, scrollexpiry, blinktype = parsemode(msg['mode']) #parse the human readable mode to commands
-            sendmessage(msg['msg'],addr=addresses,font=fnt,line=2,rate=rate,scrollexpiry=scrollexpiry,blinktype=blinktype)
+            send_message(msg['msg'],addr=addresses,font=fnt,line=2,rate=rate,scroll_expiry=scrollexpiry,blink_type=blinktype)
 
             #schedules message functions
             schedule.every(int(settings['FBM_DELAY'])).minutes.at(':30').do(updateFBM).tag('send-msg')
@@ -204,8 +204,8 @@ def backend(app):
                     db.execute('UPDATE settings SET stored = "0" WHERE setting = "ACTIVE"')
                     db.commit()
                     schedule.clear('send-msg') #clears tasks with 'send-msg' tag
-                    sendmessage(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=1) #clears display by filling with empty space
-                    sendmessage(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=2) #clears display by filling with empty space
+                    send_message(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=1) #clears display by filling with empty space
+                    send_message(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=2) #clears display by filling with empty space
             except Exception:
                 log("ERROR",traceback.format_exc())
 
