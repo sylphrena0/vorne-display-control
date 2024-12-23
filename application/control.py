@@ -43,36 +43,37 @@ def index():
             db = get_db()
             db.execute("UPDATE msg SET (msg, mode, df) = (?, ?, ?) WHERE id = 1",(msg, mode, df,))
             db.commit()
+    
+            rate, scroll_expiry, blink_type = parse_mode(mode) #parse the human readable mode to commands
+            
+            get_ser() #gets serial config from backend.py to enable serial control from here
+
+            #grab addresses from settings in db
+            settings = {}
+            addresses, shipping = [], []
+            stored_settings = get_db().execute('SELECT * FROM settings')
+            for setting in stored_settings:
+                settings[setting['setting']] = setting['stored']
+            fnt = int(settings['FNT'])
+
+            stored_addresses = get_db().execute('SELECT * FROM addresses')
+            for address in stored_addresses:
+                if address['shipping'] == 1:
+                    shipping.append(address['stored'])
+                else:
+                    addresses.append(address['stored'])
+
+            #get FBM numbers and update messages
+            total_fbm = get_db().execute('SELECT ro FROM msg').fetchone()[0]
+
+            username = get_db().execute('SELECT * FROM user WHERE id = {}'.format(session["user_id"])).fetchone()['username'] #grab user data to check old password
+
+            log("INFO", f'{username} updated the message: "{msg}"')
+            send_message(msg,addr=addresses,font=fnt,line=2,rate=rate,scroll_expiry=scroll_expiry,blink_type=blink_type)
+            send_message("RO:" + str(total_fbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
+
         except Exception:
             log("CRIT",traceback.format_exc())
-    
-        rate, scroll_expiry, blink_type = parse_mode(mode) #parse the human readable mode to commands
-        
-        get_ser() #gets serial config from backend.py to enable serial control from here
-
-        #grab addresses from settings in db
-        settings = {}
-        addresses, shipping = [], []
-        stored_settings = get_db().execute('SELECT * FROM settings')
-        for setting in stored_settings:
-            settings[setting['setting']] = setting['stored']
-        fnt = int(settings['FNT'])
-
-        stored_addresses = get_db().execute('SELECT * FROM addresses')
-        for address in stored_addresses:
-            if address['shipping'] == 1:
-                shipping.append(address['stored'])
-            else:
-                addresses.append(address['stored'])
-
-        #get FBM numbers and update messages
-        total_fbm = get_db().execute('SELECT ro FROM msg').fetchone()[0]
-
-        user_data = db.execute('SELECT * FROM user WHERE id = {}'.format(session["user_id"],)).fetchone() #grab user data to check old password
-
-        log("INFO", f'{user_data['username']} updated the message: "{msg}"')
-        send_message(msg,addr=addresses,font=fnt,line=2,rate=rate,scroll_expiry=scroll_expiry,blink_type=blink_type)
-        send_message("RO:" + str(total_fbm) + " DF:" + str(df) + "        ",char=7,addr=addresses,font=fnt,line=1)
 
         if error is not None:
             flash(error)
