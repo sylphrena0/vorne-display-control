@@ -5,7 +5,7 @@ import os
 from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for, Flask, Response #web framework imports
 from application.users import login_required, admin_required
 from application.db import log, get_db, close_db #access to database
-from application.backend import parsemode, send_message, get_ser
+from application.backend import parse_mode, send_message, get_ser
 
 #sets the blueprint for this code
 bp = Blueprint('control', __name__)
@@ -16,7 +16,7 @@ bp = Blueprint('control', __name__)
 #defines a function which is called when /getmsg is accessed
 @bp.route('/getmsg')
 @login_required
-def getmsg():
+def get_msg():
     db = get_db()
     settings = db.execute( 'SELECT msg, mode, df FROM msg WHERE id = 1' ).fetchone()
     data = []

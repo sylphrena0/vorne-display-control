@@ -40,21 +40,21 @@ def send_message(text="CHANGEME",addr=["01"],font=1,line=1,char="",rate=None,bli
         print([char,blink,scroll].count("") < 2,[char,blink,scroll].count(""), [char,blink,scroll])
         return
 
-    centerspcs = ""
-    fontlength = [20,15,10,8,15,12,20,20,20]
+    center_spcs = ""
+    font_length = [20,15,10,8,15,12,20,20,20]
     if center and len(text) < 19: #this will center the message if enabled
-        centerspcs = "\x1b%sR " % int((fontlength[font] - len(text))/2)
+        center_spcs = "\x1b%sR " % int((font_length[font] - len(text))/2)
 
     log("DEBUG","Sending message: " + text + " to " + str(addr))
     for address in addr: #iterates through all displays
         g.ser.open() #open COM port
-        string = "\x1b%sA\x1b%sL%s\x1b-b\x1b-B\x1b%sF%s%s%s%s\r" % (address,line,char,font,blink,scroll,centerspcs,text) #\x1b is eqv to <ESC> in the manual, \r to <CR> (EOL)
+        string = "\x1b%sA\x1b%sL%s\x1b-b\x1b-B\x1b%sF%s%s%s%s\r" % (address,line,char,font,blink,scroll,center_spcs,text) #\x1b is eqv to <ESC> in the manual, \r to <CR> (EOL)
         g.ser.write(b'%s' % (string.encode('ascii'))) #encodes as ascii, changes to bytes, and writes to display
         g.ser.close() #close COM 
 
     if debug: log("DEBUG","Sending %smessage to displays" % (message_type))
 
-def parse_mode(mode,rate=None, scroll_expiry=None, blink_type=None): #turns the mode string used by flask into three backend compabile options
+def parse_mode(mode,rate=None, scroll_expiry=None, blink_type=None): #turns the mode string used by flask into three backend compatible options
     if mode.endswith("Scrolling"):
         scroll_expiry = 0
     elif mode.endswith("Blinking"):
@@ -147,9 +147,9 @@ def backend(app):
                         manual += 1 
                     elif advanced_options.get('storeId') == store_dict.get("nms"): 
                         nms += 1 
-                send_message("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shippingaddress,font=fnt,line=1,center=True)
-                send_message("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shippingaddress,font=fnt,line=2,center=True)
-                send_message(str("RO:" + str(totalfbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
+                send_message("NMS:" + str(nms) + " QQShip:" + str(qqship),char=0,addr=shipping_address,font=fnt,line=1,center=True)
+                send_message("TMB:" + str(thermalblade) + " Manual:" + str(manual),char=0,addr=shipping_address,font=fnt,line=2,center=True)
+                send_message(str("RO:" + str(total_fbm) + " DF:" + str(msg['df']) + "    "),char=7,addr=addresses,font=fnt,line=1)
                 
                 #update database for other modules
                 db = get_db()
@@ -177,7 +177,7 @@ def backend(app):
 
             #adds message from previous instance
             msg = get_db().execute('SELECT * FROM msg WHERE id = 1').fetchone()
-            rate, scrollexpiry, blinktype = parsemode(msg['mode']) #parse the human readable mode to commands
+            rate, scrollexpiry, blinktype = parse_mode(msg['mode']) #parse the human readable mode to commands
             send_message(msg['msg'],addr=addresses,font=fnt,line=2,rate=rate,scroll_expiry=scrollexpiry,blink_type=blinktype)
 
             #schedules message functions
@@ -212,8 +212,8 @@ def backend(app):
                     db.execute('UPDATE settings SET stored = "0" WHERE setting = "ACTIVE"')
                     db.commit()
                     schedule.clear('send-msg') #clears tasks with 'send-msg' tag
-                    send_message(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=1) #clears display by filling with empty space
-                    send_message(text="\x1b20R ",addr=addresses + shippingaddress,font=1,line=2) #clears display by filling with empty space
+                    send_message(text="\x1b20R ",addr=addresses + shipping_address,font=1,line=1) #clears display by filling with empty space
+                    send_message(text="\x1b20R ",addr=addresses + shipping_address,font=1,line=2) #clears display by filling with empty space
             except Exception:
                 log("ERROR",traceback.format_exc())
 
