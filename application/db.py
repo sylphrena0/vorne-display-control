@@ -24,7 +24,7 @@ def log(level,message):
     int_level = ["DEBUG","INFO","WARN","ERROR","CRIT"].index(level.upper())
     try:
         db = get_db()
-        db.execute("DELETE FROM logging WHERE created_at < DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH)")
+        db.execute("DELETE FROM logging WHERE datetime < DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH)")
         db.commit()
         db.execute("INSERT INTO logging (datetime, lvl, msg) VALUES (?, ?, ?)", (timestamp, int_level, message), )
         print(timestamp,"-",message)
