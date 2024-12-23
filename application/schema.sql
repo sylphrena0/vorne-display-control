@@ -21,7 +21,7 @@ CREATE TABLE msg ( --create settings table
 
 CREATE TABLE logging ( --create logging table
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  datetime TEXT NOT NULL,
+  datetime  DATETIME DEFAULT CURRENT_TIMESTAMP,
   lvl INT NOT NULL,
   msg TEXT NOT NULL
 );
