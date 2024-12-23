@@ -23,7 +23,6 @@
 
 <nav class="topnav" id="myTopnav">
 
-  <!-- <img src="{{url_for('static', filename='nms-mountain.webp')}}"/> -->
   {% if g.user %}
     {% for href, id, caption in navigation_bar_home %}
     <a class="home{% if id == active_page %} active{% endif%}" href="{{ href|e }}">{{ caption|e }}</a>
