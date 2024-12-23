@@ -19,15 +19,15 @@
         .then(response => response.json())
         .then(data => {
             //loop through data
-            for (var i = 0; i < data.length; i++) {
+            for (const user of data.length) {
                 //create row
                 var row = $("<tr />")
                 //append row to table
                 $("#table").append(row);
                 //append data to row
-                row.append($("<td>" + data[i].id + "</td>"));
-                row.append($("<td>" + data[i].username + "</td>"));
-                row.append($("<td>" + data[i].role + "</td>"));
+                row.append($("<td>" + user.id + "</td>"));
+                row.append($("<td>" + user.username + "</td>"));
+                row.append($("<td>" + user.role + "</td>"));
                 row.append($("<td>" + 
                     "<i class='material-icons role' title='Change user role'>&#xf02e;</i>" +
                     "<i class='material-icons reset' title='Reset user password'>&#xeade;</i>" +
