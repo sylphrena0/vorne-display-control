@@ -407,3 +407,7 @@ td {
     border: none;
     text-align: center;
 }
+
+.clickable {
+    cursor: pointer;
+}
