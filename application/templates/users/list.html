@@ -15,7 +15,7 @@
 <script>
     //script will run on load
     $(document).ready(function(){
-        fetch("/users/getusers")
+        fetch("/users/get-users")
         .then(response => response.json())
         .then(data => {
             //loop through data
@@ -46,9 +46,9 @@
             const id = deletei.parentNode.parentNode.firstChild.textContent;
             const name = deletei.parentNode.parentNode.firstChild.nextSibling.textContent;
             const admin = deletei.parentNode.parentNode.firstChild.nextSibling.nextSibling.textContent;
-            console.log(`/users/deleteuser?id=${id}&user=${name}&admin=${admin}`);
+            console.log(`/users/delete-user?id=${id}&user=${name}&admin=${admin}`);
             if (window.confirm("Please confirm that you wish to delete " + name + ".")) {
-                fetch(`/users/deleteuser?id=${id}&user=${name}&admin=${admin}`)
+                fetch(`/users/delete-user?id=${id}&user=${name}&admin=${admin}`)
                 .then(function(response) {
                     if (response.status == 403) {
                         alert("You cannot delete the last admin.");
@@ -66,7 +66,18 @@
                 // prompts user to save password
                 alert("Please save the new password for " + name + ": " + password);
                 // reset password
-                $.getJSON(`/users/resetpassword?id=${id}&user=${name}&password=${password}`, function(event) {});
+                $.ajax({
+                    url: '/users/reset-password',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ username: name, password: password }),
+                    success: function(response) {
+                        console.log('Password reset successful');
+                    },
+                    error: function(error) {
+                        console.log('Error resetting password:', error);
+                    }
+                });
             }  
         } else if (role !== null) {
             const id = role.parentNode.parentNode.firstChild.textContent;
@@ -77,7 +88,7 @@
                 return;
             }
             // change role
-            fetch(`/users/changerole?id=${id}&user=${name}&admin=${admin}`)
+            fetch(`/users/change-role?id=${id}&user=${name}&admin=${admin}`)
             .then(function(response) {
                 if (response.status == 403) {
                     alert("You cannot demote the last admin.");

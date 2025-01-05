@@ -1,12 +1,13 @@
 import functools
 import re
+from typing import Any, Dict, Final, Optional
 
 from flask import Blueprint, Response, flash, g, jsonify, redirect, render_template, request, session, url_for
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from application.db import get_db, log
 
-username_regex: str = "[^0-9a-zA-Z]+"
+username_regex: Final[str] = "[^0-9a-zA-Z]+"
 bp = Blueprint("users", __name__, url_prefix="/users")
 
 
@@ -167,13 +168,14 @@ def user():
             log("INFO", "User " + user_data["username"].lower() + " changed their username to " + new_username.lower())
             db.execute("UPDATE user SET username = '{}' WHERE id = '{}'".format(new_username, user_id))  # update username
             db.commit()
-        flash(error)
+        if error is not None:
+            flash(error)
 
     return render_template("users/settings.html")
 
 
-# defines a users function which is called when /getusers is accessed
-@bp.route("/getusers", methods=["GET", "POST"])
+# defines a users function which is called when /get-users is accessed
+@bp.route("/get-users", methods=["GET", "POST"])
 @login_required
 @admin_required
 def get_users():
@@ -187,21 +189,21 @@ def get_users():
     return jsonify(users)
 
 
-# reset password route
-
-
-@bp.route("/resetpassword", methods=["GET"])
+@bp.route("/reset-password", methods=["POST"])
 @login_required
 @admin_required
 def reset_password():
-    if request.method == "GET":
-        user_id = request.args.get("id")
-        username = request.args.get("user")
-        password = request.args.get("password")
-        db = get_db()
-        log("INFO", "Admin " + g.user["username"].lower() + " changed " + username + "'s password!")
-        db.execute("UPDATE user SET password = '{}' WHERE id = '{}'".format(generate_password_hash(password), user_id))  # update password
-        db.commit()
+    data: Dict[str, Any] = request.get_json()
+    username: Optional[str] = data.get("username")
+    password: Optional[str] = data.get("password")
+
+    if not username or not password:
+        return Response(status=400)
+
+    db = get_db()
+    log("INFO", "Admin " + g.user["username"].lower() + " changed " + username + "'s password!")
+    db.execute("UPDATE user SET password = '{}' WHERE username = '{}'".format(generate_password_hash(password), username))  # update password
+    db.commit()
 
     return Response(status=200)
 
@@ -209,7 +211,7 @@ def reset_password():
 # delete user route
 
 
-@bp.route("/deleteuser", methods=["GET"])
+@bp.route("/delete-user", methods=["GET"])
 @login_required
 @admin_required
 def delete_user():
@@ -232,7 +234,7 @@ def delete_user():
 
 
 # change role route
-@bp.route("/changerole", methods=["GET"])
+@bp.route("/change-role", methods=["GET"])
 @login_required
 @admin_required
 def change_role():
