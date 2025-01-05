@@ -58,7 +58,7 @@ header .action {
 }
 
 .href {
-    text-decoration: none
+    text-decoration: none;
 }
 
 .href:hover {
@@ -69,12 +69,12 @@ header .action {
     padding: 0 1rem 1rem;
 } */
 
-.content>header {
+.content > header {
     display: flex;
     align-items: flex-end;
 }
 
-.content>header h1 {
+.content > header h1 {
     flex: auto;
     margin: 1rem 0 0.25rem 0;
 }
@@ -162,8 +162,8 @@ input.danger {
     right: 0;
     bottom: 0;
     background-color: #35393b;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
 .slider:before {
@@ -174,19 +174,19 @@ input.danger {
     left: 4px;
     bottom: 4px;
     background-color: #181a1b;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
-input:checked+.slider {
-    background-color: #dc2f55;;
+input:checked + .slider {
+    background-color: #dc2f55;
 }
 
-input:focus+.slider {
-    box-shadow: 0 0 1px #dc2f55;;
+input:focus + .slider {
+    box-shadow: 0 0 1px #dc2f55;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
@@ -202,13 +202,13 @@ input:checked+.slider:before {
 
 .button-1 {
     margin: 20px;
-    margin-bottom: 26px !important; 
+    margin-bottom: 26px !important;
     height: 50px;
     appearance: none;
     background-color: #333;
-    border: 1px solid rgba(27, 31, 35, .15);
+    border: 1px solid rgba(27, 31, 35, 0.15);
     border-radius: 12px;
-    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
     box-sizing: border-box;
     color: #fff;
     display: inline-block;
@@ -251,7 +251,6 @@ input:checked+.slider:before {
     max-width: 100%;
 }
 
-/*.form { background-color: #15172b; border-radius: 20px; box-sizing: border-box; height: 500px; padding: 20px; width: 320px;}*/
 .input-container {
     height: 50px;
     position: relative;
@@ -269,7 +268,6 @@ input:checked+.slider:before {
     outline: 0;
     padding: 4px 20px 0;
     width: 100%;
-    
 }
 
 .input:hover {
@@ -300,8 +298,8 @@ input:checked+.slider:before {
     width: 115px;
 }
 
-.input:focus~.cut,
-.input:not(:placeholder-shown)~.cut {
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
     transform: translateY(8px);
 }
 
@@ -315,27 +313,29 @@ input:checked+.slider:before {
     pointer-events: none;
     position: absolute;
     transform-origin: 0 50%;
-    transition: transform 200ms, color 200ms;
+    transition:
+        transform 200ms,
+        color 200ms;
     top: 20px;
 }
 
-.input:focus~.placeholder,
-.input:not(:placeholder-shown)~.placeholder {
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
     transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-.input:not(:placeholder-shown)~.placeholder {
+.input:not(:placeholder-shown) ~ .placeholder {
     color: #808097;
 }
 
-.input:focus~.placeholder {
+.input:focus ~ .placeholder {
     color: #dc2f55;
 }
 
-.inline { 
+.inline {
     white-space: nowrap;
     text-align: left;
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
 textarea {
@@ -344,82 +344,75 @@ textarea {
     padding-top: 15px !important;
 }
 
-
 pre code {
     background-color: #1e1e1e;
     display: block;
     padding: 20px;
     text-align: left;
-    overflow-y:scroll;
+    overflow-y: scroll;
     max-height: 60vh;
-  }
+}
 
-table{
+table {
     color: #f1f1f1 !important;
+    box-sizing: border-box;
+    display: table;
+    font-family: \"Helvetica Neue\", Helvetica, Roboto, Arial, sans-serif;
+    margin: 0 auto;
+    inline-size: 100%;
+    border-collapse: separate;
+    /* Disables those annoying white borders on tables */
+    border-spacing: 0px;
+    width: 100%;
 }
 
 .table-hover tbody tr:hover {
-  color: #ddafeb !important;
+    color: #ddafeb !important;
 }
 
 .container-xl {
     margin-top: 50px;
 }
 
-table {
-    border-collapse: separate;
-    /*Allows disabling those annoying white borders on tables*/
-    border-spacing: 0px;
-    width: 100%;
-  }
-  
-  
-  table.striped tbody tr:nth-child(2n) td {
+table.striped tbody tr:nth-child(2n) td {
     /*I used a ID here because the sorting script I enabled requires the <thead> tag, which fucks up table selections*/
     background: #1e1e1e;
     /*Change the variable above, not the value*/
-  }
-  
-  table.striped tbody tr:nth-child(2n+1) td {
+}
+
+table.striped tbody tr:nth-child(2n + 1) td {
     background: #121212;
     /*Change the variable above, not the value*/
-  }
-  
-  table.striped th {
+}
+
+table.striped th {
     background: #1e1e1e;
     /*Table header color*/
     color: white;
-  }
-  
-  tr { /*height of rows*/
-    height: 45px;
-  }
+}
 
-  h2.header {
+tr {
+    /*height of rows*/
+    height: 45px;
+}
+
+h2.header {
     text-align: left;
     margin-left: 20px;
-  }
+}
 
-  .header#register {
+.header#register {
     margin-bottom: 0px;
     margin-top: 30px;
-  }
-  .header.hinput {
+}
+.header.hinput {
     margin-bottom: 5px;
     margin-top: 30px;
-  }
-  
-  table,
-  tr,
-  td {
+}
+
+table,
+tr,
+td {
     border: none;
     text-align: center;
-  }
-  
-  table {
-    box-sizing: border-box;
-    display: table;
-    font-family: \"Helvetica Neue\", Helvetica, Roboto, Arial, sans-serif;
-    margin: 0 auto;
-    inline-size: 100%;
-  }
+}

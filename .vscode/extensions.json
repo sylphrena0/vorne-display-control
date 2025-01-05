@@ -4,6 +4,7 @@
         "ms-python.python",
         "ms-python.mypy-type-checker",
         "sonarsource.sonarlint-vscode",
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "sibiraj-s.vscode-scss-formatter"
     ]
 }
