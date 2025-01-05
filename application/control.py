@@ -9,13 +9,13 @@ from application.backend import get_ser, parse_mode, send_message
 from application.db import get_db, log  # access to database
 from application.users import admin_required, login_required
 
-#sets the blueprint for this code
+# sets the blueprint for this code
 bp = Blueprint('control', __name__)
 
 ############################################
 ############# [Control Routes] #############
 ############################################ 
-#defines a function which is called when /getmsg is accessed
+# defines a function which is called when /getmsg is accessed
 @bp.route('/getmsg')
 @login_required
 def get_msg():
@@ -26,31 +26,31 @@ def get_msg():
     print(data)
     return Response(json.dumps(data))
 
-#defines the index page
+# defines the index page
 @bp.route('/', methods=['GET','POST'])
 @login_required
 def index():
-    if request.method == 'POST': #if the user hits the submit button
+    if request.method == 'POST': # if the user hits the submit button
         msg = request.form['msg']
         mode = request.form['mode']
         df = request.form['df'] + "    "
-        error = None #initializes error message
+        error = None # initializes error message
 
-        if not msg: #check for incomplete form, though it should not be allowed by html
+        if not msg: # check for incomplete form, though it should not be allowed by html
             error = 'Message is required.'
         elif not df:
             error = 'DF Orders is required.'
 
-        try: #send new message to database and log any errors
+        try: # send new message to database and log any errors
             db = get_db()
             db.execute("UPDATE msg SET (msg, mode, df) = (?, ?, ?) WHERE id = 1",(msg, mode, df,))
             db.commit()
     
-            rate, scroll_expiry, blink_type = parse_mode(mode) #parse the human readable mode to commands
+            rate, scroll_expiry, blink_type = parse_mode(mode) # parse the human readable mode to commands
             
-            get_ser() #gets serial config from backend.py to enable serial control from here
+            get_ser() # gets serial config from backend.py to enable serial control from here
 
-            #grab addresses from settings in db
+            # grab addresses from settings in db
             settings = {}
             addresses, shipping = [], []
             stored_settings = get_db().execute('SELECT * FROM settings')
@@ -65,10 +65,10 @@ def index():
                 else:
                     addresses.append(address['stored'])
 
-            #get FBM numbers and update messages
+            # get FBM numbers and update messages
             total_fbm = get_db().execute('SELECT ro FROM msg').fetchone()[0]
 
-            username = get_db().execute('SELECT * FROM user WHERE id = {}'.format(session["user_id"])).fetchone()['username'] #grab user data to check old password
+            username = get_db().execute('SELECT * FROM user WHERE id = {}'.format(session["user_id"])).fetchone()['username'] # grab user data to check old password
 
             log("INFO", f'{username} updated the message: "{msg}"')
             send_message(msg,addr=addresses,font=fnt,line=2,rate=rate,scroll_expiry=scroll_expiry,blink_type=blink_type)
@@ -86,7 +86,7 @@ def index():
 ############################################
 ############# [Setting Routes] #############
 ############################################ 
-#defines the settings page
+# defines the settings page
 @bp.route('/settings', methods=('GET', 'POST'))
 @login_required
 @admin_required
@@ -94,8 +94,8 @@ def settings():
     if request.method == 'POST':
         error = None
         com_port = request.form['COM']
-        baud_rate = ''.join(filter(str.isdigit, request.form['baudrate'])) #these contain text in the html, we just need the number
-        font = ''.join(filter(str.isdigit, request.form['font'])) #same as above
+        baud_rate = ''.join(filter(str.isdigit, request.form['baudrate'])) # these contain text in the html, we just need the number
+        font = ''.join(filter(str.isdigit, request.form['font'])) # same as above
         ss_api_key = request.form['SS_API_KEY']
         ss_api_secret = request.form['SS_API_SECRET']
         addresses = request.form['displays'].replace(" ","").split(",")
@@ -150,7 +150,7 @@ def settings():
         return render_template('control/settings.html', form=request.form)
     return render_template('control/settings.html')
 
-#defines a settings function which is called when /getsettings is accessed
+# defines a settings function which is called when /getsettings is accessed
 @bp.route('/getsettings')
 @login_required
 @admin_required
@@ -181,7 +181,7 @@ def getsettings():
 ############################################
 ############ [Debugging Routes] ############
 ############################################ 
-#defines the debugging page
+# defines the debugging page
 @bp.route('/debugging', methods=('GET', 'POST'))
 @login_required
 @admin_required
