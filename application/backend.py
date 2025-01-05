@@ -3,6 +3,7 @@ import traceback
 from datetime import datetime
 from json import loads as loads
 from threading import Thread
+from typing import Dict, Final, Literal
 
 import requests
 import schedule
@@ -16,16 +17,29 @@ from application.db import get_db, log
 #############################################
 ###### [M1000 Communication Functions] ######
 #############################################
+font_length: Final[list[int]] = [20, 15, 10, 8, 15, 12, 20, 20, 20]
+""" The length of each font in characters """
 
 
-def send_message(text="CHANGEME", addr=["01"], font=1, line=1, char="", rate=None, blink_type=None, scroll_expiry=None, center=False, debug=False):
+def send_message(
+    text: str = "CHANGE ME",
+    addr: list[str] = ["01"],
+    font: int = 1,
+    line: Literal[1, 2] = 1,
+    char="",
+    rate=None,
+    blink_type=None,
+    scroll_expiry=None,
+    center: bool = False,
+    debug: bool = False,
+):
     """
     Send a message to the displays
 
     Parameters
     ----------
     text : str, optional
-        The message to be displayed. The default is "CHANGEME".
+        The message to be displayed. The default is "CHANGE ME".
     addr : list, optional
         The addresses of the displays to be updated. The default is ["01"].
     font : int, optional
@@ -40,7 +54,7 @@ def send_message(text="CHANGEME", addr=["01"], font=1, line=1, char="", rate=Non
             8: 8x6 pixels (2 lines of 20 characters) * Slavic
             9: 8x6 pixels (2 lines of 20 characters) * Cyrillic
     line : int, optional
-        The line to be updated. The default is 1.
+        The one-indexed line to be updated. The default is 1.
     char : str, optional
         The character to be updated. The default is "".
     rate : int, optional
@@ -84,7 +98,6 @@ def send_message(text="CHANGEME", addr=["01"], font=1, line=1, char="", rate=Non
         return
 
     center_spaces = ""
-    font_length = [20, 15, 10, 8, 15, 12, 20, 20, 20]
     if center and len(text) < 19:  # this will center the message if enabled
         center_spaces = "\x1b%sR " % int((font_length[font] - len(text)) / 2)
 
@@ -124,7 +137,7 @@ def get_ser():
         g.ser.baudrate = int(settings["BAUD_RATE"])  # baud rate, set to number shown on the display
         g.ser.port = settings["COM_PORT"]  # COM port of serial display control.
         g.ser.timeout = 2  # timeout. Leave as is
-        if g.ser.isOpen() == True:  # checks for improper shutdown
+        if g.ser.is_open is True:  # checks for improper shutdown
             g.ser.close()
             log("info", "Caught unclosed port. Closing now.")
     except Exception:
@@ -139,7 +152,71 @@ def get_ser():
 ############################################
 
 
+def update_fbm(settings: Dict[str, str], addresses: list[str], shipping_address: list[str]) -> None:
+    """
+    Updates the displays with the number of orders in Shipstation.
+
+    Raises
+    ------
+    RuntimeWarning
+        If the Shipstation API returns a 204 status code.
+    """
+    try:
+        log("DEBUG", "Updating FBM orders")
+        fnt = int(settings["FNT"])
+        msg = get_db().execute("SELECT df FROM msg WHERE id = 1").fetchone()
+        ss_api_key = settings["SS_API_KEY"]
+        ss_api_secret = settings["SS_API_SECRET"]
+        response = requests.get("https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret))
+        if response.status_code == 204:
+            raise RuntimeWarning("Shipstation API returned 204: Success, No Content")
+        _dict = loads(response.text)  # gets post request response
+        store_dict = {
+            "thermalbladedealer": 67315,
+            "thermalblade": 89213,
+            "qqship": 91927,
+            "qqshipCA": 61349,
+            "nms": 67134,
+            "manual": 38981,
+            "unbranded": 82894,
+        }  # defines dictionary of shipstation store IDs
+        total_fbm, thermalblade, qqship, manual, nms = 0, 0, 0, 0, 0  # initializes order variable counters
+        for order in _dict.get("orders"):  # grabs the order dictionaries from the set response
+            advanced_options = order.get("advancedOptions")  # gets the dictionary that contains the storeID from each order
+            total_fbm += 1
+            if (advanced_options.get("storeId") == store_dict.get("thermalbladedealer")) or (
+                advanced_options.get("storeId") == store_dict.get("thermalblade")
+            ):
+                thermalblade += 1
+            elif advanced_options.get("storeId") == store_dict.get("qqship") or advanced_options.get("storeId") == store_dict.get("qqshipCA"):
+                qqship += 1
+            elif advanced_options.get("storeId") == store_dict.get("manual") or advanced_options.get("storeId") == store_dict.get("unbranded"):
+                manual += 1
+            elif advanced_options.get("storeId") == store_dict.get("nms"):
+                nms += 1
+        send_message("NMS:" + str(nms) + " QQShip:" + str(qqship), char=0, addr=shipping_address, font=fnt, line=1, center=True)
+        send_message("TMB:" + str(thermalblade) + " Manual:" + str(manual), char=0, addr=shipping_address, font=fnt, line=2, center=True)
+        send_message(str("RO:" + str(total_fbm) + " DF:" + str(msg["df"]) + "    "), char=7, addr=addresses, font=fnt, line=1)
+
+        # update database for other modules
+        db = get_db()
+        db.execute("UPDATE msg SET ro = ? WHERE id = 1", (total_fbm,))
+        db.commit()
+    except Exception:
+        log("ERROR", "Error in ShipStation API call!")
+        log("ERROR", traceback.format_exc())
+
+
 def backend(app):
+    """
+    The backend function that controls the displays.
+
+    Parameters
+    ----------
+    app : Flask
+        The application instance
+    """
+
     with app.app_context():  # activates application context
         log("INFO", "Backend active")
         ser = get_ser()
@@ -147,8 +224,9 @@ def backend(app):
         ##########################################
         ############### [Settings] ###############
         ###########################################
-        settings = {}
-        addresses, shipping_address = [], []
+        settings: Dict[str, str] = {}
+        addresses: list[str] = []
+        shipping_address: list[str] = []
         stored_settings = get_db().execute("SELECT * FROM settings")
         for setting in stored_settings:
             settings[setting["setting"]] = setting["stored"]
@@ -164,70 +242,18 @@ def backend(app):
         ###########################################
         ##### [Update Shipstation Order Data] #####
         ###########################################
-        def update_fbm():
-            try:
-                log("DEBUG", "Updating FBM orders")
-                msg = get_db().execute("SELECT df FROM msg WHERE id = 1").fetchone()
-                ss_api_key = settings["SS_API_KEY"]
-                ss_api_secret = settings["SS_API_SECRET"]
-                response = requests.get(
-                    "https://ssapi.shipstation.com/orders?orderStatus=awaiting_shipment&pageSize=500", auth=(ss_api_key, ss_api_secret)
-                )
-                if response.status_code == 204:
-                    raise RuntimeWarning("Shipstation API returned 204: Success, No Content")
-                _dict = loads(response.text)  # gets post request response
-                store_dict = {
-                    "thermalbladedealer": 67315,
-                    "thermalblade": 89213,
-                    "qqship": 91927,
-                    "qqshipCA": 61349,
-                    "nms": 67134,
-                    "manual": 38981,
-                    "unbranded": 82894,
-                }  # defines dictionary of shipstation store IDs
-                total_fbm, thermalblade, qqship, manual, nms = 0, 0, 0, 0, 0  # initializes order variable counters
-                for order in _dict.get("orders"):  # grabs the order dictionaries from the set response
-                    advanced_options = order.get("advancedOptions")  # gets the dictionary that contains the storeID from each order
-                    total_fbm += 1
-                    if (advanced_options.get("storeId") == store_dict.get("thermalbladedealer")) or (
-                        advanced_options.get("storeId") == store_dict.get("thermalblade")
-                    ):
-                        thermalblade += 1
-                    elif advanced_options.get("storeId") == store_dict.get("qqship") or advanced_options.get("storeId") == store_dict.get("qqshipCA"):
-                        qqship += 1
-                    elif advanced_options.get("storeId") == store_dict.get("manual") or advanced_options.get("storeId") == store_dict.get(
-                        "unbranded"
-                    ):
-                        manual += 1
-                    elif advanced_options.get("storeId") == store_dict.get("nms"):
-                        nms += 1
-                send_message("NMS:" + str(nms) + " QQShip:" + str(qqship), char=0, addr=shipping_address, font=fnt, line=1, center=True)
-                send_message("TMB:" + str(thermalblade) + " Manual:" + str(manual), char=0, addr=shipping_address, font=fnt, line=2, center=True)
-                send_message(str("RO:" + str(total_fbm) + " DF:" + str(msg["df"]) + "    "), char=7, addr=addresses, font=fnt, line=1)
-
-                # update database for other modules
-                db = get_db()
-                db.execute("UPDATE msg SET ro = ? WHERE id = 1", (total_fbm,))
-                db.commit()
-            except Exception:
-                log("ERROR", "Error in ShipStation API call!")
-                log("ERROR", traceback.format_exc())
-
-        ###########################################
-        ##### [Update Shipstation Order Data] #####
-        ###########################################
-        def update_time():
+        def update_time() -> None:
             now = datetime.now()
             send_message(text=str(now.strftime("%H:%M ")), char=0, addr=addresses, font=1, line=1)
 
-        ###########################################
-        ########## [Initialize Displays] ##########
-        ###########################################
-        def initialize_displays():
+        def initialize_displays() -> None:
+            """
+            Initializes the displays with the current time and message from the previous instance.
+            """
             # initializes time and automatic order qty
             update_time()
             time.sleep(0.5)
-            update_fbm()
+            update_fbm(settings, addresses, shipping_address)
 
             # adds message from previous instance
             msg = get_db().execute("SELECT * FROM msg WHERE id = 1").fetchone()
@@ -238,13 +264,11 @@ def backend(app):
             schedule.every(int(settings["FBM_DELAY"])).minutes.at(":30").do(update_fbm).tag("send-msg")
             schedule.every().minute.at(":00").do(update_time).tag("send-msg")
 
-        ###########################################
-        ############ [Timeout Handler] ############
-        ###########################################
-        # handles scheduling and turns off displays at night
-
         @schedule.repeat(schedule.every(5).minutes.at(":10"))
-        def timeout_handler():
+        def timeout_handler() -> None:
+            """
+            Handles scheduling and turns off displays at night.
+            """
             try:
                 active = get_db().execute('SELECT * FROM settings WHERE setting = "ACTIVE"').fetchone()["stored"]
                 end_hour, end_min = get_db().execute('SELECT * FROM settings WHERE setting = "END_TIME"').fetchone()["stored"].split(":")
@@ -284,7 +308,15 @@ def backend(app):
 # function called from __init__.py to start the function above in a sub-process with the application context
 
 
-def start(app):
+def start(app) -> None:
+    """
+    Starts the backend function in a separate thread with the application context
+
+    Parameters
+    ----------
+    app : Flask
+        The application instance
+    """
     thread = Thread(target=backend, args=(app,))
     thread.daemon = True
     thread.start()
