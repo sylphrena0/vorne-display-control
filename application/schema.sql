@@ -11,7 +11,7 @@ CREATE TABLE user ( --create user table
   password TEXT NOT NULL
 );
 
-CREATE TABLE msg ( --create settings table
+CREATE TABLE msg ( --create message settings table
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   msg TEXT NOT NULL,
   mode TEXT NOT NULL,
@@ -26,13 +26,13 @@ CREATE TABLE logging ( --create logging table
   msg TEXT NOT NULL
 );
 
-CREATE TABLE settings ( --create logging table
+CREATE TABLE settings ( --create settings table
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   setting CHARACTER(20) NOT NULL,
   stored CHARACTER(20) NOT NULL
 );
 
-CREATE TABLE addresses ( --create logging table
+CREATE TABLE addresses ( --create addresses table
   stored TEXT NOT NULL PRIMARY KEY,
   shipping BOOLEAN NOT NULL
 );

@@ -1,10 +1,12 @@
 import sqlite3
-import click
 import traceback
 from datetime import datetime
+
+import click
 from flask import current_app, g
 from flask.cli import with_appcontext
 from werkzeug.security import generate_password_hash
+
 
 def get_db():
     try:

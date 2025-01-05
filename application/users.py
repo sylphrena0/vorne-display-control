@@ -1,8 +1,11 @@
 import functools
-from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for, Response, jsonify
-from werkzeug.security import check_password_hash, generate_password_hash
-from application.db import get_db, log
 import re
+
+from flask import (Blueprint, Response, flash, g, jsonify, redirect,
+                   render_template, request, session, url_for)
+from werkzeug.security import check_password_hash, generate_password_hash
+
+from application.db import get_db, log
 
 username_regex: str = '[^0-9a-zA-Z]+'
 bp = Blueprint('users', __name__, url_prefix='/users')

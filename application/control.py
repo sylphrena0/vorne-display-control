@@ -1,11 +1,13 @@
-from dis import dis
-import json #to get data from js
-import traceback
+import json  # to get data from js
 import os
-from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for, Flask, Response #web framework imports
-from application.users import login_required, admin_required
-from application.db import log, get_db, close_db #access to database
-from application.backend import parse_mode, send_message, get_ser
+import traceback
+
+from flask import (Blueprint, Response, flash,  # web framework imports
+                   render_template, request, session)
+
+from application.backend import get_ser, parse_mode, send_message
+from application.db import get_db, log  # access to database
+from application.users import admin_required, login_required
 
 #sets the blueprint for this code
 bp = Blueprint('control', __name__)

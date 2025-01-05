@@ -1,14 +1,16 @@
-import serial #pyserial
-import time
 import datetime
+import time
+import traceback
+from datetime import datetime
+from json import loads as loads
+from threading import Thread
+
 import requests
 import schedule
-import traceback
-from json import loads as loads
-from datetime import datetime
-from flask import g, request, session, Blueprint, app
-from application.db import log, get_db
-from threading import Thread
+import serial  # pyserial
+from flask import g
+
+from application.db import get_db, log
 
 #Manual: https://www.vorne.com/support/product-manuals/m1000.pdf
 

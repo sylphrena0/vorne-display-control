@@ -1,4 +1,11 @@
 {
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit",
+    },
+    "python.analysis.fixAll": [
+        "source.unusedImports"
+    ],
     "cSpell.words": [
         "qqship",
         "thermalblade"
