@@ -52,15 +52,12 @@
   {% else %}
   <a href="{{ url_for('users.login') }}">Login</a>
   {% endif %}
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
 
 </nav>
 
 <section class="content">
   <div class="centerdiv">
-    <img src="{{url_for('static', filename='nms.png')}}" style="margin-top: 20px;"/>
+    <img src="{{url_for('static', filename='nms.png')}}" style="margin-top: 20px;" alt="North Mountain Supply Logo"/>
     <header>
     </header>
     {% for message in get_flashed_messages() %}

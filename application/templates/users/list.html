@@ -38,7 +38,7 @@
     });
 
     //add click listener to icon with id settings
-    document.addEventListener('click',function(event){
+    document.addEventListener('click', function(event){
         const reset = event.target.closest('.reset');
         const deletei = event.target.closest('.delete');
         const role = event.target.closest('.role');
@@ -60,25 +60,23 @@
         } else if (reset !== null) {
             const id = reset.parentNode.parentNode.firstChild.textContent;
             const name = reset.parentNode.parentNode.firstChild.nextSibling.textContent;
-            const admin = reset.parentNode.parentNode.firstChild.nextSibling.nextSibling.textContent;
             if (window.confirm("Please confirm that you wish to reset " + name + "'s password.")) {
-                //generate random password
+                // generate random password
                 var password = Math.random().toString(36).slice(-8);
-                //prompts user to save password
+                // prompts user to save password
                 alert("Please save the new password for " + name + ": " + password);
-                //reset password
+                // reset password
                 $.getJSON(`/users/resetpassword?id=${id}&user=${name}&password=${password}`, function(event) {});
             }  
         } else if (role !== null) {
             const id = role.parentNode.parentNode.firstChild.textContent;
             const name = role.parentNode.parentNode.firstChild.nextSibling.textContent;
             const admin = role.parentNode.parentNode.firstChild.nextSibling.nextSibling.textContent;
-            if (admin != "Admin") {
-                if(!window.confirm("Please confirm that you wish to promote " + name + " to admin.")) {return;}
-            } else {
-                if (!window.confirm("Please confirm that you wish to demote " + name + " to user.")) {return;}
+            const action = admin != "Admin" ? "promote" : "demote";
+            if (!window.confirm(`Please confirm that you wish to ${action} ${name} to ${action == "promote" ? "admin" : "user"}.`)) {
+                return;
             }
-            //change role
+            // change role
             fetch(`/users/changerole?id=${id}&user=${name}&admin=${admin}`)
             .then(function(response) {
                 if (response.status == 403) {
@@ -135,8 +133,8 @@
   
       
       <select class="input" name="privilege" style="height: 50px; width: 110px; color: #9d9d9d; margin: 0px 20px;">
-        <option name="user" selected>User</option>
-        <option name="admin">Admin</option>
+        <option value="user" selected>User</option>
+        <option value="admin">Admin</option>
         </select>
   
       <input class="button-1" type="submit" value="Register">
