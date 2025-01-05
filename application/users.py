@@ -128,8 +128,8 @@ def user():
         user_id = session["user_id"]
         error = None
         if "change_password" in request.form:
-            old_password = request.form["oldpassword"]
-            new_password = request.form["newpassword"]
+            old_password = request.form["old_password"]
+            new_password = request.form["new_password"]
             if not old_password or not new_password:  # check that the form is complete
                 error = "All fields are required."
 
@@ -149,7 +149,7 @@ def user():
             db.commit()
         elif "change_username" in request.form:
             password = request.form["password"]
-            new_username = request.form["newusername"].capitalize()
+            new_username = request.form["new_username"].capitalize()
 
             if not password or not new_username:  # check that the form is complete
                 error = "All fields are required."
