@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "ms-python.flake8",
+        "streetsidesoftware.code-spell-checker",
+        "ms-python.python",
+        "ms-python.mypy-type-checker",
+        "sonarsource.sonarlint-vscode"
+    ]
+}

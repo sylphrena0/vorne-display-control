@@ -1,0 +1,8 @@
+[flake8]
+max-line-length = 150
+exclude =
+    .git,
+    .conda,
+    .vscode,
+    .mypy_cache,
+    __pycache__
