@@ -1,6 +1,6 @@
 import functools
 import re
-from typing import Any, Dict, Final, Optional
+from typing import Any, Dict, Final, List, Literal, Optional
 
 from flask import Blueprint, Response, flash, g, jsonify, redirect, render_template, request, session, url_for
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -175,86 +175,89 @@ def user():
 
 
 # defines a users function which is called when /get-users is accessed
-@bp.route("/get-users", methods=["GET", "POST"])
+@bp.route("/get-users", methods=["GET"])
 @login_required
 @admin_required
 def get_users():
     db = get_db()
-    user_data = db.execute("SELECT * FROM user")
-    users = []
-    for user in user_data:
-        role = "Admin" if user["admin"] == 1 else "User"
-        users.append({"id": user["id"], "username": user["username"], "role": role})
+    return jsonify(
+        [
+            {"id": user["id"], "username": user["username"], "role": "Admin" if user["admin"] == 1 else "User"}
+            for user in db.execute("SELECT * FROM user")
+        ]
+    )
 
-    return jsonify(users)
 
-
-@bp.route("/reset-password", methods=["POST"])
+# delete user route
 @login_required
 @admin_required
-def reset_password():
-    data: Dict[str, Any] = request.get_json()
-    username: Optional[str] = data.get("username")
-    password: Optional[str] = data.get("password")
+@bp.route("<string:username>", methods=["DELETE"])
+def delete_user(username: str) -> Response:
+    """
+    Route to delete a user. Only admins can access this route.
 
-    if not username or not password:
-        return Response(status=400)
-
+    Parameters:
+    ----------
+    username : str
+        The username of the user to delete.
+    """
     db = get_db()
-    log("INFO", "Admin " + g.user["username"].lower() + " changed " + username + "'s password!")
-    db.execute("UPDATE user SET password = '{}' WHERE username = '{}'".format(generate_password_hash(password), username))  # update password
+
+    deleting_admin = db.execute("SELECT admin FROM user WHERE username = ?", (username,)).fetchone()["admin"]
+    admin_users: Final[List[Any]] = db.execute("SELECT * FROM user WHERE admin = 1").fetchall()
+    if deleting_admin and len(admin_users) == 1:
+        return Response(status=403)  # cannot delete last admin
+
+    log("INFO", f"Admin {g.user['username'].lower()} deleted {username}'s account!")
+    db.execute(f"DELETE FROM user WHERE username = '{username}'")
     db.commit()
 
     return Response(status=200)
 
 
-# delete user route
-
-
-@bp.route("/delete-user", methods=["GET"])
-@login_required
-@admin_required
-def delete_user():
-    if request.method == "GET":
-        admin = True if request.args.get("admin") == "Admin" else False
-
-        db = get_db()
-
-        user_data = db.execute("SELECT * FROM user WHERE admin = 1").fetchall()
-        if admin and len(user_data) == 1:
-            return Response(status=403)
-
-        user_id = request.args.get("id")
-        username = request.args.get("user")
-        log("INFO", "Admin " + g.user["username"].lower() + " deleted " + username + "'s account!")
-        db.execute("DELETE FROM user WHERE id = '{}'".format(user_id))
-        db.commit()
-
-        return Response(status=200)
-
-
 # change role route
-@bp.route("/change-role", methods=["GET"])
 @login_required
 @admin_required
-def change_role():
-    admin = True if request.args.get("admin") == "Admin" else False
+@bp.route("<string:username>/<string:action>", methods=["POST"])
+def modify_user(username: str, action: Literal["promote", "demote", "reset-password"]):
+    """
+    Route to promote, demote, or reset password of a user. Only admins can access this route.
 
+    Parameters:
+    ----------
+    username : str
+        The username of the user to modify.
+    action : Literal["promote", "demote", "reset-password"]
+        The action to perform on the user.
+    """
     db = get_db()
 
-    user_data = db.execute("SELECT * FROM user WHERE admin = 1").fetchall()
-    if admin and len(user_data) == 1:
-        return Response(status=403)
+    current_user: Final[str] = g.user["username"].lower()
 
-    user_id = request.args.get("id")
-    username = request.args.get("user")
+    if action == "reset-password":
+        data: Dict[str, Any] = request.get_json()
+        password: Optional[str] = data.get("password")
 
-    if not admin:
-        log("INFO", "Admin " + g.user["username"].lower() + " made " + username + " an admin!")
-        db.execute("UPDATE user SET admin = 1 WHERE id = '{}'".format(user_id))
+        if not password:
+            return Response(status=400)
+
+        log("INFO", f"Admin {current_user} changed {username}'s password.")
+        db.execute(f"UPDATE user SET password = '{generate_password_hash(password)}' WHERE username = '{username}'")  # update password
+        db.commit()
+
     else:
-        log("INFO", "Admin " + g.user["username"].lower() + " demoted " + username + " to a user!")
-        db.execute("UPDATE user SET admin = 0 WHERE id = '{}'".format(user_id))
-    db.commit()
+        promote: Final[bool] = True if action == "promote" else False
+        new_role: Final[Literal["Admin", "User"]] = "Admin" if promote else "User"
+
+        user_data = db.execute("SELECT * FROM user WHERE admin = 1").fetchall()
+        if not promote and len(user_data) == 1:
+            return Response(status=403)  # cannot demote last admin
+
+        log("INFO", f"Admin {current_user} {action}d {username}'s role to {new_role}.")
+        if promote:
+            db.execute(f"UPDATE user SET admin = 1 WHERE username = '{username}'")
+        else:
+            db.execute(f"UPDATE user SET admin = 0 WHERE username = '{username}'")
+        db.commit()
 
     return Response(status=200)

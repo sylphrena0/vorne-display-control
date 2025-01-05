@@ -13,18 +13,20 @@
 
 
 <script>
-    //script will run on load
+    // script will run on load
     $(document).ready(function(){
-        fetch("/users/get-users")
+        fetch("/users/get-users", {
+            method: 'GET',
+        })
         .then(response => response.json())
         .then(data => {
-            //loop through data
-            for (const user of data.length) {
-                //create row
+            // loop through data
+            for (const user of data) {
+                // create row
                 var row = $("<tr />")
-                //append row to table
+                // append row to table
                 $("#table").append(row);
-                //append data to row
+                // append data to row
                 row.append($("<td>" + user.id + "</td>"));
                 row.append($("<td>" + user.username + "</td>"));
                 row.append($("<td>" + user.role + "</td>"));
@@ -37,29 +39,30 @@
         })
     });
 
-    //add click listener to icon with id settings
+    // add click listener to icon with id settings
     document.addEventListener('click', function(event){
-        const reset = event.target.closest('.reset');
-        const deletei = event.target.closest('.delete');
-        const role = event.target.closest('.role');
-        if (deletei !== null) {
-            const id = deletei.parentNode.parentNode.firstChild.textContent;
-            const name = deletei.parentNode.parentNode.firstChild.nextSibling.textContent;
-            const admin = deletei.parentNode.parentNode.firstChild.nextSibling.nextSibling.textContent;
-            console.log(`/users/delete-user?id=${id}&user=${name}&admin=${admin}`);
+        const update_user_role = event.target.closest('.role');
+        const reset_user_password = event.target.closest('.reset');
+        const delete_user = event.target.closest('.delete');
+        if (delete_user !== null) {
+            const name = delete_user.parentNode.parentNode.firstChild.nextSibling.textContent;
             if (window.confirm("Please confirm that you wish to delete " + name + ".")) {
-                fetch(`/users/delete-user?id=${id}&user=${name}&admin=${admin}`)
+                fetch(`/users/${name}`, {
+                    method: 'DELETE',
+                })
                 .then(function(response) {
                     if (response.status == 403) {
                         alert("You cannot delete the last admin.");
                     } else {
                         location.reload();
                     }
-                });
+                })
+                .catch(function(error) {
+                    console.error('Error:', error);
+                });;
             }
-        } else if (reset !== null) {
-            const id = reset.parentNode.parentNode.firstChild.textContent;
-            const name = reset.parentNode.parentNode.firstChild.nextSibling.textContent;
+        } else if (reset_user_password !== null) {
+            const name = reset_user_password.parentNode.parentNode.firstChild.nextSibling.textContent;
             if (window.confirm("Please confirm that you wish to reset " + name + "'s password.")) {
                 // generate random password
                 var password = Math.random().toString(36).slice(-8);
@@ -67,10 +70,10 @@
                 alert("Please save the new password for " + name + ": " + password);
                 // reset password
                 $.ajax({
-                    url: '/users/reset-password',
+                    url: `/users/${name}/reset-password`,
                     type: 'POST',
                     contentType: 'application/json',
-                    data: JSON.stringify({ username: name, password: password }),
+                    data: JSON.stringify({ password: password }),
                     success: function(response) {
                         console.log('Password reset successful');
                     },
@@ -79,22 +82,28 @@
                     }
                 });
             }  
-        } else if (role !== null) {
-            const id = role.parentNode.parentNode.firstChild.textContent;
-            const name = role.parentNode.parentNode.firstChild.nextSibling.textContent;
-            const admin = role.parentNode.parentNode.firstChild.nextSibling.nextSibling.textContent;
-            const action = admin != "Admin" ? "promote" : "demote";
-            if (!window.confirm(`Please confirm that you wish to ${action} ${name} to ${action == "promote" ? "admin" : "user"}.`)) {
+        } else if (update_user_role !== null) {
+            const name = update_user_role.parentNode.parentNode.firstChild.nextSibling.textContent.trim();
+            const admin = update_user_role.parentNode.parentNode.firstChild.nextSibling.nextSibling.textContent.trim();
+            const action = admin !== "Admin" ? "promote" : "demote";
+            
+            if (!window.confirm(`Please confirm that you wish to ${action} ${name} to ${action === "promote" ? "admin" : "user"}.`)) {
                 return;
             }
+            
             // change role
-            fetch(`/users/change-role?id=${id}&user=${name}&admin=${admin}`)
+            fetch(`/users/${name}/${action}`, {
+                method: 'POST'
+            })
             .then(function(response) {
-                if (response.status == 403) {
+                if (response.status === 403) {
                     alert("You cannot demote the last admin.");
                 } else {
                     location.reload();
                 }
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
             });
         }
 
