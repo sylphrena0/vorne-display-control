@@ -15,9 +15,10 @@
         "source.unusedImports",
     ],
     "cSpell.words": [
+        "Baudrate",
         "jsonify",
         "qqship",
         "shipstation",
-        "thermalblade",
+        "thermalblade"
     ],
 }
