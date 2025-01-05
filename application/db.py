@@ -57,7 +57,7 @@ def init_db():
     # make default user
     db.execute(
         "INSERT INTO user (username, admin, password) VALUES (?, ?, ?)",
-        ("Admin", 1, generate_password_hash("administrator")),
+        ("Admin", 1, generate_password_hash("administrator")),  # NOSONAR: exposing documented default password is OK
     )
     db.commit()
 

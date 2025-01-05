@@ -64,18 +64,18 @@ def send_message(text="CHANGEME", addr=["01"], font=1, line=1, char="", rate=Non
     if char != "":
         char = "\x1b%sC" % (char)
         message_type = "partial "
-    if blink_type != None:
+    if blink_type is not None:
         blink = "\x1b%s;+%s" % (rate, blink_type)
         message_type = "blinking "
-    if scroll_expiry != None:
+    if scroll_expiry is not None:
         scroll = "\x1b%s;%sS\x1b20R " % (rate, scroll_expiry)
         message_type = "scrolling "
     if [char, blink, scroll].count("") < 2:  # ensure multiple commands are not specified
         message_type = "partial "
-    if blink_type != None:
+    if blink_type is not None:
         blink = "\x1b%s;+%s" % (rate, blink_type)
         message_type = "blinking "
-    if scroll_expiry != None:
+    if scroll_expiry is not None:
         scroll = "\x1b%s;%sS\x1b20R " % (rate, scroll_expiry)
         message_type = "scrolling "
     if [char, blink, scroll].count("") < 2:  # ensure multiple commands are not specified
@@ -83,16 +83,16 @@ def send_message(text="CHANGEME", addr=["01"], font=1, line=1, char="", rate=Non
         print([char, blink, scroll].count("") < 2, [char, blink, scroll].count(""), [char, blink, scroll])
         return
 
-    center_spcs = ""
+    center_spaces = ""
     font_length = [20, 15, 10, 8, 15, 12, 20, 20, 20]
     if center and len(text) < 19:  # this will center the message if enabled
-        center_spcs = "\x1b%sR " % int((font_length[font] - len(text)) / 2)
+        center_spaces = "\x1b%sR " % int((font_length[font] - len(text)) / 2)
 
     log("DEBUG", "Sending message: " + text + " to " + str(addr))
     for address in addr:  # iterates through all displays
         g.ser.open()  # open COM port
         # \x1b is eqv to <ESC> in the manual, \r to <CR> (EOL)
-        string = "\x1b%sA\x1b%sL%s\x1b-b\x1b-B\x1b%sF%s%s%s%s\r" % (address, line, char, font, blink, scroll, center_spcs, text)
+        string = "\x1b%sA\x1b%sL%s\x1b-b\x1b-B\x1b%sF%s%s%s%s\r" % (address, line, char, font, blink, scroll, center_spaces, text)
         g.ser.write(b"%s" % (string.encode("ascii")))  # encodes as ascii, changes to bytes, and writes to display
         g.ser.close()  # close COM
 
@@ -106,11 +106,11 @@ def parse_mode(mode, rate=None, scroll_expiry=None, blink_type=None):  # turns t
     elif mode.endswith("Blinking"):
         blink_type = "B"
     if mode.startswith("Slow"):
-        rate = 5 if scroll_expiry != None else 50
+        rate = 5 if scroll_expiry is not None else 50
     elif mode.startswith("Medium"):
-        rate = 10 if scroll_expiry != None else 100
+        rate = 10 if scroll_expiry is not None else 100
     elif mode.startswith("Fast"):
-        rate = 15 if scroll_expiry != None else 150
+        rate = 15 if scroll_expiry is not None else 150
     return rate, scroll_expiry, blink_type
 
 
@@ -224,15 +224,15 @@ def backend(app):
         ########## [Initialize Displays] ##########
         ###########################################
         def initialize_displays():
-            # initializes time and automatic order qtys
+            # initializes time and automatic order qty
             update_time()
             time.sleep(0.5)
             update_fbm()
 
             # adds message from previous instance
             msg = get_db().execute("SELECT * FROM msg WHERE id = 1").fetchone()
-            rate, scrollexpiry, blinktype = parse_mode(msg["mode"])  # parse the human readable mode to commands
-            send_message(msg["msg"], addr=addresses, font=fnt, line=2, rate=rate, scroll_expiry=scrollexpiry, blink_type=blinktype)
+            rate, scroll_expiry, blink_type = parse_mode(msg["mode"])  # parse the human readable mode to commands
+            send_message(msg["msg"], addr=addresses, font=fnt, line=2, rate=rate, scroll_expiry=scroll_expiry, blink_type=blink_type)
 
             # schedules message functions
             schedule.every(int(settings["FBM_DELAY"])).minutes.at(":30").do(update_fbm).tag("send-msg")
